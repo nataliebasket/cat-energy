@@ -1,0 +1,47 @@
+.slogan {
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-image: url(../../img/slogan-cat.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+}
+
+.slogan__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 27px 20px 0 20px;
+}
+
+.slogan__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.slogan__text {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
+  color: #ffffff;
+}
+
+.slogan__image {
+  display: block;
+}
+
+.slogan__button {
+  width: 100%;
+}
