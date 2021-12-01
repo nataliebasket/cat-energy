@@ -7,7 +7,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 20px 0 20px;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .programs__list {
@@ -21,8 +24,12 @@
 
 .programs__item {
   margin-bottom: 20px;
-  background-color: $basic-gray;
-  padding: 29px 33px 0px 20px;
+  background-color: $basic-grey;
+  padding: 29px 33px 0 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .programs__title {
@@ -32,6 +39,9 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  display: block;
+  padding-left: 71px;
+  padding-bottom: 29px;
 }
 
 .programs__text {
@@ -40,8 +50,9 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: $special_dark-grey;
   margin: 0;
+  padding-bottom: 23px;
 }
 
 .programs__link {

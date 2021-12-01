@@ -1,4 +1,6 @@
-//.navigation {}
+.navigation {
+//  border: 2px solid green;
+}
 
 .navigation__button {
   width: 24px;
@@ -20,7 +22,10 @@
   }
 }
 
-//.navigation__container {}
+.navigation__container {
+ // display: none;
+ // position: absolute;
+}
 
 .navigation__list {
   margin: 0;

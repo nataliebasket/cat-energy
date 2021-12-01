@@ -1,17 +1,20 @@
 .slogan {
   margin-top: 0;
   margin-bottom: 20px;
-  background-image: url(../../img/slogan-cat.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
+  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat.png"), linear-gradient(#4f4e54 302px, transparent 302px);
+  background-repeat: repeat, no-repeat;
+  background-position-x: center, center;
+  background-position-y: top, top;
 }
 
 .slogan__container {
+  margin: 0 auto;
+  padding: 27px 20px 0 20px;
+  width: 320px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 27px 20px 0 20px;
 }
 
 .slogan__title {
@@ -40,6 +43,7 @@
 
 .slogan__image {
   display: block;
+  margin-bottom: 4px;
 }
 
 .slogan__button {

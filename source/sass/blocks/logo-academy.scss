@@ -1,0 +1,22 @@
+//.logo-academy {
+//  display: block;
+//  padding: 0;
+//  text-decoration: none;
+//   width: 27px;
+//   height: 34px;
+// }
+
+// .logo-academy__svg {
+
+//   & path {
+//     width: 27px;
+//     height: 34px;
+//     fill: $special_grey-2;
+//   }
+// }
+
+.logo-academy__path {
+  width: 27px;
+  height: 34px;
+  fill: $special_grey-2;
+}
