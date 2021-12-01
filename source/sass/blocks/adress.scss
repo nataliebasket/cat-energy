@@ -17,25 +17,19 @@
 .adress__title {
   margin: 0;
   padding: 0 20px;
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
   width: 139px;
+
+  @include word-font ("Oswald", normal, normal, 16px, 20px);
 }
 
 .adress__text {
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
   color: $special_dark-grey;
   margin: 0;
   padding: 0 20px;
   width: 139px;
+
+  @include word-font ("Arial", normal, normal, 14px, 20px);
 }
 
 .adress__img {

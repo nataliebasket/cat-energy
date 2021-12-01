@@ -2,10 +2,10 @@
   margin: 0;
   margin-bottom: 49px;
 }
+
 .process__container {
   display: flex;
   flex-direction: column;
-//  align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
   width: 320px;
@@ -13,14 +13,11 @@
 }
 
 .process__title {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+
+  @include word-font ("Oswald", normal, normal, 36px, 40px);
 }
 
 .process__list {
@@ -31,18 +28,16 @@
 
 .process__item {
   margin-bottom: 20px;
+
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 .process__text {
   margin: 0;
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
   padding-left: 80px;
   color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 14px, 18px);
 }

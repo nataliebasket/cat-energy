@@ -18,27 +18,21 @@
 }
 
 .slogan__title {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 36px;
   text-align: center;
   color: #ffffff;
   margin: 0;
   margin-bottom: 25px;
+
+  @include word-font ("Oswald", normal, normal, 36px, 36px);
 }
 
 .slogan__text {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
   color: #ffffff;
+
+  @include word-font ("Oswald", normal, normal, 14px, 14px);
 }
 
 .slogan__image {
