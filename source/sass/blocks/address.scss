@@ -1,38 +1,44 @@
-.adress {
+.address {
   margin: 0;
 }
 
-.adress__container {
+.address__container {
   display: flex;
   justify-content: space-between;
   //align-items: center;
+  margin: 0 auto;
   padding: 0;
   padding-top: 26px;
   padding-bottom: 26px;
   box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
 }
 
-.adress__title {
+.address__title {
   margin: 0;
-  padding: 0 20px;
+  padding-left: 20px;
   text-transform: uppercase;
-  width: 139px;
+  min-width: 139px;
+  box-sizing: border-box;
 
   @include word-font ("Oswald", normal, normal, 16px, 20px);
 }
 
-.adress__text {
+.address__text {
   color: $special_dark-grey;
   margin: 0;
-  padding: 0 20px;
-  width: 139px;
+  padding-right: 20px;
+  min-width: 139px;
+  box-sizing: border-box;
 
   @include word-font ("Arial", normal, normal, 14px, 20px);
 }
 
-.adress__img {
+.address__img {
   display: block;
   margin: 0 auto;
 }
+
+.address__container--gray {
+  background-color: $basic_grey;
+}
+

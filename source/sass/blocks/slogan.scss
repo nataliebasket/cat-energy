@@ -9,8 +9,7 @@
 
 .slogan__container {
   margin: 0 auto;
-  padding: 27px 20px 0 20px;
-  width: 320px;
+  padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -19,8 +18,9 @@
 
 .slogan__title {
   text-align: center;
-  color: #ffffff;
+  color: $basic-white;
   margin: 0;
+  margin-top: 27px;
   margin-bottom: 25px;
 
   @include word-font ("Oswald", normal, normal, 36px, 36px);
@@ -30,7 +30,7 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
-  color: #ffffff;
+  color: $basic-white;
 
   @include word-font ("Oswald", normal, normal, 14px, 14px);
 }

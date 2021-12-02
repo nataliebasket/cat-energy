@@ -15,11 +15,11 @@
     content: "";
     width: 24px;
     height: 2px;
-    background-color: #000000;
+    background-color: $basic-black;
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
   }
 }
 
@@ -37,15 +37,13 @@
   align-items: center;
 }
 
-.navigation__item {
-  & a {
-    text-decoration: none;
-    display: block;
-    padding-top: 22px;
-    padding-bottom: 24px;
-    color: #000000;
-    text-transform: uppercase;
+.navigation__link {
+  text-decoration: none;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  color: $basic-black;
+  text-transform: uppercase;
 
-    @include word-font ("Oswald", normal, 500, 20px, 20px);
-  }
+  @include word-font ("Oswald", normal, 500, 20px, 20px);
 }

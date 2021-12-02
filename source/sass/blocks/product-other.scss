@@ -1,0 +1,48 @@
+.product-other {
+  margin: 0;
+}
+
+.product-other__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.product-other__title {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 36px;
+  padding: 0;
+
+  @include word-font ("Oswald", normal, normal, 24px, 24px);
+}
+
+.product-other__list {
+  @include list-zero;
+}
+
+.product-other__name {
+  text-transform: uppercase;
+  color: $special_dark-grey-2;
+
+  @include word-font ("Oswald", normal, normal, 16px, 16px);
+}
+
+.product-other__lot {
+  color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 14px, 14px);
+}
+
+.product-other__price {
+  color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 14px, 14px);
+}
+
+.product-other--button {
+  font-size: 16px;
+  line-height: 20px;
+}
