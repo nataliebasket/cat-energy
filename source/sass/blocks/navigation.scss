@@ -10,6 +10,7 @@
   border: none;
   padding: 0;
   position: relative;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -22,11 +23,6 @@
     box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
   }
 }
-
-//.navigation__container {
-// display: none;
-// position: absolute;
-//}
 
 .navigation__list {
   margin: 0;
@@ -46,4 +42,12 @@
   text-transform: uppercase;
 
   @include word-font ("Oswald", normal, 500, 20px, 20px);
+}
+
+.navigation__container {
+
+  position: absolute;
+  background-color: rgba($basic-white, 0.8);
+  right: 0;
+  width: 100vw;
 }
