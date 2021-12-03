@@ -1,0 +1,75 @@
+.example {
+  margin: 0;
+  background-color: $basic-grey-3;
+}
+
+.example__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.example__title {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 40px;
+
+  @include word-font ("Oswald", normal, normal, 36px, 40px);
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 14px, 18px);
+}
+
+.example__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__item-value {
+  @include word-font ("Oswald", normal, normal, 24px, 24px);
+}
+
+.example__item-text {
+  margin: 0;
+  color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 12px, 100%);
+}
+
+.example__cost {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 14px, 20px);
+}
+
+// .example__toggle {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 0 auto;
+// }
+
+.example__toggle-container {
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__img-text {
+  @include word-font ("Oswald", normal, normal, 16px, 20px);
+}

@@ -1,0 +1,117 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $basic-white;
+  color: $basic-black;
+}
+
+
+.form__text {
+  text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 14px, 18px);
+}
+
+.form__fieldset {
+  border: 0;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.form__legend {
+  margin-bottom: 17px;
+
+  @include word-font ("Oswald", normal, normal, 24px, 26px);
+}
+
+.form__list {
+  @include list-zero;
+}
+
+.form__item {
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__item-radio {
+  margin-bottom: 23px;
+}
+
+.form__item-checkbox {
+  margin-bottom: 23px;
+}
+
+.form__label {
+  text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 16px, 18px);
+}
+
+.form__label--radio {
+  padding-left: 45px;
+}
+
+.form__label--checkbox {
+  padding-left: 45px;
+}
+
+.form__input {
+  height: 45px;
+  margin-left: 13px;
+  padding: 0;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: 1px solid $light-grey;
+  flex-grow: 1;
+}
+
+.form__input::placeholder {
+  color: $special_dark-grey;
+  text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 16px, 18px);
+}
+
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__input:focus-visible {
+  outline: none;
+  border: 1px solid $basic-black;
+  border-radius: 0;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 150px;
+  border: 1px solid $light-grey;
+  resize: none;
+}
+
+.form__textarea::placeholder {
+  padding: 9px 15px;
+  text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 16px, 18px);
+}
+
+.form__button {
+  border: 0;
+  cursor: pointer;
+
+  @include word-font ("Oswald", normal, normal, 16px, 20px);
+}
+
+.form__required-text {
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 32px;
+
+  @include word-font ("Arial", normal, normal, 14px, 16px);
+}

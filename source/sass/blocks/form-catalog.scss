@@ -1,0 +1,12 @@
+.form-catalog {
+  color: $basic-black;
+  background-color: $basic-white;
+}
+
+.form-catalog__container {
+  padding: 0 20px;
+}
+
+.form-catalog__title {
+  @include word-font ("Oswald", normal, normal, 36px, 36px);
+}

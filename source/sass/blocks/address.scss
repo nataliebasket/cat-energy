@@ -1,0 +1,40 @@
+.address {
+  margin: 0;
+}
+
+.address__container {
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  margin: 0 auto;
+  padding: 26px 20px;
+  box-sizing: border-box;
+}
+
+.address__title {
+  margin: 0;
+  text-transform: uppercase;
+  width: 139px;
+  box-sizing: border-box;
+
+  @include word-font ("Oswald", normal, normal, 16px, 20px);
+}
+
+.address__text {
+  color: $special_dark-grey;
+  margin: 0;
+  padding: 0;
+  width: 139px;
+  box-sizing: border-box;
+
+  @include word-font ("Arial", normal, normal, 14px, 20px);
+}
+
+.address__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.address__container--gray {
+  background-color: $basic_grey;
+}

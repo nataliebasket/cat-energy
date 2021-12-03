@@ -1,0 +1,12 @@
+.button {
+  text-decoration: none;
+  background-color: $basic_green;
+  color: $basic-white;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+
+  @include word-font ("Oswald", normal, normal, 14px, 18px);
+}

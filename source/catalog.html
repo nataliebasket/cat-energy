@@ -2,48 +2,47 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="page-header">
       <div class="page-header__container">
         <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" alt="Логотип магазина питания." width="191" height="36" >
+          <img src="img/logo-mobile.svg" alt="Логотип магазина питания." width="33" height="38" >
+        </a>
+        <a class="page-header__logo" href="index.html">
+          <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18" >
         </a>
 
-        <nav class="navigation">
-
-          <button class="navigation__toggle" type="button">
+        <nav class="navigation page-header__navigation">
+          <button class="navigation__button" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
-
           <div class="navigation__container">
-            <ul class="navigation__list ">
-              <li class="navigation__item">
-                <a href="index.html">ГЛАВНАЯ</a>
-              </li>
+            <ul class="navigation__list">
               <li class="navigation__item navigation__item--active">
-                <a>КАТАЛОГ ПРОДУКЦИИ</a>
+                <a class="navigation__link" href="index.html">Главная</a>
               </li>
               <li class="navigation__item">
-                <a href="form.html">ПОДБОР ПРОГРАММЫ</a>
+                <a class="navigation__link" href="#">Каталог продукции</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
         </nav>
-
       </div>
     </header>
 
     <main class="catalog-main">
-
-      <h1 class="catalog-main__title">Каталог продукции</h1>
-
       <div class="catalog-main__container">
+        <h1 class="catalog-main__title">Каталог продукции</h1>
         <h2 class="visually-hidden">Каталог основной продукции</h2>
         <article class="product">
-          <div class="product__container">
             <h3 class="visually-hidden">Cat Energy PRO 500 г</h3>
             <a class="product__img-link" href="#">
               <img class="product__image" src="img/catalog/pro500hen.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
@@ -63,8 +62,7 @@
                 <span class="product__card-point">700 Р.</span>
               </li>
             </ul>
-            <a class="product__button button" href="form.html">заказать</a>
-          </div>
+            <a class="product__button--catalog button" href="form.html">заказать</a>
         </article>
 
         <article class="product">
@@ -220,12 +218,12 @@
         <article class="product-more">
           <div class="product-more__container">
             <h3 class="visually-hidden">Ещё больше товаров.</h3>
-            <a class="product-more__link" href="#">
+            <a class="product-more__link" href="form.html">
               <svg class="" width="30" height="30"><use></use></svg>
             </a>
             <span class="product-more__big-text">Показать еще 100500 товаров</span>
             <span class="product-more__small-text">На самом деле вкусов гораздо больше!</span>
-            <a class="product-more__button button product-more__button--gray" href="form.html">показать все</a>
+            <a class="button product-more--button-gray" href="form.html">показать все</a>
           </div>
         </article>
       </div>
@@ -238,25 +236,25 @@
               <span class="product-other__name">Сахарозаменитель</span>
               <span class="product-other__lot">1 упаковка (100 г)</span>
               <span class="product-other__price">200 Р.</span>
-              <a class="product__other button" href="form.html">заказать</a>
+              <a class="product-other--button button" href="form.html">заказать</a>
             </li>
             <li class="product-other__item">
               <span class="product-other__name">питьевая вода</span>
               <span class="product-other__lot">5 литров</span>
               <span class="product-other__price">50 Р.</span>
-              <a class="product__other button" href="form.html">заказать</a>
+              <a class="product-other--button button" href="form.html">заказать</a>
             </li>
             <li class="product-other__item">
               <span class="product-other__name">молоко</span>
               <span class="product-other__lot">1 литр</span>
               <span class="product-other__price">100 Р.</span>
-              <a class="product__other button" href="form.html">заказать</a>
+              <a class="product-other--button button" href="form.html">заказать</a>
             </li>
             <li class="product-other__item">
               <span class="product-other__name">витамины</span>
               <span class="product-other__lot">1 упаковка (30 г)</span>
               <span class="product-other__price">300 Р.</span>
-              <a class="product__other button" href="form.html">заказать</a>
+              <a class="product-other--button button" href="form.html">заказать</a>
             </li>
           </ul>
         </div>
@@ -269,16 +267,14 @@
         </div>
       </section>
 
-
-
-
-      <section class="adress">
-        <div class="adress__container adress__container--gray">
-          <h2 class="adress__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="adress__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          <img class="adress__img" src="img/location.png" width="320" height="362" alt="Карта местоположения магазина.">
+      <section class="address">
+        <div class="address__container address__container--gray">
+          <h2 class="address__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
+        <img class="address__img" src="img/location.png" width="320" height="362" alt="Карта местоположения магазина.">
       </section>
+
     </main>
 
     <footer class="page-footer">
@@ -287,8 +283,8 @@
           <img src="img/footer-logo-mobile.svg" alt="Логотип магазина." width="128" height="24">
         </div>
 
-        <div class="page-footer__social social">
-          <ul class="social__list">
+        <div class="page-footer__social">
+          <ul class="social">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
@@ -301,16 +297,12 @@
           </ul>
         </div>
 
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-
-        <div class="page-footer__logo logo-footer">
-          <a class="logo-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" alt="Логотип академии." width="27" height="24">
+        <div class="page-footer__academy-logos">
+          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="logo-academy__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34"><path class="logo-academy__path" fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
           </a>
         </div>
-
       </div>
     </footer>
 

@@ -1,0 +1,19 @@
+.page-header {
+  background-color: $basic-white;
+  color: $basic-black;
+}
+
+.page-header__container {
+  padding: 0 20px;
+  margin: 0 auto;
+  min-height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  display: block;
+}
+
+//.page-header__navigation {}

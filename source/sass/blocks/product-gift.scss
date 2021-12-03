@@ -1,0 +1,25 @@
+.product-gift {
+  margin-bottom: 35px;
+}
+
+.product-gift__container {
+  margin-top: 39px;
+  color: $basic-white;
+  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../../img/gift-cat.jpg");
+  background-size: cover;
+  background-position: center, center;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-gift__text {
+  display: block;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  width: 161px;
+  text-align: center;
+
+  @include word-font ("Arial", normal, normal, 16px, 20px);
+}

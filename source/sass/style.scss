@@ -1,1 +1,25 @@
-// Начните писать стили здесь
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/global.scss";
+//Blocks
+@import "./blocks/page-header.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/catalog-main.scss";
+@import "./blocks/slogan.scss";
+@import "./blocks/button.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/process.scss";
+@import "./blocks/example.scss";
+@import "./blocks/address.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/logo-academy.scss";
+@import "./blocks/social.scss";
+@import "./blocks/product.scss";
+@import "./blocks/product-more.scss";
+@import "./blocks/product-other.scss";
+@import "./blocks/product-gift.scss";
+@import "./blocks/form-catalog.scss";
+@import "./blocks/form.scss";
