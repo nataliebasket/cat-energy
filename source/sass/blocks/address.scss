@@ -1,5 +1,6 @@
 .address {
   margin: 0;
+  position: relative;
 }
 
 .address__container {
@@ -9,25 +10,51 @@
   margin: 0 auto;
   padding: 26px 20px;
   box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    background-color: $basic-white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+    align-items: center;
+  }
 }
 
 .address__title {
   margin: 0;
   text-transform: uppercase;
-  width: 139px;
   box-sizing: border-box;
 
   @include word-font ("Oswald", normal, normal, 16px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 20px, 26px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .address__text {
   color: $special_dark-grey;
   margin: 0;
   padding: 0;
-  width: 139px;
   box-sizing: border-box;
 
   @include word-font ("Arial", normal, normal, 14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Arial", normal, normal, 16px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 60px;
+  }
 }
 
 .address__img {

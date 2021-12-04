@@ -7,8 +7,15 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  box-sizing: border-box;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .process__title {
@@ -17,19 +24,38 @@
   padding: 0;
 
   @include word-font ("Oswald", normal, normal, 36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 60px, 60px);
+  }
 }
 
 .process__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-right: 0;
+    column-gap: 80px;
+  }
 }
 
 .process__item {
-  margin-bottom: 20px;
+  min-height: 60px;
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    min-height: 280px;
   }
 }
 
@@ -37,7 +63,19 @@
   margin: 0;
   padding-left: 80px;
   color: $special_dark-grey;
-  min-height: 60px;
+
 
   @include word-font ("Arial", normal, normal, 14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 151px;
+    padding-left: 0;
+    padding-right: 75px;
+
+    @include word-font ("Arial", normal, normal, 16px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }
