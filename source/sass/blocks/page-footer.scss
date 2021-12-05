@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    max-width: 1440px;
+  }
 }
 
 .page-footer__logo {

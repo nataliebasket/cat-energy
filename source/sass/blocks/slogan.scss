@@ -23,6 +23,7 @@
 .slogan__container {
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +34,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 141px 110px 0 110px;
+    max-width: 1440px;
   }
 }
 
@@ -57,7 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 89px;
+    margin-left: 80px;
   }
 }
 
@@ -78,6 +80,10 @@
 
     @include word-font ("Oswald", normal, normal, 20px, 20px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .slogan__image {
@@ -95,7 +101,7 @@
     align-self: flex-end;
     top: calc(50% + 141px);
     transform: translateY(-50%);
-    right: 220px;
+    left: 50%;
   }
 }
 
@@ -109,5 +115,9 @@
     align-self: flex-start;
 
     @include word-font ("Oswald", normal, normal, 20px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
   }
 }

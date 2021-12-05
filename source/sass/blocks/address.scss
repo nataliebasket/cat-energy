@@ -1,6 +1,13 @@
 .address {
   margin: 0;
-  position: relative;
+}
+
+.address__conteiner-page {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+  }
 }
 
 .address__container {
@@ -19,7 +26,7 @@
     background-color: $basic-white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 78px;
+    gap: 90px;
     align-items: center;
   }
 }
@@ -36,7 +43,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
+    padding-left: 60px;
   }
 }
 

@@ -16,6 +16,7 @@
   flex-direction: column;
   padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
@@ -26,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    max-width: 1440px;
   }
 }
 
@@ -62,6 +64,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-right: 134px;
     margin-bottom: 69px;
   }
 }
@@ -171,6 +174,7 @@
   @media (min-width: $tablet-width) {
     @include word-font ("Oswald", normal, normal, 20px, 20px);
   }
+
 }
 
 .example__toggle {

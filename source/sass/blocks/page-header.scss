@@ -7,6 +7,7 @@
 .page-header__container {
   padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
   min-height: 66px;
   display: flex;
   justify-content: space-between;
@@ -19,10 +20,12 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
-    position: absolute;
-    z-index: 20;
     box-sizing: border-box;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 1440px;
   }
 }
 
