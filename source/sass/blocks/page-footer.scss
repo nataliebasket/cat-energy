@@ -7,7 +7,16 @@
   padding: 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
-  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    max-width: 1440px;
+  }
 }
 
 .page-footer__logo {

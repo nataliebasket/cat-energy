@@ -1,14 +1,34 @@
 .example {
   margin: 0;
   background-color: $basic-grey-3;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, transparent 60%, $basic-grey-3 60%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, transparent 50%, $basic-grey-3 50%);
+  }
 }
 
 .example__container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 0 20px;
-  box-sizing: border-box;
+  padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1440px;
+  }
 }
 
 .example__title {
@@ -17,6 +37,17 @@
   margin-bottom: 40px;
 
   @include word-font ("Oswald", normal, normal, 36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 63px;
+
+    @include word-font ("Oswald", normal, normal, 60px, 60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__text {
@@ -25,6 +56,50 @@
   color: $special_dark-grey;
 
   @include word-font ("Arial", normal, normal, 14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+
+    @include word-font ("Arial", normal, normal, 16px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 134px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.example__slider-tablet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .example__list {
@@ -34,33 +109,79 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit;
+  position: relative;
 }
 
 .example__item-value {
+  display: block;
+  text-align: center;
+  width: 124px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px $special-grey;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
   @include word-font ("Oswald", normal, normal, 24px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 30px, 37px);
+  }
 }
 
 .example__item-text {
+  display: block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0;
+  width: 87px;
   color: $special_dark-grey;
+  background-color: $basic-grey-3;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  left: 50%;
 
-  @include word-font ("Arial", normal, normal, 12px, 100%);
+  @include word-font ("Arial", normal, normal, 12px, 12px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Arial", normal, normal, 14px, 14px);
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-grey-3;
+  }
 }
 
 .example__cost {
-  margin: 0 auto;
-  margin-bottom: 40px;
   text-transform: uppercase;
 
   @include word-font ("Oswald", normal, normal, 14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 20px, 20px);
+  }
 }
 
-// .example__toggle {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin: 0 auto;
-// }
+.example__toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
 
 .example__toggle-container {
   margin-left: 35px;
@@ -68,8 +189,33 @@
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .example__img-text {
   @include word-font ("Oswald", normal, normal, 16px, 20px);
+}
+
+.example__track {
+  width: 86px;
+  height: 14px;
+  box-sizing: border-box;
+  background-color: $basic-white;
+  border-radius: 6px;
+  border: 1px solid $special-grey;
+  margin-left: 13px;
+  margin-right: 13px;
+  position: relative;
+}
+
+.example__button {
+  width: 36px;
+  height: 6px;
+  border: 0;
+  border-radius: 6px;
+  background-color: $basic_green;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  cursor: pointer;
 }

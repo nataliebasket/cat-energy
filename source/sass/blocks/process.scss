@@ -1,14 +1,22 @@
 .process {
   margin: 0;
-  margin-bottom: 49px;
 }
 
 .process__container {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  box-sizing: border-box;
   margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    max-width: 1440px;
+  }
 }
 
 .process__title {
@@ -17,19 +25,159 @@
   padding: 0;
 
   @include word-font ("Oswald", normal, normal, 36px, 40px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 60px, 60px);
+  }
 }
 
 .process__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-right: 0;
+    column-gap: 80px;
+  }
 }
 
 .process__item {
-  margin-bottom: 20px;
+  min-height: 60px;
+  position: relative;
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    min-height: 280px;
+  }
+}
+
+.process__item--useful::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: url("../../img/pseudo/process-useful.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.process__item--useful::after {
+  @media (min-width: $tablet-width) {
+    content: "1";
+    position: absolute;
+    color: $basic-grey;
+    top: -40px;
+    left: 118px;
+    z-index: -1;
+
+    @include word-font ("Oswald", normal, normal, 280px, 280px);
+  }
+}
+
+.process__item--flour::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: url("../../img/pseudo/process-flour.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.process__item--flour::after {
+  @media (min-width: $tablet-width) {
+    content: "2";
+    position: absolute;
+    color: $basic-grey;
+    top: -40px;
+    left: 118px;
+    z-index: -1;
+
+    @include word-font ("Oswald", normal, normal, 280px, 280px);
+  }
+}
+
+.process__item--eat::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: url("../../img/pseudo/process-eat.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.process__item--eat::after {
+  @media (min-width: $tablet-width) {
+    content: "3";
+    position: absolute;
+    color: $basic-grey;
+    top: -40px;
+    left: 118px;
+    z-index: -1;
+
+    @include word-font ("Oswald", normal, normal, 280px, 280px);
+  }
+}
+
+.process__item--time::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: url("../../img/pseudo/process-time.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.process__item--time::after {
+  @media (min-width: $tablet-width) {
+    content: "4";
+    position: absolute;
+    color: $basic-grey;
+    top: -40px;
+    left: 118px;
+    z-index: -1;
+
+    @include word-font ("Oswald", normal, normal, 280px, 280px);
   }
 }
 
@@ -37,7 +185,21 @@
   margin: 0;
   padding-left: 80px;
   color: $special_dark-grey;
-  min-height: 60px;
+  position: relative;
+  z-index: 4;
+
 
   @include word-font ("Arial", normal, normal, 14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 111px;
+    padding-left: 0;
+    padding-right: 120px;
+
+    @include word-font ("Arial", normal, normal, 16px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }

@@ -1,19 +1,40 @@
 .page-header {
   background-color: $basic-white;
   color: $basic-black;
+  position: relative;
 }
 
 .page-header__container {
   padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
   min-height: 66px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 120px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: 1440px;
+  }
 }
 
 .page-header__logo {
   display: block;
 }
 
-//.page-header__navigation {}
+.page-header__logo--none {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

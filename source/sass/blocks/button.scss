@@ -9,4 +9,11 @@
   display: block;
 
   @include word-font ("Oswald", normal, normal, 14px, 18px);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include word-font ("Oswald", normal, normal, 20px, 20px);
+  }
 }
