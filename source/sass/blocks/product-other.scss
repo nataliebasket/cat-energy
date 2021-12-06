@@ -8,41 +8,113 @@
   padding: 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    width: 1440px;
+  }
 }
 
 .product-other__title {
+  display: inline;
   margin: 0;
   margin-top: 25px;
   margin-bottom: 36px;
   padding: 0;
 
   @include word-font ("Oswald", normal, normal, 24px, 24px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    padding-right: 36px;
+
+    @include word-font ("Oswald", normal, normal, 36px, 36px);
+  }
 }
 
 .product-other__list {
   @include list-zero;
 }
 
+.product-other__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  display: grid;
+  grid-template-areas:
+    "name name"
+    "lot price"
+    "button button";
+  grid-template-rows: repeat(3, 40px);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 28px 38px;
+    grid-template-areas:
+      "name lot price"
+      "button button button";
+    grid-template-rows: repeat(2, 40px);
+    grid-template-columns: 2fr 1fr 193px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 17px 0;
+    grid-template-areas: "name lot price button";
+    //grid-template-rows: 40px;
+    grid-template-columns: 1fr 1fr 80px 1fr;
+  }
+}
+
 .product-other__name {
   text-transform: uppercase;
   color: $special_dark-grey-2;
+  grid-area: name;
 
   @include word-font ("Oswald", normal, normal, 16px, 16px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 20px, 20px);
+  }
 }
 
 .product-other__lot {
   color: $special_dark-grey;
+  grid-area: lot;
 
   @include word-font ("Arial", normal, normal, 14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Arial", normal, normal, 16px, 20px);
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .product-other__price {
   color: $special_dark-grey;
+  grid-area: price;
+  text-align: right;
 
   @include word-font ("Arial", normal, normal, 14px, 14px);
+
+  @media (min-width: $tablet-width) {
+    @include word-font ("Arial", normal, normal, 16px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .product-other--button {
+  grid-area: button;
   font-size: 16px;
   line-height: 20px;
 }
