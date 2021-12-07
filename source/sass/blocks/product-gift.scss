@@ -1,25 +1,35 @@
 .product-gift {
   margin-bottom: 35px;
-}
-
-.product-gift__container {
   margin-top: 39px;
+  padding: 0;
   color: $basic-white;
   background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../../img/gift-cat.jpg");
-  background-size: cover;
+  background-size: cover, cover;
   background-position: center, center;
-  min-height: 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }
 
 .product-gift__text {
   display: block;
-  padding-top: 187px;
-  padding-bottom: 43px;
-  width: 161px;
+  padding: 187px 61px 43px 58px;
   text-align: center;
 
   @include word-font ("Arial", normal, normal, 16px, 20px);
+
+  @media (min-width: $tablet-width) {
+    padding: 71px 124px 69px 422px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 184px;
+    padding-left: 40px;
+    padding-right: 43px;
+    padding-bottom: 42px;
+  }
 }

@@ -2,40 +2,6 @@
   margin: 0;
 }
 
-.product-other__container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-    width: 1440px;
-  }
-}
-
-.product-other__title {
-  display: inline;
-  margin: 0;
-  margin-top: 25px;
-  margin-bottom: 36px;
-  padding: 0;
-
-  @include word-font ("Oswald", normal, normal, 24px, 24px);
-
-  @media (min-width: $tablet-width) {
-    padding-left: 36px;
-    padding-right: 36px;
-
-    @include word-font ("Oswald", normal, normal, 36px, 36px);
-  }
-}
-
 .product-other__list {
   @include list-zero;
 }
@@ -64,8 +30,8 @@
   @media (min-width: $desktop-width) {
     padding: 15px 0 17px 0;
     grid-template-areas: "name lot price button";
-    //grid-template-rows: 40px;
-    grid-template-columns: 1fr 1fr 80px 1fr;
+    grid-template-rows: 40px;
+    grid-template-columns: 325px 245px 80px 245px;
   }
 }
 
@@ -117,4 +83,6 @@
   grid-area: button;
   font-size: 16px;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
