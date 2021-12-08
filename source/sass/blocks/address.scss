@@ -3,7 +3,7 @@
 }
 
 .address--gray {
-    background-color: $basic_grey;
+  background-color: $basic_grey;
 
   @media (min-width: $desktop-width) {
     background-color: $basic_white;
@@ -11,12 +11,16 @@
 }
 
 .address__container-page {
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
+    padding: 0 110px;
+    box-sizing: border-box;
+    width: 1440px;
     position: relative;
   }
 }

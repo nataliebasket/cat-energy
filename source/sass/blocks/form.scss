@@ -87,6 +87,9 @@
 }
 
 .form__button-container {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
     display: grid;
@@ -142,6 +145,16 @@
 
 .form__label--checkbox {
   padding-left: 45px;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 59px;
+  }
 }
 
 .form__input {
@@ -184,9 +197,12 @@
   height: 150px;
   border: 1px solid $light-grey;
   resize: none;
-  padding: 9px 15px;
+  padding: 19px 15px;
+
+  @include word-font ("Oswald", normal, normal, 16px, 18px);
 
   @media (min-width: $tablet-width) {
+    @include word-font ("Oswald", normal, normal, 20px, 30px);
     padding: 10px 19px;
   }
 }
@@ -248,20 +264,55 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 28px;
-  width: 38px;
-  height: 38px;
+  left: 0;
+  width: 28px;
+  height: 28px;
   box-sizing: border-box;
   border-radius: 50%;
   content: "";
-  border: 11px solid white;
+  border: 8px solid $basic-white;
   box-shadow: 0 0 1px 1px $special-grey;
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
-
-
-
+    left: 28px;
+    width: 38px;
+    height: 38px;
   }
+}
 
+.form__checkbox-mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  content: "";
+  border: 1px solid $special-grey;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__input[type="checkbox"]:checked + .form__checkbox-mark::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  content: "";
+  background-image: url("../../img/pseudo/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
 }
