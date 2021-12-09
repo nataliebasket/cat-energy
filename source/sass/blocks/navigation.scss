@@ -56,16 +56,16 @@
   text-transform: uppercase;
 
 
-  @include word-font ("Oswald", normal, 500, 20px, 20px);
+  @include word-font ("Oswald", 20px, 20px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, 400, 18px, 24px);
+    @include word-font ("Oswald", 18px, 24px);
   }
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
 
-    @include word-font ("Oswald", normal, 400, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 

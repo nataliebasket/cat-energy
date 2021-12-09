@@ -27,12 +27,12 @@
   margin-top: 27px;
   margin-bottom: 49px;
 
-  @include word-font ("Oswald", normal, normal, 36px, 36px);
+  @include word-font ("Oswald", 36px, 36px);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 82px;
 
-    @include word-font ("Oswald", normal, normal, 60px, 60px);
+    @include word-font ("Oswald", 60px, 60px);
   }
 }
 
@@ -87,22 +87,53 @@
 }
 
 .catalog-main__other-title {
-  display: inline;
+  display: inline-block;
   margin: 0;
   margin-top: 25px;
   margin-bottom: 36px;
   padding: 0;
+  position: relative;
+  z-index: 3;
 
-  @include word-font ("Oswald", normal, normal, 24px, 24px);
+  @include word-font ("Oswald", 24px, 24px);
 
   @media (min-width: $tablet-width) {
     padding-left: 36px;
     padding-right: 36px;
 
-    @include word-font ("Oswald", normal, normal, 36px, 36px);
+    @include word-font ("Oswald", 36px, 36px);
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: -36px;
+    padding: 0;
   }
+}
+
+.catalog-main__other-title--decor::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 10px;
+  width: calc(100% + 60px);
+  background-color: $basic-white;
+  top: 50%;
+  left: -30px;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% + 80px);
+    left: -40px;
+  }
+}
+
+.catalog-main__other-title--decor::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100vw;
+  top: 60%;
+  left: -100vw;
+  box-shadow: 100vw 0 0 0 $basic_green;
+  background-color: $basic_green;
+  z-index: -2;
 }

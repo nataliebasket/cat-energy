@@ -54,14 +54,14 @@
   padding-left: 91px;
   padding-bottom: 29px;
 
-  @include word-font ("Oswald", normal, normal, 24px, 37px);
+  @include word-font ("Oswald", 24px, 37px);
 
   @media (min-width: $tablet-width) {
     padding-top: 77px;
     padding-left: 53px;
     padding-bottom: 24px;
 
-    @include word-font ("Oswald", normal, normal, 36px, 36px);
+    @include word-font ("Oswald", 36px, 36px);
   }
 
   @media (min-width: $desktop-width) {
@@ -126,13 +126,13 @@
   margin: 0;
   padding: 0 33px 23px 20px;
 
-  @include word-font ("Arial", normal, normal, 14px, 18px);
+  @include word-font ("Arial", 14px, 18px);
 
   @media (min-width: $tablet-width) {
     padding-left: 53px;
     padding-right: 316px;
 
-    @include word-font ("Arial", normal, normal, 16px, 24px);
+    @include word-font ("Arial", 16px, 24px);
   }
 
   @media (min-width: $desktop-width) {
@@ -150,12 +150,12 @@
   color: $basic-black;
   text-transform: uppercase;
 
-  @include word-font ("Oswald", 400, normal, 16px, 16px);
+  @include word-font ("Oswald", 16px, 16px);
 
   @media (min-width: $tablet-width) {
     padding-bottom: 57px;
     padding-left: 53px;
 
-    @include word-font ("Oswald", 400, normal, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 }

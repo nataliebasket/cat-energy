@@ -41,12 +41,12 @@
   text-transform: uppercase;
 
 
-  @include word-font ("Oswald", 400, normal, 16px, 20px);
+  @include word-font ("Oswald", 16px, 20px);
 
   @media (min-width: $tablet-width) {
     text-align: center;
 
-    @include word-font ("Oswald", 400, normal, 20px, 24px);
+    @include word-font ("Oswald", 20px, 24px);
   }
 }
 
@@ -80,10 +80,10 @@
 .product__card-point {
   color: $special_dark-grey;
 
-  @include word-font ("Arial", normal, normal, 12px, 16px);
+  @include word-font ("Arial", 12px, 16px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Arial", normal, normal, 16px, 16px);
+    @include word-font ("Arial", 16px, 16px);
   }
 }
 

@@ -27,37 +27,54 @@
 }
 
 .form__legend {
+  display: block;
   margin-bottom: 17px;
   padding: 0;
   position: relative;
+  z-index: 3;
 
-  @include word-font ("Oswald", normal, normal, 24px, 26px);
+  &--width {
+    width: 187px;
+  }
+
+  @include word-font ("Oswald", 24px, 26px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, normal, 36px, 36px);
+    &--width {
+      width: auto;
+    }
+
+    @include word-font ("Oswald", 36px, 36px);
   }
 }
 
 .form__legend--decor::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 10px;
+  width: calc(100% + 60px);
+  background-color: $basic-white;
+  top: 50%;
+  left: -30px;
+  z-index: -1;
+
   @media (min-width: $tablet-width) {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 1000px;
-    border-bottom: 2px solid $basic_green;
-    top: 60%;
-    left: calc(-1000px - 40px);
+    width: calc(100% + 80px);
+    left: -40px;
   }
 }
 
 .form__legend--decor::after {
-  position: absolute;
   content: "";
-  display: block;
-  width: 1000px;
-  border-bottom: 2px solid $basic_green;
+  position: absolute;
+  height: 2px;
+  width: 100vw;
   top: 60%;
-  right: calc(-1000px - 40px);
+  left: -100vw;
+  box-shadow: 100vw 0 0 0 $basic_green;
+  background-color: $basic_green;
+  z-index: -2;
 }
 
 .form__list {
@@ -124,10 +141,10 @@
 .form__label {
   text-transform: uppercase;
 
-  @include word-font ("Oswald", normal, normal, 16px, 18px);
+  @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, 400, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -139,7 +156,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 88px;
 
-    @include word-font ("Oswald", normal, normal, 20px, 20px);
+    @include word-font ("Oswald", 20px, 20px);
   }
 }
 
@@ -160,22 +177,30 @@
 .form__input {
   height: 45px;
   margin-left: 13px;
-  padding: 0;
-  padding-left: 15px;
+  padding: 13px 14px 15px 14px;
   box-sizing: border-box;
   border-radius: 0;
   border: 1px solid $light-grey;
   flex-grow: 1;
+
+  @include word-font ("Oswald", 16px, 18px);
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 19px 12px 19px;
+
+    @include word-font ("Oswald", 20px, 30px);
+  }
 }
 
 .form__input::placeholder {
   color: $special_dark-grey;
   text-transform: uppercase;
 
-  @include word-font ("Oswald", normal, normal, 16px, 18px);
+
+  @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, 400, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -199,10 +224,10 @@
   resize: none;
   padding: 19px 15px;
 
-  @include word-font ("Oswald", normal, normal, 16px, 18px);
+  @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, normal, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
     padding: 10px 19px;
   }
 }
@@ -210,10 +235,10 @@
 .form__textarea::placeholder {
   text-transform: uppercase;
 
-  @include word-font ("Oswald", normal, normal, 16px, 18px);
+  @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, normal, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -221,12 +246,12 @@
   border: 0;
   cursor: pointer;
 
-  @include word-font ("Oswald", normal, normal, 16px, 20px);
+  @include word-font ("Oswald", 16px, 20px);
 
   @media (min-width: $tablet-width) {
     margin-left: 41px;
 
-    @include word-font ("Oswald", normal, normal, 20px, 20px);
+    @include word-font ("Oswald", 20px, 20px);
   }
 
   @media (min-width: $desktop-width) {
@@ -240,7 +265,7 @@
   padding-top: 21px;
   padding-bottom: 32px;
 
-  @include word-font ("Arial", normal, normal, 14px, 16px);
+  @include word-font ("Arial", 14px, 16px);
 
   @media (min-width: $tablet-width) {
     padding: 0;

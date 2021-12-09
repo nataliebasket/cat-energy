@@ -3,5 +3,5 @@
   text-decoration: none;
   color: $special_dark-grey;
 
-  @include word-font ("Arial", normal, normal, 16px, 18px);
+  @include word-font ("Arial", 16px, 18px);
 }

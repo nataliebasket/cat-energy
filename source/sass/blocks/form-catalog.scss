@@ -23,13 +23,13 @@
   margin-top: 27px;
   margin-bottom: 54px;
 
-  @include word-font ("Oswald", normal, normal, 36px, 36px);
+  @include word-font ("Oswald", 36px, 36px);
 
   @media (min-width: $tablet-width) {
     padding-left: 40px;
     margin-top: 40px;
 
-    @include word-font ("Oswald", normal, normal, 60px, 60px);
+    @include word-font ("Oswald", 60px, 60px);
   }
 
   @media (min-width: $desktop-width) {
@@ -43,12 +43,12 @@
   margin: 0;
   padding: 0;
 
-  @include word-font ("Oswald", normal, normal, 14px, 18px);
+  @include word-font ("Oswald", 14px, 18px);
 
   @media (min-width: $tablet-width) {
     padding-left: 40px;
 
-    @include word-font ("Oswald", normal, normal, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
 
   @media (min-width: $desktop-width) {
