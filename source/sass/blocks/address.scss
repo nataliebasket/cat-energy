@@ -2,27 +2,49 @@
   margin: 0;
 }
 
-.address__conteiner-page {
+.address--gray {
+  background-color: $basic_grey;
+
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    max-width: 1440px;
+    background-color: $basic_white;
+  }
+}
+
+.address__container-page {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    box-sizing: border-box;
+    width: 1440px;
     position: relative;
   }
 }
 
 .address__container {
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  //justify-content: space-between;
   //align-items: center;
   margin: 0 auto;
   padding: 26px 20px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 40px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 95px;
     left: 110px;
     width: 565px;
+    padding: 56px 80px;
     background-color: $basic-white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,11 +57,14 @@
   margin: 0;
   text-transform: uppercase;
   box-sizing: border-box;
+  padding-right: 15px;
 
-  @include word-font ("Oswald", normal, normal, 16px, 20px);
+  @include word-font ("Oswald", 16px, 20px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, normal, 20px, 26px);
+    max-width: 200px;
+
+    @include word-font ("Oswald", 20px, 26px);
   }
 
   @media (min-width: $desktop-width) {
@@ -53,10 +78,14 @@
   padding: 0;
   box-sizing: border-box;
 
-  @include word-font ("Arial", normal, normal, 14px, 20px);
+  @include word-font ("Arial", 14px, 20px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Arial", normal, normal, 16px, 20px);
+    max-width: 190px;
+    text-align: right;
+    padding-right: 0;
+
+    @include word-font ("Arial", 16px, 20px);
   }
 
   @media (min-width: $desktop-width) {
@@ -64,15 +93,15 @@
   }
 }
 
-.address__img {
+.address iframe {
+  border: none;
   display: block;
-  margin: 0 auto;
+  height: 362px;
+  width: 100%;
 
-  @media (min-width: $desktop-width) {
-    width: 100%;
+  @media (min-width: $tablet-width) {
+    height: 400px;
+
+    @include word-font ("Arial", 16px, 20px);
   }
-}
-
-.address__container--gray {
-  background-color: $basic_grey;
 }

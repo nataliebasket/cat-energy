@@ -37,8 +37,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  //background-color: rgba(lightcoral, 0.7);
+  background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
+    background-color: transparent;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -52,30 +55,51 @@
   color: $basic-black;
   text-transform: uppercase;
 
-  @include word-font ("Oswald", normal, 500, 20px, 20px);
+
+  @include word-font ("Oswald", 20px, 20px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", normal, 400, 18px, 24px);
+    @include word-font ("Oswald", 18px, 24px);
   }
 
   @media (min-width: $desktop-width) {
     color: $basic-white;
 
-    @include word-font ("Oswald", normal, 400, 20px, 30px);
+    @include word-font ("Oswald", 20px, 30px);
   }
+}
+
+.navigation__item {
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $special_grey-3;
+
+    &:last-child {
+      border-bottom: 1px solid $special_grey-3;
+    }
+  }
+}
+
+.navigation__link--black {
+  color: $basic-black;
 }
 
 .navigation__container {
   position: absolute;
   right: 0;
+  top: 63px;
   width: 100%;
+  z-index: 100;
 
   @media (min-width: $tablet-width) {
     position: relative;
+    top: 0;
     width: 440px;
   }
 
   @media (min-width: $desktop-width) {
+    top: 0;
     width: 478px;
   }
 }

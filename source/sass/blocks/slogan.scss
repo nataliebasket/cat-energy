@@ -45,7 +45,7 @@
   margin-bottom: 25px;
   text-align: center;
 
-  @include word-font ("Oswald", normal, normal, 36px, 36px);
+  @include word-font ("Oswald", 36px, 36px);
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -55,7 +55,7 @@
     margin-bottom: 41px;
     z-index: 2;
 
-    @include word-font ("Oswald", normal, normal, 60px, 60px);
+    @include word-font ("Oswald", 60px, 60px);
   }
 
   @media (min-width: $desktop-width) {
@@ -69,7 +69,7 @@
   margin-bottom: 29px;
   color: $basic-white;
 
-  @include word-font ("Oswald", normal, normal, 14px, 14px);
+  @include word-font ("Oswald", 14px, 14px);
 
   @media (min-width: $tablet-width) {
     margin-left: 89px;
@@ -78,7 +78,7 @@
     align-self: flex-start;
     z-index: 2;
 
-    @include word-font ("Oswald", normal, normal, 20px, 20px);
+    @include word-font ("Oswald", 20px, 20px);
   }
 
   @media (min-width: $desktop-width) {
@@ -114,7 +114,7 @@
     margin-left: 89px;
     align-self: flex-start;
 
-    @include word-font ("Oswald", normal, normal, 20px, 20px);
+    @include word-font ("Oswald", 20px, 20px);
   }
 
   @media (min-width: $desktop-width) {
