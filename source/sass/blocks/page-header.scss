@@ -5,21 +5,24 @@
 }
 
 .page-header__container {
-  padding: 0 20px;
+  //padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
   min-height: 66px;
   display: flex;
+  //flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
+    flex-direction: row;
     min-height: 100px;
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 160px;
+    min-height: 170px;
     padding: 0 110px;
     box-sizing: border-box;
     position: absolute;
@@ -42,6 +45,7 @@
 
 .page-header__logo {
   display: block;
+  margin: 10px 20px 13px 20px;
 }
 
 .page-header__logo--none {
