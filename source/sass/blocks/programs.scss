@@ -135,6 +135,7 @@
   @include word-font ("Arial", 14px, 18px);
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     padding-left: 53px;
     padding-right: 316px;
 
