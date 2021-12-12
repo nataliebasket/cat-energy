@@ -4,3 +4,11 @@
   margin: 0;
   padding: 0;
 }
+
+.social__link {
+  display: block;
+}
+
+.social__link svg {
+  fill: $special_grey-2;
+}

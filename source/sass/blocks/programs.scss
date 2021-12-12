@@ -34,7 +34,7 @@
 }
 
 .programs__item {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   background-color: $basic-grey;
   position: relative;
 
@@ -126,7 +126,11 @@
 .programs__text {
   color: $special_dark-grey;
   margin: 0;
-  padding: 0 33px 23px 20px;
+  padding: 0;
+  padding-bottom: 23px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-bottom: 1px solid $special_grey-4;
 
   @include word-font ("Arial", 14px, 18px);
 
@@ -150,7 +154,7 @@
   padding-left: 19px;
   padding-bottom: 10px;
   margin-bottom: 14px;
-  margin-top: 10px;
+  margin-top: 9px;
   color: $basic-black;
   text-transform: uppercase;
   position: relative;
@@ -163,27 +167,51 @@
 
     @include word-font ("Oswald", 20px, 30px);
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .programs__link-arrow::after {
+    width: 26px;
+    right: -42px;
+  }
+
+  &:hover .programs__link-arrow::before {
+    right: -48px;
+  }
+
+  &:active .programs__link-arrow::after {
+    opacity: 0.3;
+  }
+
+  &:active .programs__link-arrow::before {
+    opacity: 0.3;
+  }
 }
 
 .programs__link-arrow {
-  position: absolute;
-  display: inline-block;
-  width: 18px;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -34px;
-  background-color: $basic-black;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 2px;
+    right: -34px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $basic-black;
+  }
 
   &::before {
     position: absolute;
     content: "";
-    top: -200%;
-    right: -50%;
-    //width: 10px;
-    //height: 10px;
-    box-sizing: border-box;
-    border: 6px solid transparent;
-    border-left: 6px solid $basic-black;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 7px solid $basic-black;
+    border-bottom: 5px solid transparent;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
   }
 }
