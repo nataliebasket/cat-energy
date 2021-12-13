@@ -42,6 +42,14 @@
     margin-bottom: 0;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
@@ -112,6 +120,7 @@
     right: 28px;
     width: 268px;
     height: 200px;
+    top: 91px;
   }
 
   @media (min-width: $desktop-width) {
@@ -136,8 +145,9 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding-left: 53px;
+    padding-left: 52px;
     padding-right: 316px;
+    border-bottom: none;
 
     @include word-font ("Arial", 16px, 24px);
   }
@@ -163,8 +173,12 @@
   @include word-font ("Oswald", 16px, 16px);
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 57px;
-    padding-left: 53px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0;
+    margin-left: 52px;
+    margin-top: 20px;
+    margin-bottom: 46px;
 
     @include word-font ("Oswald", 20px, 30px);
   }
@@ -188,6 +202,12 @@
 
   &:active .programs__link-arrow::before {
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    padding-bottom: 57px;
+    padding-left: 53px;
   }
 }
 
@@ -214,5 +234,19 @@
     top: 50%;
     right: -40px;
     transform: translateY(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      right: -42px;
+    }
+
+    &::before {
+      right: -49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    //
   }
 }

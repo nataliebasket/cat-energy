@@ -39,8 +39,8 @@
   @include word-font ("Oswald", 36px, 40px);
 
   @media (min-width: $tablet-width) {
-    margin-top: 43px;
-    margin-bottom: 63px;
+    margin-top: 0;
+    margin-bottom: 64px;
 
     @include word-font ("Oswald", 60px, 60px);
   }
@@ -59,6 +59,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;
+    padding-right: 6px;
 
     @include word-font ("Arial", 16px, 24px);
   }
@@ -112,7 +113,7 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 52%;
   }
 }
 
@@ -138,6 +139,8 @@
 
   @media (min-width: $tablet-width) {
     @include word-font ("Oswald", 30px, 37px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -159,8 +162,15 @@
   @include word-font ("Arial", 12px, 12px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Arial", 14px, 14px);
     background-color: $basic-white;
+    padding-top: 0;
+    //padding-left: 5px;
+    //padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 128px;
+
+    @include word-font ("Arial", 14px, 14px);
   }
 
   @media (min-width: $desktop-width) {
@@ -177,7 +187,13 @@
   @include word-font ("Oswald", 14px, 20px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", 20px, 20px);
+    width: 180px;
+    text-align: right;
+    margin: 0;
+    align-self: flex-start;
+    margin-top: 5px;
+
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 
