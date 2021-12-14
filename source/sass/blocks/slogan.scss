@@ -1,6 +1,5 @@
 .slogan {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
   background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../img/slogan-cat.png"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
@@ -48,16 +47,14 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
-    height: 830px;//удалить позже!!!!
+    height: 850px;//удалить позже!!!!
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
     max-width: 1440px;
-    //outline: 2px solid lightcoral;
-    //outline-offset: -2px;
-    height: 553px;//удалить позже!!!!
+    height: 556px;//удалить позже!!!!
     position: relative;
   }
 }
@@ -84,6 +81,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 82px;
     margin-left: 80px;
   }
 }
@@ -108,6 +106,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 80px;
+    margin-bottom: 52px;
   }
 }
 
