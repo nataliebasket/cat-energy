@@ -30,7 +30,7 @@
   //justify-content: space-between;
   //align-items: center;
   margin: 0 auto;
-  padding: 26px 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -63,6 +63,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 200px;
+    padding: 0;
 
     @include word-font ("Oswald", 20px, 26px);
   }
@@ -81,9 +82,10 @@
   @include word-font ("Arial", 14px, 20px);
 
   @media (min-width: $tablet-width) {
-    max-width: 190px;
+    //max-width: 190px;
     text-align: right;
     padding-right: 0;
+    padding-left: 150px;
 
     @include word-font ("Arial", 16px, 20px);
   }
@@ -101,7 +103,5 @@
 
   @media (min-width: $tablet-width) {
     height: 400px;
-
-    @include word-font ("Arial", 16px, 20px);
   }
 }

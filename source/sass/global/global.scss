@@ -7,7 +7,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  //font-family: "Oswald", "Arial", sans-serif;
   font-family: "Arial", "Helvetica", sans-serif;
   background: $basic-white;
   color: $basic-black;
@@ -29,4 +28,8 @@ img {
   overflow: hidden;
   border: none;
   clip: rect(0 0 0 0);
+}
+
+.sticky-footer {
+  flex-grow: 1;
 }

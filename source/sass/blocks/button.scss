@@ -8,11 +8,20 @@
   padding-bottom: 10px;
   display: block;
 
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:active {
+    background-color: $basic_green-2;
+    color: transparentize($basic-white, 0.3);
+  }
+
   @include word-font ("Oswald", 14px, 18px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 
     @include word-font ("Oswald", 20px, 20px);
   }

@@ -1,13 +1,13 @@
 .programs {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  //margin-bottom: 20px;
 }
 
 .programs__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
 
@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    padding: 82px 110px 71px 110px;
     max-width: 1440px;
   }
 }
@@ -34,12 +34,20 @@
 }
 
 .programs__item {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: $basic-grey;
   position: relative;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -50,7 +58,7 @@
 .programs__title {
   text-transform: uppercase;
   display: block;
-  padding-top: 30px;
+  padding-top: 32px;
   padding-left: 91px;
   padding-bottom: 29px;
 
@@ -75,8 +83,9 @@
   position: absolute;
   width: 50px;
   height: 53px;
+  top: 21px;
   left: 22px;
-  background-image: url("../../img/pseudo/cat_sit.svg");
+  background-image: url("../img/pseudo/cat_sit.svg");
   background-size: cover;
 
   @media (min-width: $tablet-width) {
@@ -101,8 +110,9 @@
   position: absolute;
   width: 67px;
   height: 50px;
+  top: 24px;
   left: 13px;
-  background-image: url("../../img/pseudo/cat_walk.svg");
+  background-image: url("../img/pseudo/cat_walk.svg");
   background-size: cover;
 
   @media (min-width: $tablet-width) {
@@ -110,10 +120,11 @@
     right: 28px;
     width: 268px;
     height: 200px;
+    top: 91px;
   }
 
   @media (min-width: $desktop-width) {
-    left: 52px;
+    left: 35px;
     right: auto;
     width: 134px;
     height: 100px;
@@ -124,13 +135,19 @@
 .programs__text {
   color: $special_dark-grey;
   margin: 0;
-  padding: 0 33px 23px 20px;
+  padding: 0;
+  padding-bottom: 23px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-bottom: 1px solid $special_grey-4;
 
   @include word-font ("Arial", 14px, 18px);
 
   @media (min-width: $tablet-width) {
-    padding-left: 53px;
+    margin: 0;
+    padding-left: 52px;
     padding-right: 316px;
+    border-bottom: none;
 
     @include word-font ("Arial", 16px, 24px);
   }
@@ -138,24 +155,101 @@
   @media (min-width: $desktop-width) {
     padding-left: 52px;
     padding-right: 51px;
+    padding-bottom: 15px;
   }
 }
 
 .programs__link {
   text-decoration: none;
-  display: block;
-  padding-top: 22px;
+  display: inline-block;
+  padding-top: 10px;
   padding-left: 19px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  margin-top: 9px;
   color: $basic-black;
   text-transform: uppercase;
+  position: relative;
 
   @include word-font ("Oswald", 16px, 16px);
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 57px;
-    padding-left: 53px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0;
+    margin-left: 52px;
+    margin-top: 20px;
+    margin-bottom: 46px;
 
     @include word-font ("Oswald", 20px, 30px);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .programs__link-arrow::after {
+    width: 26px;
+    right: -42px;
+  }
+
+  &:hover .programs__link-arrow::before {
+    right: -48px;
+  }
+
+  &:active .programs__link-arrow::after {
+    opacity: 0.3;
+  }
+
+  &:active .programs__link-arrow::before {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 49px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+}
+
+.programs__link-arrow {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 2px;
+    right: -34px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $basic-black;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 7px solid $basic-black;
+    border-bottom: 5px solid transparent;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      right: -42px;
+    }
+
+    &::before {
+      right: -49px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    //
   }
 }

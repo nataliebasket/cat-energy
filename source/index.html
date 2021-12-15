@@ -17,14 +17,15 @@
           <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18" >
         </a>
 
-        <nav class="navigation page-header__navigation">
+        <!-- Классы для переключения меню: navigation--closed navigation--opened -->
+        <nav class="navigation navigation--closed navigation--nojs page-header__navigation">
           <button class="navigation__button" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="navigation__container">
             <ul class="navigation__list">
-              <li class="navigation__item navigation__item--active">
-                <a class="navigation__link" href="#">Главная</a>
+              <li class="navigation__item">
+                <a class="navigation__link  navigation__link--active" href="#">Главная</a>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -38,7 +39,7 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main class="page-main sticky-footer">
 
       <h1 class="visually-hidden">Cat energy - Интернет магазин питания для котов</h1>
 
@@ -58,12 +59,12 @@
             <li class="programs__item">
               <span class="programs__title programs__title--cat-sit">Похудение</span>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link" href="#">каталог slim</a>
+              <a class="programs__link" href="#">каталог slim<span class="programs__link-arrow"></span></a>
             </li>
             <li class="programs__item">
               <span class="programs__title programs__title--cat-walk">Набор массы</span>
               <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link " href="#">каталог pro</a>
+              <a class="programs__link " href="#">каталог pro<span class="programs__link-arrow"></span></a>
             </li>
           </ul>
         </div>
@@ -155,19 +156,25 @@
         <div class="page-footer__social">
           <ul class="social">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                В<span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                И<span class="visually-hidden">Мы в Инстаграме</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                Ф<span class="visually-hidden">Мы в Фейсбуке</span>
+              </a>
             </li>
           </ul>
         </div>
 
         <div class="page-footer__academy-logos">
-          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright page-footer--margin" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
@@ -176,5 +183,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let nav = document.querySelector('.navigation');
+      let navButton = document.querySelector('.navigation__button');
+      console.log("Ghbdtn");
+
+      nav.classList.remove('navigation--nojs');
+
+      navButton.onclick = function () {
+        if (nav.classList.contains('navigation--closed')) {
+          nav.classList.remove('navigation--closed');
+          nav.classList.add('navigation--opened');
+          console.log("Ghbdtn");
+        } else {
+          nav.classList.add('navigation--closed');
+          nav.classList.remove('navigation--opened');
+        }
+      }
+    </script>
+
   </body>
 </html>
