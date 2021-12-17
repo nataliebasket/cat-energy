@@ -22,21 +22,22 @@
 
   @media (min-width: $desktop-width) {
     min-height: 165px;
-    padding: 23px 110px 0 110px;
     box-sizing: border-box;
     width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
   }
 }
 
-.page-header__container--block {
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    padding: 0 110px;
-    box-sizing: border-box;
-    position: static;
-    transform: none;
-  }
-}
+// .page-header__container--block {
+//   @media (min-width: $desktop-width) {
+//     margin: 0 auto;
+//     padding: 0 110px;
+//     box-sizing: border-box;
+//     position: static;
+//     transform: none;
+//   }
+// }
 
 .page-header__logo {
   //display: block;

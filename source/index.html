@@ -47,7 +47,14 @@
         <div class="slogan__container">
           <h2 class="slogan__title">Функциональное<br> питание для котов</h2>
           <p class="slogan__text">Занялся собой? Займись котом!</p>
-          <img class="slogan__image" src="img/slogan-image.png" alt="Банка с надписью курица" width="280" height="270">
+          <picture>
+            <source class="slogan__image" media="(min-width: 1440px)" srcset="img/slogan-image-desktop.png 1x, img/slogan-image-desktop@2x.png 2x" alt="Банка с надписью курица" width="552" height="499">
+            <source class="slogan__image" media="(min-width: 768px)" srcset="img/slogan-image-tablet.png 1x, img/slogan-image-tablet@2x.png 2x" alt="Банка с надписью курица" width="709" height="609">
+            <img class="slogan__image" src="img/slogan-image-mobile.png" srcset="img/slogan-image-mobile@2x.png 2x" alt="Банка с надписью курица" width="280" height="270">
+          </picture>
+
+
+          <!-- <img class="slogan__image" src="img/slogan-image.png" alt="Банка с надписью курица" width="280" height="270"> -->
           <a class="slogan__button button" href="form.html">подобрать программу</a>
         </div>
       </section>
