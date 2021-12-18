@@ -217,6 +217,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
+  position: relative;
 }
 
 .example__toggle-container {
@@ -227,10 +228,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.example__img-text {
-  @include word-font ("Oswald", 16px, 20px);
 }
 
 .example__track {
@@ -255,4 +252,42 @@
   top: 3px;
   left: 6px;
   cursor: pointer;
+  transition: 0.5s;
 }
+
+.example__img-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include word-font ("Oswald", 16px, 20px);
+}
+
+.example__img-after {
+  opacity: 0;
+  transition: 0.5s;
+  grid-area: 1 / -1;
+}
+
+.example__img-before {
+  grid-area: 1 / -1;
+  transition: 0.5s;
+}
+
+.example__grid {
+  display: grid;
+}
+
+// <div class="example__toggle">
+//           <img class="example__img-before" src="https://cdn.discordapp.com/attachments/901775837689425970/920572339685556244/before-mobile.png" alt="Фото кота до программы" width="280" height="232">
+//           <img class="example__img-after" src="https://cdn.discordapp.com/attachments/901775837689425970/920572339375202324/after-mobile.png" alt="Фото кота после программы"  width="280" height="232">
+//           <div class="example__toggle-container">
+//             <button class="example__button-before example__img-button" type="button">БЫЛО</button>
+//             <div class="example__track">
+//               <button class="example__button" type="button">
+//                 <span class="visually-hidden">Поменять картинку.</span>
+//               </button>
+//             </div>
+//             <button class="example__button-after example__img-button" type="button">СТАЛО</button>
+//           </div>
+//         </div>

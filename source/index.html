@@ -53,7 +53,6 @@
             <img class="slogan__image" src="img/slogan-image-mobile.png" srcset="img/slogan-image-mobile@2x.png 2x" alt="Банка с надписью курица" width="280" height="270">
           </picture>
 
-
           <!-- <img class="slogan__image" src="img/slogan-image.png" alt="Банка с надписью курица" width="280" height="270"> -->
           <a class="slogan__button button" href="form.html">подобрать программу</a>
         </div>
@@ -123,35 +122,57 @@
         </div>
 
         <div class="example__toggle">
-          <img class="example__img-before" src="img/before-mobile.png" alt="Фото кота до программы" width="280" height="232">
-          <img class="example__img-after visually-hidden" src="img/after-mobile.png" alt="Фото кота после программы"  width="280" height="232">
+          <!-- <img class="example__img-before" src="img/before-mobile.png" alt="Фото кота до программы" width="280" height="232">
+          <img class="example__img-after" src="img/after-mobile.png" alt="Фото кота после программы"  width="280" height="232"> -->
+
+          <div class="example__grid">
+            <div class="example__img-before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x" alt="Фото кота до программы" width="591" height="511">
+                <img src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы" width="280" height="232">
+              </picture>
+            </div>
+
+            <div class="example__img-after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x" alt="Фото кота после программы" width="591" height="511">
+                <img src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы"  width="280" height="232">
+              </picture>
+            </div>
+          </div>
+
           <div class="example__toggle-container">
-            <span class="example__img-text">БЫЛО</span>
+            <button class="example__img-button example__button-before" type="button">БЫЛО</button>
             <div class="example__track">
               <button class="example__button" type="button">
                 <span class="visually-hidden">Поменять картинку.</span>
               </button>
             </div>
-            <span class="example__img-text">СТАЛО</span>
+            <button class="example__img-button example__button-after" type="button">СТАЛО</button>
           </div>
+
         </div>
 
         </div>
       </section>
 
       <section class="address">
+
         <div class="address__container-page">
-          <div class="address__container">
             <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
         </div>
+
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru"
           allowfullscreen
           title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
         </iframe>
+
+
       </section>
+
+
     </main>
 
     <footer class="page-footer">
@@ -192,6 +213,6 @@
     </footer>
 
     <script src="js/navigation.js"></script>
-
+    <script src="js/slider-button.js"></script>
   </body>
 </html>
