@@ -1,4 +1,18 @@
 .product {
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: $special_grey-5;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 36px;
     padding-right: 36px;
@@ -7,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    //height: 511px;
   }
 }
 
@@ -19,7 +34,7 @@
   // align-items: center;
   // align-content: center;
   width: 100%;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -37,16 +52,23 @@
   display: block;
   text-decoration: none;
   color: $basic-black;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
   text-transform: uppercase;
+  width: 60%;
 
 
   @include word-font ("Oswald", 16px, 20px);
 
   @media (min-width: $tablet-width) {
     text-align: center;
+    margin: 0 auto;
+    width: 50%;
 
     @include word-font ("Oswald", 20px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90%;
   }
 }
 
@@ -67,7 +89,7 @@
 .product__card-item {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 6px;
+  //padding-bottom: 6px;
   width: 142px;
 
   @media (min-width: $tablet-width) {

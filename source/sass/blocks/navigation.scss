@@ -40,7 +40,7 @@
     height: 2px;
     background-color: $basic-black;
     position: absolute;
-    top: 2px;
+    top: 6px;
     left: 0;
   }
 
@@ -133,7 +133,7 @@
       width: 100%;
       height: 2px;
       bottom: 14px;
-      background: $basic-green;
+      background-color: $basic-green;
     }
   }
 
@@ -144,7 +144,7 @@
       width: 100%;
       height: 2px;
       bottom: 17px;
-      background: $basic-white;
+      background-color: $basic-white;
     }
   }
 }
@@ -176,6 +176,10 @@
 
 .navigation__link--black {
   color: $basic-black;
+
+  &::before {
+    background-color: $basic-green;
+  }
 }
 
 .navigation__container {

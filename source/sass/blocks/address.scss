@@ -30,7 +30,8 @@
   //justify-content: space-between;
   //align-items: center;
   margin: 0 auto;
-  padding: 30px 20px;
+  //padding: 30px 20px;
+  padding: 25px 20px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44,12 +45,12 @@
     top: 95px;
     left: 110px;
     width: 565px;
-    padding: 56px 80px;
+    padding: 59px 80px;
     background-color: $basic-white;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 90px;
-    align-items: center;
+    align-items: top;
   }
 }
 
@@ -69,7 +70,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 60px;
+    padding-left: 0;
   }
 }
 
@@ -91,7 +92,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 60px;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: left;
   }
 }
 

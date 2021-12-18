@@ -8,15 +8,80 @@
 
 .form__fieldset {
   border: 0;
-  margin: 24px 0;
+  margin: 0;
   padding: 0;
 
+  &--namecat-margin {
+    margin-bottom: 36px;
+  }
+
+  &--radio-margin {
+    margin-bottom: 30px;
+  }
+
+  &--contacts-margin {
+    margin-bottom: 26px;
+  }
+
+  &--textarea-margin {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin: 24px 37px 24px 42px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    &--namecat-margin {
+      margin-top: 24px;
+    }
+
+    &--radio-margin {
+      margin-top: 77px;
+    }
+
+    &--contacts-margin {
+      margin-bottom: 70px;
+    }
+
+    &--textarea-margin {
+      margin-bottom: 57px;
+    }
+
+    &--add-margin {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+
+    &--contacts-margin {
+      margin-bottom: 52px;
+    }
+
+    &--textarea-margin {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+.form__fieldset--decor-line {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 40px);
+    left: -20px;
+    height: 1px;
+    bottom: -24px;
+    background-color: $special_grey-4;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -40,6 +105,31 @@
   @include word-font ("Oswald", 24px, 26px);
 
   @media (min-width: $tablet-width) {
+    &--width {
+      width: auto;
+    }
+
+    @include word-font ("Oswald", 36px, 36px);
+  }
+}
+
+.form__legend-contacts {
+  display: block;
+  margin-bottom: 34px;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+
+  &--width {
+    width: 187px;
+  }
+
+  @include word-font ("Oswald", 24px, 26px);
+
+  @media (min-width: $tablet-width) {
+    padding-left: 39px;
+    margin-bottom: 80px;
+
     &--width {
       width: auto;
     }
@@ -81,8 +171,11 @@
   @include list-zero;
 }
 
-.form__list--grid {
+.form__list--add {
+  margin-top: 22px;
+
   @media (min-width: $tablet-width) {
+    margin-top: 45px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -95,7 +188,20 @@
   }
 }
 
-.form__list--contacts-grid {
+.form__list-radio {
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.form__list--contacts {
+  margin-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -104,6 +210,7 @@
 }
 
 .form__button-container {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
 
@@ -122,20 +229,48 @@
 }
 
 .form__item {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__item-radio {
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin: 0;
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .form__item-checkbox {
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin: 0;
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .form__label {
@@ -166,7 +301,7 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    padding-left: 88px;
+    padding-left: 59px;
   }
 
   @media (min-width: $desktop-width) {
@@ -186,9 +321,16 @@
   @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    padding: 10px 19px 12px 19px;
+    padding: 9px 18px 10px 18px;
+    margin-left: 18px;
 
     @include word-font ("Oswald", 20px, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    &--namecat {
+      height: 52px;
+    }
   }
 }
 
@@ -222,13 +364,19 @@
   height: 150px;
   border: 1px solid $light-grey;
   resize: none;
-  padding: 19px 15px;
+  padding: 10px 12px;
+  margin-top: 20px;
 
   @include word-font ("Oswald", 16px, 18px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", 20px, 30px);
+    box-sizing: border-box;
+    width: 100%;
     padding: 10px 19px;
+    margin-top: 59px;
+    height: 178px;
+
+    @include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -268,16 +416,27 @@
   @include word-font ("Arial", 14px, 16px);
 
   @media (min-width: $tablet-width) {
+    @include word-font ("Arial", 16px, 16px);
+  }
+
+  @media (min-width: $tablet-width) {
     padding: 0;
     text-align: left;
   }
 }
 
 .form__radio-container {
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    margin-bottom: 72px;
   }
 }
 
