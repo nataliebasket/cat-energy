@@ -6,7 +6,7 @@
   margin-top: 33px;
   margin-bottom: 35px;
   color: $basic-white;
-  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/gift-cat.jpg");
+  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-mobile.png");
   background-size: cover, cover;
   background-position: center, center;
   display: flex;
@@ -14,13 +14,43 @@
   align-items: center;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+      url("../img/catalog/gift-cat-mobile@2x.png");
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 68px;
     margin-bottom: 76px;
+    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-tablet.png");
+    background-size: cover, cover;
+    background-position: center, center;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+        url("../img/catalog/gift-cat-tablet@2x.png");
+      background-size: cover, cover;
+      background-position: center, center;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 245px;
+    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-desktop.png");
+    background-size: cover, cover;
+    background-position: center, center;
+
+    @media (min-resolution: 2dppx) {
+      background:
+        linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+        url("../img/catalog/gift-cat-desktop@2x.png");
+      background-size: cover, cover;
+      background-position: center, center;
+    }
   }
 }
 
