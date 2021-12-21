@@ -1,16 +1,14 @@
 .address {
-  margin: 0;
-
   @media (min-width: $desktop-width) {
     display: grid;
   }
-}
 
-.address--gray {
-  background-color: $basic_grey;
+  &--gray {
+    background-color: $basic_grey;
 
-  @media (min-width: $desktop-width) {
-    background-color: $basic_white;
+    @media (min-width: $desktop-width) {
+      background-color: $basic_white;
+    }
   }
 }
 
@@ -71,7 +69,6 @@
   @include word-font ("Arial", 14px, 20px);
 
   @media (min-width: $tablet-width) {
-    //max-width: 190px;
     text-align: right;
     padding-right: 0;
     padding-left: 150px;

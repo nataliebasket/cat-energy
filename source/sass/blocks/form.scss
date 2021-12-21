@@ -309,6 +309,28 @@
   }
 }
 
+.form__input-container {
+  display: inline-block;
+  position: relative;
+  //outline: 2px solid green;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-left: 13px;
+}
+
+.form__input-container::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 14px;
+  background-image: url("../img/pseudo/icon-email.svg");
+  background-repeat: no-repeat;
+  background-position: (center, center);
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .form__input {
   height: 45px;
   margin-left: 13px;
@@ -316,6 +338,7 @@
   box-sizing: border-box;
   border-radius: 0;
   border: 1px solid $light-grey;
+  width: 100%;
   flex-grow: 1;
 
   @include word-font ("Oswald", 16px, 18px);
@@ -334,10 +357,15 @@
   }
 }
 
+.form__input--icon {
+  padding-right: 45px;
+  margin-left: 0;
+}
+
+
 .form__input::placeholder {
   color: $special_dark-grey;
   text-transform: uppercase;
-
 
   @include word-font ("Oswald", 16px, 18px);
 
@@ -354,8 +382,12 @@
 
 .form__input:focus-visible {
   outline: none;
-  border: 1px solid $basic-black;
+  border: 1px solid $special_dark-grey;
   border-radius: 0;
+}
+
+.form__input-container:focus-within::after {
+  background-image: url("../img/pseudo/icon-email-green.svg");
 }
 
 .form__textarea {

@@ -1,12 +1,9 @@
 .page-header {
   background-color: $basic-white;
   color: $basic-black;
-  //position: relative;
 }
 
 .page-header__container {
-  padding: 0 20px;
-  margin: 0 auto;
   box-sizing: border-box;
   min-height: 66px;
   display: flex;
@@ -17,27 +14,13 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     min-height: 100px;
-    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 165px;
     box-sizing: border-box;
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0 110px;
   }
 }
-
-// .page-header__container--block {
-//   @media (min-width: $desktop-width) {
-//     margin: 0 auto;
-//     padding: 0 110px;
-//     box-sizing: border-box;
-//     position: static;
-//     transform: none;
-//   }
-// }
 
 .page-header__logo {
   //display: block;

@@ -1,5 +1,4 @@
 .example {
-  margin: 0;
   background-color: $basic-grey-3;
 
   @media (min-width: $tablet-width) {
@@ -14,20 +13,20 @@
 .example__container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  margin: 0 auto;
+  //padding: 0 20px;
+  //margin: 0 auto;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
+    //padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    //padding: 0 110px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    max-width: 1440px;
+    //max-width: 1440px;
     padding-bottom: 75px;
   }
 }
@@ -279,7 +278,7 @@
   display: grid;
 }
 
-.example--img-object {
+.example__img-object {
   width: 280px;
   height: 232px;
   //object-fit: fill;
@@ -289,17 +288,3 @@
     height: 511px;
   }
 }
-
-// <div class="example__toggle">
-//           <img class="example__img-before" src="https://cdn.discordapp.com/attachments/901775837689425970/920572339685556244/before-mobile.png" alt="Фото кота до программы" width="280" height="232">
-//           <img class="example__img-after" src="https://cdn.discordapp.com/attachments/901775837689425970/920572339375202324/after-mobile.png" alt="Фото кота после программы"  width="280" height="232">
-//           <div class="example__toggle-container">
-//             <button class="example__button-before example__img-button" type="button">БЫЛО</button>
-//             <div class="example__track">
-//               <button class="example__button" type="button">
-//                 <span class="visually-hidden">Поменять картинку.</span>
-//               </button>
-//             </div>
-//             <button class="example__button-after example__img-button" type="button">СТАЛО</button>
-//           </div>
-//         </div>

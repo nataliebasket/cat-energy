@@ -1,25 +1,17 @@
-.process {
-  margin: 0;
-}
-
 .process__container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  margin: 0 auto;
-  margin-bottom: 48px;
+  padding-bottom: 48px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
     border-bottom: 1px solid $special_grey-3;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
-    max-width: 1440px;
     border-bottom: 0;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -74,133 +66,12 @@
   }
 }
 
-.process__item--useful::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background: url("../img/pseudo/process-useful.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.process__item--useful::after {
-  @media (min-width: $tablet-width) {
-    content: "1";
-    position: absolute;
-    color: $basic-grey;
-    top: -40px;
-    left: 118px;
-    z-index: -1;
-
-    @include word-font ("Oswald", 280px, 280px);
-  }
-}
-
-.process__item--flour::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background: url("../img/pseudo/process-flour.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.process__item--flour::after {
-  @media (min-width: $tablet-width) {
-    content: "2";
-    position: absolute;
-    color: $basic-grey;
-    top: -40px;
-    left: 118px;
-    z-index: -1;
-
-    @include word-font ("Oswald", 280px, 280px);
-  }
-}
-
-.process__item--eat::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background: url("../img/pseudo/process-eat.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.process__item--eat::after {
-  @media (min-width: $tablet-width) {
-    content: "3";
-    position: absolute;
-    color: $basic-grey;
-    top: -40px;
-    left: 118px;
-    z-index: -1;
-
-    @include word-font ("Oswald", 280px, 280px);
-  }
-}
-
-.process__item--time::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
-  background: url("../img/pseudo/process-time.svg"), linear-gradient($basic_green 50%, $basic_green 50%);
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.process__item--time::after {
-  @media (min-width: $tablet-width) {
-    content: "4";
-    position: absolute;
-    color: $basic-grey;
-    top: -40px;
-    left: 118px;
-    z-index: -1;
-
-    @include word-font ("Oswald", 280px, 280px);
-  }
-}
-
 .process__text {
   margin: 0;
   padding-left: 80px;
   color: $special_dark-grey;
   position: relative;
   z-index: 4;
-
 
   @include word-font ("Arial", 14px, 18px);
 
@@ -214,5 +85,77 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-color: $basic_green;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      color: $basic-grey;
+      top: -40px;
+      left: 118px;
+      z-index: -1;
+
+      @include word-font ("Oswald", 280px, 280px);
+    }
+  }
+}
+
+.process__text--useful::before {
+  content: "";
+  background-image: url("../img/pseudo/process-useful.svg");
+}
+
+.process__text--useful::after {
+  @media (min-width: $tablet-width) {
+    content: "1";
+  }
+}
+
+.process__text--flour::before {
+  content: "";
+  background-image: url("../img/pseudo/process-flour.svg");
+}
+
+.process__text--flour::after {
+  @media (min-width: $tablet-width) {
+    content: "2";
+  }
+}
+
+.process__text--eat::before {
+  content: "";
+  background-image: url("../img/pseudo/process-eat.svg");
+}
+
+.process__text--eat::after {
+  @media (min-width: $tablet-width) {
+    content: "3";
+  }
+}
+
+.process__text--time::before {
+  content: "";
+  background-image: url("../img/pseudo/process-time.svg");
+}
+
+.process__text--time::after {
+  @media (min-width: $tablet-width) {
+    content: "4";
   }
 }
