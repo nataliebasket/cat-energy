@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Наталия Хохлова](https://up.htmlacademy.ru/adaptive/24/user/1881369).
-* Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er).
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 

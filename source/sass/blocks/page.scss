@@ -1,5 +1,6 @@
 .page__centerer {
   margin: 0 20px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     margin: 0 30px;
@@ -8,6 +9,5 @@
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     width: 1220px;
-    //width: 1440px;
   }
 }
