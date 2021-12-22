@@ -8,8 +8,8 @@
   align-items: center;
   width: 100%;
 
-  @media (max-width: $mobile-width-only) {
-    &::before {
+  &::before {
+    @media (max-width: $mobile-width-only) {
       content: "";
       position: absolute;
       bottom: -25px;
