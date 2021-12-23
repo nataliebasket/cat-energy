@@ -7,17 +7,14 @@
   justify-content: space-between;
   //align-items: center;
   margin: 0 auto;
-  padding: 0;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding: 26px 20px;
   box-sizing: border-box;
 }
 
 .address__title {
   margin: 0;
-  padding-left: 20px;
   text-transform: uppercase;
-  min-width: 139px;
+  width: 139px;
   box-sizing: border-box;
 
   @include word-font ("Oswald", normal, normal, 16px, 20px);
@@ -26,8 +23,8 @@
 .address__text {
   color: $special_dark-grey;
   margin: 0;
-  padding-right: 20px;
-  min-width: 139px;
+  padding: 0;
+  width: 139px;
   box-sizing: border-box;
 
   @include word-font ("Arial", normal, normal, 14px, 20px);
@@ -41,4 +38,3 @@
 .address__container--gray {
   background-color: $basic_grey;
 }
-
