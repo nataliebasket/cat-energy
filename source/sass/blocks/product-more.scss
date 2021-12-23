@@ -1,9 +1,24 @@
 .product-more {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   margin: 0 auto;
   justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: $special_grey-5;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 36px;
@@ -48,4 +63,14 @@
   background-color: $basic_grey;
   color: $special_dark-grey;
   align-content: flex-end;
+  width: 100%;
+}
+
+.product-more__link {
+  display: block;
+  margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/pseudo/plus.svg");
+  background-size: cover;
 }

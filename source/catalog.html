@@ -17,7 +17,7 @@
           <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18" >
         </a>
 
-        <nav class="navigation page-header__navigation">
+        <nav class="navigation navigation--closed navigation--nojs page-header__navigation">
           <button class="navigation__button" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
@@ -51,7 +51,7 @@
                   <img class="product__image" src="img/catalog/pro500hen.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
                 </a>
                 <div class="product__discription-container">
-                  <a class="product__title-link" href="#">Cat Energy PRO<br>500 г</a>
+                  <a class="product__title-link" href="#">Cat Energy PRO 500 г</a>
                   <ul class="product__card-list">
                     <li class="product__card-item">
                       <span class="product__card-point">Масса</span>
@@ -78,7 +78,7 @@
                 <img class="product__image" src="img/catalog/pro1000hen.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
               </a>
               <div class="product__discription-container">
-                <a class="product__title-link" href="#">Cat Energy PRO<br>1000 г</a>
+                <a class="product__title-link" href="#">Cat Energy PRO 1000 г</a>
                 <ul class="product__card-list">
                   <li class="product__card-item">
                     <span class="product__card-point">Масса</span>
@@ -105,7 +105,7 @@
               <img class="product__image" src="img/catalog/pro500fish.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
             </a>
             <div class="product__discription-container">
-              <a class="product__title-link" href="#">Cat Energy PRO<br>500 г</a>
+              <a class="product__title-link" href="#">Cat Energy PRO 500 г</a>
               <ul class="product__card-list">
                 <li class="product__card-item">
                   <span class="product__card-point">Масса</span>
@@ -133,7 +133,7 @@
                 <img class="product__image" src="img/catalog/pro1000fish.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
               </a>
               <div class="product__discription-container">
-                <a class="product__title-link" href="#">Cat Energy PRO<br>1000 г</a>
+                <a class="product__title-link" href="#">Cat Energy PRO 1000 г</a>
                 <ul class="product__card-list">
                   <li class="product__card-item">
                     <span class="product__card-point">Масса</span>
@@ -161,7 +161,7 @@
                 <img class="product__image" src="img/catalog/slim500buckwheat.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
               </a>
               <div class="product__discription-container">
-                <a class="product__title-link" href="#">Cat Energy SLIM<br>500 г</a>
+                <a class="product__title-link" href="#">Cat Energy SLIM 500 г</a>
                 <ul class="product__card-list">
                   <li class="product__card-item">
                     <span class="product__card-point">Масса</span>
@@ -189,7 +189,7 @@
               <img class="product__image" src="img/catalog/slim1000buckwheat.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
             </a>
             <div class="product__discription-container">
-              <a class="product__title-link" href="#">Cat Energy SLIM<br>1000 г</a>
+              <a class="product__title-link" href="#">Cat Energy SLIM 1000 г</a>
               <ul class="product__card-list">
                 <li class="product__card-item">
                   <span class="product__card-point">Масса</span>
@@ -216,7 +216,7 @@
                 <img class="product__image" src="img/catalog/slim500rice.png" width="140" height="112" alt="Фото банки Cat Energy PRO курица.">
               </a>
               <div class="product__discription-container">
-                <a class="product__title-link" href="#">Cat Energy SLIM<br>500 г</a>
+                <a class="product__title-link" href="#">Cat Energy SLIM 500 г</a>
                 <ul class="product__card-list">
                   <li class="product__card-item">
                     <span class="product__card-point">Масса</span>
@@ -330,6 +330,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let nav = document.querySelector('.navigation');
+      let navButton = document.querySelector('.navigation__button');
+      console.log("Ghbdtn");
+
+      nav.classList.remove('navigation--nojs');
+
+      navButton.onclick = function () {
+        if (nav.classList.contains('navigation--closed')) {
+          nav.classList.remove('navigation--closed');
+          nav.classList.add('navigation--opened');
+          console.log("Ghbdtn");
+        } else {
+          nav.classList.add('navigation--closed');
+          nav.classList.remove('navigation--opened');
+        }
+      }
+    </script>
 
   </body>
 </html>
