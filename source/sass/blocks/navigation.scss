@@ -1,5 +1,7 @@
 // .navigation {
-//   border: 2px solid green;
+//   @media (min-width: $tablet-width) {
+
+//   }
 // }
 
 .navigation__button {
@@ -22,6 +24,10 @@
     left: 0;
     box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -31,6 +37,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .navigation__link {
@@ -42,12 +52,26 @@
   text-transform: uppercase;
 
   @include word-font ("Oswald", normal, 500, 20px, 20px);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 34px;
+
+    @include word-font ("Oswald", normal, 400, 18px, 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+
+    @include word-font ("Oswald", normal, 400, 20px, 30px);
+  }
 }
 
 .navigation__container {
-
   position: absolute;
-  background-color: rgba($basic-white, 0.8);
   right: 0;
-  width: 100vw;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
 }
