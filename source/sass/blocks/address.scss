@@ -1,5 +1,9 @@
 .address {
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+  }
 }
 
 .address--gray {
@@ -12,38 +16,22 @@
 
 .address__container-page {
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-    box-sizing: border-box;
-    width: 1440px;
-    position: relative;
-  }
-}
-
-.address__container {
-  //display: flex;
-  //justify-content: space-between;
-  //align-items: center;
-  margin: 0 auto;
-  //padding: 30px 20px;
   padding: 25px 20px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet-width) {
-    padding: 56px 40px;
+    padding: 56px 70px;
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
+    grid-area: 1 / -1;
+    z-index: 4;
+    box-sizing: border-box;
+    margin-top: 95px;
+    margin-left: calc((100vw - 1440px) / 2 + 100px);
+    margin-bottom: 107px;
     width: 565px;
     padding: 59px 80px;
     background-color: $basic-white;
@@ -103,8 +91,11 @@
   display: block;
   height: 362px;
   width: 100%;
+  grid-area: 1 / -1;
+  //z-index: -1;
 
   @media (min-width: $tablet-width) {
-    height: 400px;
+    //min-height: 400px;
+    height: 100%;
   }
 }
