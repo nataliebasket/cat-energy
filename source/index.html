@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
@@ -12,27 +14,24 @@
           <img src="img/logo-mobile.svg" alt="Логотип магазина питания." width="191" height="36" >
         </a>
 
-        <nav class="navigation">
-
-          <button class="navigation__toggle" type="button">
+        <nav class="navigation page-header__navigation">
+          <button class="navigation__button" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
-
           <div class="navigation__container">
-            <ul class="navigation__list ">
+            <ul class="navigation__list">
               <li class="navigation__item navigation__item--active">
-                <a href="#">ГЛАВНАЯ</a>
+                <a href="#">Главная</a>
               </li>
               <li class="navigation__item">
-                <a href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
+                <a href="catalog.html">Каталог продукции</a>
               </li>
               <li class="navigation__item">
-                <a href="form.html">ПОДБОР ПРОГРАММЫ</a>
+                <a href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
         </nav>
-
       </div>
     </header>
 
@@ -45,8 +44,8 @@
           <h2 class="slogan__title">Функциональное питание для котов</h2>
           <p class="slogan__text">Занялся собой? Займись котом!</p>
           <img class="slogan__image" src="img/slogan-image.png" alt="Банка с надписью курица" width="280" height="270">
-          <a class="slogan__link button" href="form.html">подобрать программу</a>
         </div>
+        <a class="slogan__button button" href="form.html">подобрать программу</a>
       </section>
 
       <section class="programs">
@@ -54,14 +53,14 @@
           <h2 class="visually-hidden">Программы похудения и набора веса.</h2>
           <ul class="programs__list">
             <li class="programs__item">
-              <span class="programs__title programs__title--cat">похудение</span>
+              <span class="programs__title programs__title--cat-sit">Похудение</span>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="programs__link" href="#">каталог slim</a>
             </li>
             <li class="programs__item">
-              <span class="programs__title programs__title--cat">Набор массы</span>
+              <span class="programs__title programs__title--cat-walk">Набор массы</span>
               <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__link" href="#">каталог pro</a>
+              <a class="programs__link " href="#">каталог pro</a>
             </li>
           </ul>
         </div>
@@ -101,22 +100,23 @@
               <p class="example__item-text">снижение веса</p>
             </li>
             <li class="example__item">
-              <b class="example__item-value">60 ДНЕЙ</b>
+              <b class="example__item-value">60 Дней</b>
               <p class="example__item-text">затрачено времени</p>
             </li>
           </ul>
           <p class="example__cost">Затраты на питание: 15 000 РУБ.</p>
-          <div class="example__img">
+
+          <div class="example__toggle">
             <img class="example__img-before" src="img/before-mobile.png" alt="Фото кота до программы" width="280" height="232">
             <img class="example__img-after" src="img/after-mobile.png" alt="Фото кота после программы"  width="280" height="232">
-          </div>
 
-          <div class="example__toggle-container">
-            <span class="example__img-text">БЫЛО</span>
-            <button class="example__button" type="button">
-              <span class="visually-hidden">Поменять картинку.</span>
-            </button>
-            <span class="example__img-text">СТАЛО</span>
+            <div class="example__toggle-container">
+              <span class="example__img-text">БЫЛО</span>
+              <button class="example__button" type="button">
+                <span class="visually-hidden">Поменять картинку.</span>
+              </button>
+              <span class="example__img-text">СТАЛО</span>
+            </div>
           </div>
 
         </div>
@@ -126,8 +126,9 @@
         <div class="adress__container">
           <h2 class="adress__title">Приглашаем к сотрудничеству дилеров!</h2>
           <p class="adress__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          <img class="adress__img" src="img/location.png" width="320" height="362" alt="Карта местоположения магазина.">
         </div>
+        <img class="adress__img" src="img/location.png" width="320" height="362" alt="Карта местоположения магазина.">
+
       </section>
     </main>
 
@@ -137,8 +138,8 @@
           <img src="img/footer-logo-mobile.svg" alt="Логотип магазина." width="128" height="24">
         </div>
 
-        <div class="page-footer__social social">
-          <ul class="social__list">
+        <div class="page-footer__social">
+          <ul class="social">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
@@ -151,13 +152,10 @@
           </ul>
         </div>
 
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-
-        <div class="page-footer__logo logo-footer">
-          <a class="logo-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" alt="Логотип академии." width="27" height="24">
+        <div class="page-footer__academy-logos">
+          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="logo-academy" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="logo-academy__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34"><path class="logo-academy__path" fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
           </a>
         </div>
 

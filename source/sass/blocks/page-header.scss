@@ -1,0 +1,24 @@
+.page-header {
+  background-color: #ffffff;
+  color: #000000;
+  outline-offset: -2px;
+}
+
+.page-header__container {
+  padding: 10px 20px 17px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 320px;
+}
+
+// .page-header__container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__navigation {}
