@@ -31,28 +31,6 @@
 
   @include word-font ("Oswald", 36px, 36px);
 
-  @media (max-width: $mobile-width-only) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: -28px;
-      left: -20px;
-      height: 1px;
-      width: 100vw;
-      background-color: $special_grey-5;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -41px;
-      left: -20px;
-      height: 1px;
-      width: 100vw;
-      background-color: $special_grey-5;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     margin-top: 40px;
     margin-bottom: 82px;
@@ -63,6 +41,30 @@
   @media (min-width: $desktop-width) {
     margin-top: 23px;
     margin-bottom: 82px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      top: -28px;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: $special_grey-5;
+    }
+  }
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      content: "";
+      position: absolute;
+      bottom: -41px;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: $special_grey-5;
+    }
   }
 }
 

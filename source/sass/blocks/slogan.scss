@@ -1,5 +1,4 @@
 .slogan {
-  margin: 0;
   background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../img/slogan-cat.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
@@ -19,8 +18,8 @@
     background-image: none;
   }
 
-  @media (min-width: $desktop-width) {
-    &::before {
+  &::before {
+    @media (min-width: $desktop-width) {
       content: "";
       position: absolute;
       width: 100%;
@@ -49,23 +48,12 @@
 }
 
 .slogan__container {
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
-    //height: 850px;//удалить позже!!!!
-    position: relative;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-    max-width: 1440px;
-    //height: 556px;//удалить позже!!!!
     position: relative;
   }
 }
@@ -76,10 +64,12 @@
   margin-top: 27px;
   margin-bottom: 25px;
   text-align: center;
+  max-width: 250px;
 
   @include word-font ("Oswald", 36px, 36px);
 
   @media (min-width: $tablet-width) {
+    max-width: 450px;
     text-align: left;
     margin-top: 40px;
     margin-left: 89px;
@@ -131,15 +121,17 @@
     bottom: 0;
     right: 50%;
     transform: translateX(50%);
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     z-index: 1;
-    right: 0;
-    transform: translateX(calc(-50% - 50px));
-    bottom: 53px;
-    //right: 0;
+    left: 173px;
+    top: -25px;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -150,8 +142,6 @@
     width: 244px;
     margin-left: 90px;
     margin-bottom: 526px;
-    //padding-top: 16px;
-    //padding-bottom: 16px;
     align-self: flex-start;
     z-index: 3;
   }

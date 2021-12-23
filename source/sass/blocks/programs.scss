@@ -1,23 +1,13 @@
-.programs {
-  margin: 0;
-  //margin-bottom: 20px;
-}
-
 .programs__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 0 20px;
+  padding-top: 20px;
   box-sizing: border-box;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 30px;
-  }
 
   @media (min-width: $desktop-width) {
-    padding: 82px 110px 71px 110px;
-    max-width: 1440px;
+    padding-top: 82px;
+    padding-bottom: 71px;
   }
 }
 
@@ -85,7 +75,7 @@
   height: 53px;
   top: 21px;
   left: 22px;
-  background-image: url("../img/pseudo/cat_sit.svg");
+  background-image: url("../img/pseudo/cat-sit.svg");
   background-size: cover;
 
   @media (min-width: $tablet-width) {
@@ -112,7 +102,7 @@
   height: 50px;
   top: 24px;
   left: 13px;
-  background-image: url("../img/pseudo/cat_walk.svg");
+  background-image: url("../img/pseudo/cat-walk.svg");
   background-size: cover;
 
   @media (min-width: $tablet-width) {
