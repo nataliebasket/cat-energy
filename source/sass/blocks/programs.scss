@@ -34,7 +34,7 @@
 }
 
 .programs__item {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   background-color: $basic-grey;
   position: relative;
 
@@ -50,7 +50,7 @@
 .programs__title {
   text-transform: uppercase;
   display: block;
-  padding-top: 30px;
+  padding-top: 32px;
   padding-left: 91px;
   padding-bottom: 29px;
 
@@ -75,6 +75,7 @@
   position: absolute;
   width: 50px;
   height: 53px;
+  top: 21px;
   left: 22px;
   background-image: url("../img/pseudo/cat_sit.svg");
   background-size: cover;
@@ -101,6 +102,7 @@
   position: absolute;
   width: 67px;
   height: 50px;
+  top: 24px;
   left: 13px;
   background-image: url("../img/pseudo/cat_walk.svg");
   background-size: cover;
@@ -143,12 +145,15 @@
 
 .programs__link {
   text-decoration: none;
-  display: block;
-  padding-top: 22px;
+  display: inline-block;
+  padding-top: 10px;
   padding-left: 19px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  margin-top: 10px;
   color: $basic-black;
   text-transform: uppercase;
+  position: relative;
 
   @include word-font ("Oswald", 16px, 16px);
 
@@ -157,5 +162,28 @@
     padding-left: 53px;
 
     @include word-font ("Oswald", 20px, 30px);
+  }
+}
+
+.programs__link-arrow {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -34px;
+  background-color: $basic-black;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -200%;
+    right: -50%;
+    //width: 10px;
+    //height: 10px;
+    box-sizing: border-box;
+    border: 6px solid transparent;
+    border-left: 6px solid $basic-black;
   }
 }

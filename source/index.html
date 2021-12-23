@@ -17,14 +17,15 @@
           <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18" >
         </a>
 
-        <nav class="navigation page-header__navigation">
+        <!-- Классы для переключения меню: navigation--closed navigation--closed -->
+        <nav class="navigation navigation--closed navigation--nojs page-header__navigation">
           <button class="navigation__button" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="navigation__container">
             <ul class="navigation__list">
-              <li class="navigation__item navigation__item--active">
-                <a class="navigation__link" href="#">Главная</a>
+              <li class="navigation__item">
+                <a class="navigation__link  navigation__link--active" href="#">Главная</a>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -58,7 +59,7 @@
             <li class="programs__item">
               <span class="programs__title programs__title--cat-sit">Похудение</span>
               <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__link" href="#">каталог slim</a>
+              <a class="programs__link" href="#">каталог slim<span class="programs__link-arrow"></span></a>
             </li>
             <li class="programs__item">
               <span class="programs__title programs__title--cat-walk">Набор массы</span>
@@ -176,5 +177,25 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let nav = document.querySelector('.navigation');
+      let navButton = document.querySelector('.navigation__button');
+      console.log("Ghbdtn");
+
+      nav.classList.remove('navigation--nojs');
+
+      navButton.onclick = function () {
+        if (nav.classList.contains('navigation--closed')) {
+          nav.classList.remove('navigation--closed');
+          nav.classList.add('navigation--opened');
+          console.log("Ghbdtn");
+        } else {
+          nav.classList.add('navigation--closed');
+          nav.classList.remove('navigation--opened');
+        }
+      }
+    </script>
+
   </body>
 </html>

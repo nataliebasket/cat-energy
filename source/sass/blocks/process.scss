@@ -7,6 +7,7 @@
   flex-direction: column;
   padding: 0 20px;
   margin: 0 auto;
+  margin-bottom: 48px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -21,6 +22,7 @@
 
 .process__title {
   margin: 0;
+  margin-top: -2px;
   margin-bottom: 40px;
   padding: 0;
 
