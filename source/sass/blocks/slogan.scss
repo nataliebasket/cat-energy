@@ -13,10 +13,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to left, rgba($basic_green, 0.85) 50%, transparent 50%), url("../img/slogan-cat.png"), linear-gradient(to left, #4f4e54 50%, transparent 50%);
-    background-repeat: repeat, no-repeat;
-    background-position-x: center, right;
-    background-position-y: top, center;
+    //background: linear-gradient(to left, rgba($basic_green, 0.85) 50%, transparent 50%), url("../img/slogan-cat.png"), linear-gradient(to left, #4f4e54 50%, transparent 50%);
+    //background-repeat: repeat, no-repeat;
+    //background-position-x: center, right;
+    //background-position-y: top, center;
+    //position: static;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 150%;
+      background:
+        linear-gradient(to left, rgba($basic_green, 0.85) 50%, $basic-white 50%),
+        url("../img/slogan-cat.png"),
+        linear-gradient(to left, #4f4e54 50%, $basic-white 50%);
+      background-repeat: repeat, no-repeat, repeat;
+      background-position-x: center, right, center;
+      background-position-y: top, bottom, top;
+      //background-size: auto, contain, auto;
+      //z-index: -1;
+    }
   }
 }
 
@@ -30,11 +48,17 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
+    height: 830px;//удалить позже!!!!
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 141px 110px 0 110px;
+    padding: 0 110px;
     max-width: 1440px;
+    //outline: 2px solid lightcoral;
+    //outline-offset: -2px;
+    height: 553px;//удалить позже!!!!
+    position: relative;
   }
 }
 
@@ -73,8 +97,8 @@
   @include word-font ("Oswald", 14px, 14px);
 
   @media (min-width: $tablet-width) {
-    margin-left: 89px;
-    margin-bottom: 20px;
+    margin-left: 90px;
+    margin-bottom: 48px;
     color: $basic-black;
     align-self: flex-start;
     z-index: 2;
@@ -92,19 +116,21 @@
   margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
-    top: 150px;
+    position: absolute;
     z-index: 1;
-    //position: relative;
-    //position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     z-index: 1;
-    align-self: flex-end;
-    top: calc(50% + 141px);
-    transform: translateY(-50%);
-    left: 50%;
+    bottom: 0;
+    right: 220px;
+    //align-self: flex-end;
+    //top: calc(50% + 141px);
+    //transform: translateY(-50%);
+    //left: 50%;
   }
 }
 
@@ -112,16 +138,12 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    bottom: 200px; //изменить!!!
     width: 244px;
     margin-left: 90px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    //padding-top: 16px;
+    //padding-bottom: 16px;
     align-self: flex-start;
-    position: absolute;
     z-index: 3;
-
-    @include word-font ("Oswald", 20px, 20px);
   }
 
   @media (min-width: $desktop-width) {

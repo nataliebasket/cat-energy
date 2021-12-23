@@ -20,8 +20,8 @@
   @include word-font ("Oswald", 14px, 18px);
 
   @media (min-width: $tablet-width) {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 
     @include word-font ("Oswald", 20px, 20px);
   }

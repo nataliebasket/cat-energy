@@ -1,7 +1,7 @@
 .page-header {
   background-color: $basic-white;
   color: $basic-black;
-  position: relative;
+  //position: relative;
 }
 
 .page-header__container {
@@ -21,14 +21,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 170px;
+    min-height: 140px;
     padding: 0 110px;
     box-sizing: border-box;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
+    //position: absolute;
+    //left: 50%;
+    //transform: translateX(-50%);
+    //z-index: 20;
     width: 1440px;
+    //outline: 2px solid lightcoral;
+    //outline-offset: -2px;
   }
 }
 
@@ -44,6 +46,7 @@
 
 .page-header__logo {
   display: block;
+  z-index: 100;
   //margin: 10px 20px 13px 20px;
   &:nth-child(2) {
     margin-right: 35px;

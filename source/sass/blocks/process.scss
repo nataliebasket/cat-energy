@@ -12,6 +12,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;
+    border-bottom: 1px solid $special_grey-3;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,6 +30,9 @@
   @include word-font ("Oswald", 36px, 40px);
 
   @media (min-width: $tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 74px;
+
     @include word-font ("Oswald", 60px, 60px);
   }
 }
@@ -196,7 +200,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 111px;
     padding-left: 0;
-    padding-right: 120px;
+    padding-right: 70px;
 
     @include word-font ("Arial", 16px, 24px);
   }
