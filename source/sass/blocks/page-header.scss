@@ -14,11 +14,12 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    min-height: 120px;
+    min-height: 100px;
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 160px;
     padding: 0 110px;
     box-sizing: border-box;
     position: absolute;
