@@ -1,7 +1,7 @@
-@mixin word-font ($font, $font-style, $font-weight, $font-size, $line-height) {
-  font-family: $font, sans-serif;
-  font-style: $font-style;
-  font-weight: $font-weight;
+@mixin word-font ($font, $font-size, $line-height) {
+  font-family: $font, "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: $font-size;
   line-height: $line-height;
 }

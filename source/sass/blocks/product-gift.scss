@@ -20,7 +20,7 @@
   padding: 187px 61px 43px 58px;
   text-align: center;
 
-  @include word-font ("Arial", normal, normal, 16px, 20px);
+  @include word-font ("Arial", 16px, 20px);
 
   @media (min-width: $tablet-width) {
     padding: 71px 124px 69px 422px;
