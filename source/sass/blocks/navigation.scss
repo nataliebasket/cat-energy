@@ -1,6 +1,6 @@
-.navigation {
-//  border: 2px solid green;
-}
+// .navigation {
+//   border: 2px solid green;
+// }
 
 .navigation__button {
   width: 24px;
@@ -10,6 +10,7 @@
   border: none;
   padding: 0;
   position: relative;
+
   &::after {
     content: "";
     width: 24px;
@@ -22,10 +23,10 @@
   }
 }
 
-.navigation__container {
- // display: none;
- // position: absolute;
-}
+//.navigation__container {
+// display: none;
+// position: absolute;
+//}
 
 .navigation__list {
   margin: 0;
@@ -38,16 +39,13 @@
 
 .navigation__item {
   & a {
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
     text-decoration: none;
     display: block;
     padding-top: 22px;
     padding-bottom: 24px;
     color: #000000;
     text-transform: uppercase;
+
+    @include word-font ("Oswald", normal, 500, 20px, 20px);
   }
 }

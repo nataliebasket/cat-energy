@@ -1,7 +1,7 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
-
+@import "./global/mixins.scss";
 //Blocks
 @import "./blocks/page-header.scss";
 @import "./blocks/navigation.scss";
@@ -16,4 +16,3 @@
 @import "./blocks/copyright.scss";
 @import "./blocks/logo-academy.scss";
 @import "./blocks/social.scss";
-

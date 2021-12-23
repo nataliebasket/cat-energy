@@ -1,9 +1,4 @@
 .button {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
   text-decoration: none;
   background-color: $basic_green;
   color: #ffffff;
@@ -12,4 +7,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
+
+  @include word-font ("Oswald", normal, normal, 14px, 18px);
 }

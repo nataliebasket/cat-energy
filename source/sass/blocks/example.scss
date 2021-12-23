@@ -7,8 +7,7 @@
 .example__container {
   display: flex;
   flex-direction: column;
-//  align-items: center;
-  padding: 0px 20px 0 20px;
+  padding: 0 20px 0 20px;
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
@@ -18,22 +17,16 @@
   margin: 0;
   margin-top: 25px;
   margin-bottom: 40px;
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
+
+  @include word-font ("Oswald", normal, normal, 36px, 40px);
 }
 
 .example__text {
   margin: 0;
   margin-bottom: 20px;
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
   color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 14px, 18px);
 }
 
 .example__list {
@@ -45,47 +38,33 @@
   justify-content: space-between;
 }
 
-.example__item {
-}
-
 .example__item-value {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
+  @include word-font ("Oswald", normal, normal, 24px, 24px);
 }
 
 .example__item-text {
   margin: 0;
-  font-family: "Arial", "Helvetica", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 100%;
   color: $special_dark-grey;
+
+  @include word-font ("Arial", normal, normal, 12px, 100%);
 }
 
 .example__cost {
   margin: 0 auto;
   margin-bottom: 40px;
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
   text-transform: uppercase;
+
+  @include word-font ("Oswald", normal, normal, 14px, 20px);
 }
 
-.example__toggle {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin: 0 auto;
-}
+// .example__toggle {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin: 0 auto;
+// }
 
 .example__toggle-container {
-  display: block;
   margin-left: 35px;
   margin-right: 35px;
   display: flex;
@@ -93,10 +72,5 @@
 }
 
 .example__img-text {
-  font-family: "Oswald", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
+  @include word-font ("Oswald", normal, normal, 16px, 20px);
 }
-
