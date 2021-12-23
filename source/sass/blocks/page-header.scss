@@ -29,6 +29,16 @@
   }
 }
 
+.page-header__container--block {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 0 110px;
+    box-sizing: border-box;
+    position: static;
+    transform: none;
+  }
+}
+
 .page-header__logo {
   display: block;
 }
