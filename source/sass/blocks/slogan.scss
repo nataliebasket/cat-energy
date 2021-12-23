@@ -49,6 +49,7 @@
 
   @media (min-width: $tablet-width) {
     text-align: left;
+    margin-top: 40px;
     margin-left: 89px;
     color: $basic-black;
     align-self: flex-start;
@@ -93,6 +94,8 @@
   @media (min-width: $tablet-width) {
     top: 150px;
     z-index: 1;
+    //position: relative;
+    //position: absolute;
   }
 
   @media (min-width: $desktop-width) {
@@ -109,10 +112,14 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
-    bottom: 200px;
+    bottom: 200px; //изменить!!!
     width: 244px;
-    margin-left: 89px;
+    margin-left: 90px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     align-self: flex-start;
+    position: absolute;
+    z-index: 3;
 
     @include word-font ("Oswald", 20px, 20px);
   }
