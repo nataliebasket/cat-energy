@@ -28,20 +28,20 @@
   background-color: $basic-grey;
   position: relative;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -214,6 +214,10 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: $basic-black;
+
+    @media (min-width: $tablet-width) {
+      right: -42px;
+    }
   }
 
   &::before {
@@ -227,19 +231,9 @@
     top: 50%;
     right: -40px;
     transform: translateY(-50%);
-  }
 
-  @media (min-width: $tablet-width) {
-    &::after {
-      right: -42px;
-    }
-
-    &::before {
+    @media (min-width: $tablet-width) {
       right: -49px;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    //
   }
 }

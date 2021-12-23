@@ -280,6 +280,7 @@
 
 .form__label {
   text-transform: uppercase;
+  flex-shrink: 0;
 
   @include word-font ("Oswald", 16px, 18px);
 

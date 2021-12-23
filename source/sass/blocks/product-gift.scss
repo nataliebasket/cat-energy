@@ -6,7 +6,7 @@
   margin-top: 33px;
   margin-bottom: 35px;
   color: $basic-white;
-  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-mobile.png");
+  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-mobile@1x.png");
   background-size: cover, cover;
   background-position: center, center;
   display: flex;
@@ -25,7 +25,7 @@
   @media (min-width: $tablet-width) {
     margin-top: 68px;
     margin-bottom: 76px;
-    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-tablet.png");
+    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-tablet@1x.png");
     background-size: cover, cover;
     background-position: center, center;
 
@@ -40,7 +40,7 @@
 
   @media (min-width: $desktop-width) {
     width: 245px;
-    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-desktop.png");
+    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../img/catalog/gift-cat-desktop@1x.png");
     background-size: cover, cover;
     background-position: center, center;
 
@@ -62,26 +62,9 @@
 
   @include word-font ("Arial", 16px, 20px);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 59px;
-    left: 101px;
-    width: 78px;
-    height: 80px;
-    background-image: url("../img/pseudo/icon_gift.svg");
-  }
-
   @media (min-width: $tablet-width) {
     padding: 71px 124px 69px 422px;
     text-align: left;
-
-    &::before {
-      top: 57px;
-      left: 77px;
-      width: 80px;
-      height: 82px;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -90,5 +73,28 @@
     padding-right: 43px;
     padding-bottom: 42px;
     text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/pseudo/icon-gift.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 57px;
+      left: 77px;
+      width: 80px;
+      height: 82px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

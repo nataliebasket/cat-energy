@@ -97,18 +97,11 @@
   font-weight: 500;
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", 18px, 24px);
     padding-left: 0;
     padding-right: 0;
     padding-top: 31px;
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    @include word-font ("Oswald", 18px, 24px);
   }
 
   @media (min-width: $desktop-width) {
@@ -116,11 +109,23 @@
 
     @include word-font ("Oswald", 20px, 30px);
   }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      opacity: 0.3;
+    }
+  }
 }
 
 .navigation__link--active {
-  @media (min-width: $tablet-width) {
-    &::before {
+  &::before {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       width: 100%;
@@ -128,10 +133,8 @@
       bottom: 14px;
       background-color: $basic-green;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::before {
+    @media (min-width: $desktop-width) {
       content: "";
       position: absolute;
       width: 100%;
