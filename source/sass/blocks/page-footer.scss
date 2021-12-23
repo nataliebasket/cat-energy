@@ -17,13 +17,14 @@
   @media (min-width: $desktop-width) {
     padding: 57px 110px 58px 110px;
     max-width: 1440px;
+    align-items: center;
   }
 }
 
 .page-footer__logo {
   display: block;
-  padding-top: 33px;
-  padding-bottom: 28px;
+  padding-top: 40px;
+  padding-bottom: 25px;
   text-align: center;
   border-bottom: 1px solid $special_grey-4;
 
@@ -46,8 +47,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 28px;
+  padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     padding: 0;

@@ -4,34 +4,41 @@
 
 .product-other__list {
   @include list-zero;
+  margin-top: 1px;
 }
 
 .product-other__item {
-  padding-top: 13px;
-  padding-bottom: 19px;
   display: grid;
   grid-template-areas:
     "name name"
     "lot price"
     "button button";
-  grid-template-rows: repeat(3, 40px);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
   align-items: center;
+  border-bottom: 1px solid $special-grey;
 
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px 38px;
     grid-template-areas:
       "name lot price"
       "button button button";
-    grid-template-rows: repeat(2, 40px);
-    grid-template-columns: 2fr 1fr 193px;
+    grid-template-columns: 2fr 1fr 93px;
+    //border-top: 1px solid $special-grey;
+    border-left: 1px solid $special-grey;
+    border-right: 1px solid $special-grey;
+
+    &:first-child {
+      border-top: 1px solid $special-grey;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px 0;
+    padding: 15px 0 16px 0;
     grid-template-areas: "name lot price button";
     grid-template-rows: 40px;
     grid-template-columns: 325px 245px 80px 245px;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
@@ -39,27 +46,46 @@
   text-transform: uppercase;
   color: $special_dark-grey-2;
   grid-area: name;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: 14px;
 
   @include word-font ("Oswald", 16px, 16px);
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 24px;
+
     @include word-font ("Oswald", 20px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
 .product-other__lot {
   color: $special_dark-grey;
   grid-area: lot;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
 
   @include word-font ("Arial", 14px, 14px);
 
   @media (min-width: $tablet-width) {
     @include word-font ("Arial", 16px, 20px);
     text-align: right;
+    margin-top: 3px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    margin: 0;
+    align-self: center;
   }
 }
 
@@ -67,15 +93,21 @@
   color: $special_dark-grey;
   grid-area: price;
   text-align: right;
+  align-self: flex-start;
 
   @include word-font ("Arial", 14px, 14px);
 
   @media (min-width: $tablet-width) {
+    margin-top: 3px;
+    margin-bottom: 0;
+
     @include word-font ("Arial", 16px, 20px);
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    margin: 0;
+    align-self: center;
   }
 }
 
@@ -85,4 +117,9 @@
   line-height: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
