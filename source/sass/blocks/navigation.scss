@@ -1,9 +1,3 @@
-.navigation {
-  @media (min-width: $desktop-width) {
-    //
-  }
-}
-
 .navigation__button {
   position: absolute;
   top: 23px;
@@ -82,7 +76,6 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  //background-color: rgba(lightcoral, 0.7);
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {

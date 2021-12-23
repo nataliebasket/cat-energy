@@ -4,19 +4,14 @@
 }
 
 .page-footer__container {
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
-
   @media (min-width: $tablet-width) {
-    padding: 58px 30px 55px 30px;
+    padding-top: 58px;
+    padding-bottom: 55px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 110px 58px 110px;
-    max-width: 1440px;
     align-items: center;
   }
 }

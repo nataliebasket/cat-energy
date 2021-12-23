@@ -13,20 +13,12 @@
 .example__container {
   display: flex;
   flex-direction: column;
-  //padding: 0 20px;
-  //margin: 0 auto;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
-    //padding: 0 30px;
-  }
-
   @media (min-width: $desktop-width) {
-    //padding: 0 110px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    //max-width: 1440px;
     padding-bottom: 75px;
   }
 }
@@ -106,14 +98,13 @@
 }
 
 .example__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+
+  @include list-zero;
 
   @media (min-width: $tablet-width) {
     width: 52%;
@@ -148,9 +139,10 @@
   @include word-font ("Oswald", 24px, 24px);
 
   @media (min-width: $tablet-width) {
-    @include word-font ("Oswald", 30px, 37px);
     padding-left: 20px;
     padding-right: 20px;
+
+    @include word-font ("Oswald", 30px, 37px);
   }
 }
 
@@ -174,8 +166,6 @@
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
     padding-top: 0;
-    //padding-left: 5px;
-    //padding-right: 5px;
     padding-left: 3px;
     padding-right: 3px;
     width: 128px;
@@ -220,7 +210,6 @@
 }
 
 .example__toggle-container {
-  //margin-top: 20px;
   margin-left: 35px;
   margin-right: 35px;
   margin-bottom: 45px;
