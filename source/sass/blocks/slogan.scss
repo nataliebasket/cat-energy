@@ -1,7 +1,7 @@
 .slogan {
   margin-top: 0;
   margin-bottom: 20px;
-  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat.png"), linear-gradient(#4f4e54 302px, transparent 302px);
+  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../img/slogan-cat.png"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
   background-position-y: top, top;
@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(to left, rgba($basic_green, 0.85) 50%, transparent 50%), url("../../img/slogan-cat.png"), linear-gradient(to left, #4f4e54 50%, transparent 50%);
+    background: linear-gradient(to left, rgba($basic_green, 0.85) 50%, transparent 50%), url("../img/slogan-cat.png"), linear-gradient(to left, #4f4e54 50%, transparent 50%);
     background-repeat: repeat, no-repeat;
     background-position-x: center, right;
     background-position-y: top, center;
