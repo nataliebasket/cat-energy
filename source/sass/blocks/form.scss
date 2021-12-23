@@ -327,7 +327,7 @@
     content: "";
     width: 20px;
     height: 14px;
-    background-image: url("../img/pseudo/icon-email.svg");
+    background-image: url("../../img/pseudo/icon-email.svg");
     background-repeat: no-repeat;
     background-position: (center, center);
     right: 15px;
@@ -341,7 +341,7 @@
 //   content: "";
 //   width: 20px;
 //   height: 14px;
-//   background-image: url("../img/pseudo/icon-email.svg");
+//   background-image: url("../../img/pseudo/icon-email.svg");
 //   background-repeat: no-repeat;
 //   background-position: (center, center);
 //   right: 15px;
@@ -404,7 +404,7 @@
 }
 
 .form__input-container:focus-within::after {
-  background-image: url("../img/pseudo/icon-email-green.svg");
+  background-image: url("../../img/pseudo/icon-email-green.svg");
 }
 
 .form__textarea {
@@ -539,7 +539,7 @@
   width: 30px;
   height: 30px;
   content: "";
-  background-image: url("../img/pseudo/tick.svg");
+  background-image: url("../../img/pseudo/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 

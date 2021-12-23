@@ -1,20 +1,21 @@
+@import "./global/media.scss";
 @import "./global/variables.scss";
 @import "./global/mixins.scss";
 @import "./global/fonts.scss";
 @import "./global/global.scss";
 //Blocks
 @import "./blocks/page.scss";
-@import "./blocks/page-header.scss";
+@import "./blocks/header.scss";
 @import "./blocks/navigation.scss";
-@import "./blocks/page-main.scss";
-@import "./blocks/catalog-main.scss";
+@import "./blocks/main.scss";
+@import "./blocks/catalog.scss";
 @import "./blocks/slogan.scss";
 @import "./blocks/button.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/process.scss";
 @import "./blocks/example.scss";
 @import "./blocks/address.scss";
-@import "./blocks/page-footer.scss";
+@import "./blocks/footer.scss";
 @import "./blocks/copyright.scss";
 @import "./blocks/logo-academy.scss";
 @import "./blocks/social.scss";

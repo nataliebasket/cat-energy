@@ -1,0 +1,28 @@
+<header class="header page__centerer">
+  <div class="header__container">
+    <a class="header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+      <img src="img/logo-mobile.svg" alt="Логотип магазина питания." width="33" height="38">
+    </a>
+    <a class="header__logo header__logo--none" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+      <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18">
+    </a>
+
+    <!-- Классы для переключения меню: navigation--closed navigation--opened -->
+    <nav class="navigation navigation--closed navigation--nojs header__navigation">
+      <button class="navigation__button" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <div class="navigation__container">
+        <ul class="navigation__list">
+          {% for page in pages %}
+            <li class="navigation__item">
+              <a class="navigation__link" href="{{ page.path }}" {% if permalink == page.path %} aria-current="page" {% endif %}>{{ page.name }}</a>
+            </li>
+          {% else %}
+            <li>Из навигации пропали все пункты 😕</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

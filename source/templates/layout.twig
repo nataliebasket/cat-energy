@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ pages[pageId].name }} | Кэт энерджи | HTML Academy</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script src="./js/navigation.js" defer></script>
+  <script src="./js/slider-button.js" defer></script>
+</head>
+
+<body class="page__body">
+  {% include "./header.twig" %}
+
+  <main class="main sticky-footer">
+    {% block main %}{% endblock %}
+  </main>
+
+  {% include "./footer.twig" %}
+</body>
+
+</html>

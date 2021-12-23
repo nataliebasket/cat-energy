@@ -1,12 +1,12 @@
 .slogan {
-  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../img/slogan-cat.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
   background-position-y: top, top;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../img/slogan-cat@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+    background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
     background-size: 320px auto;
     background-repeat: repeat, no-repeat;
     background-position-x: center, center;
@@ -27,7 +27,7 @@
       height: 150%;
       background:
         linear-gradient(to left, rgba($basic_green, 0.85) 50%, $basic-white 50%),
-        url("../img/slogan-cat-desktop.jpg"),
+        url("../../img/slogan-cat-desktop.jpg"),
         linear-gradient(to left, #4f4e54 50%, $basic-white 50%);
       background-repeat: repeat, no-repeat, repeat;
       background-position-x: center, right, center;
@@ -36,7 +36,7 @@
       @media (min-resolution: 2dppx) {
         background:
           linear-gradient(to left, rgba($basic_green, 0.85) 50%, $basic-white 50%),
-          url("../img/slogan-cat-desktop@2x.jpg"),
+          url("../../img/slogan-cat-desktop@2x.jpg"),
           linear-gradient(to left, #4f4e54 50%, $basic-white 50%);
         background-size: auto auto, 720px auto, auto auto;
         background-position-x: center, right, center;

@@ -1,9 +1,9 @@
-.page-header {
+.header {
   background-color: $basic-white;
   color: $basic-black;
 }
 
-.page-header__container {
+.header__container {
   box-sizing: border-box;
   min-height: 66px;
   display: flex;
@@ -22,7 +22,7 @@
   }
 }
 
-.page-header__logo {
+.header__logo {
   z-index: 100;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
   }
 }
 
-.page-header__logo--none {
+.header__logo--none {
   @media (min-width: $tablet-width) {
     display: none;
   }

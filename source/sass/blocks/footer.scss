@@ -1,9 +1,9 @@
-.page-footer {
+.footer {
   background-color: $basic-grey;
   color: $basic-black;
 }
 
-.page-footer__container {
+.footer__container {
   @media (min-width: $tablet-width) {
     padding-top: 58px;
     padding-bottom: 55px;
@@ -16,7 +16,7 @@
   }
 }
 
-.page-footer__logo {
+.footer__logo {
   display: block;
   padding-top: 40px;
   padding-bottom: 25px;
@@ -28,7 +28,7 @@
   }
 }
 
-.page-footer__social {
+.footer__social {
   padding-top: 20px;
   padding-bottom: 21px;
   text-align: center;
@@ -38,7 +38,7 @@
   }
 }
 
-.page-footer__academy-logos {
+.footer__academy-logos {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +50,6 @@
   }
 }
 
-.page-footer--margin {
+.footer--margin {
   margin-right: 22px;
 }
