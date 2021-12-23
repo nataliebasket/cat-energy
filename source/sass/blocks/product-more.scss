@@ -54,8 +54,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 87px;
+    text-align: center;
 
-    @include word-font ("Oswald", 16px, 18px);
+    @include word-font ("Arial", 16px, 18px);
   }
 }
 

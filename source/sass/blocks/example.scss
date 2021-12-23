@@ -221,7 +221,7 @@
 }
 
 .example__toggle-container {
-  margin-top: 20px;
+  //margin-top: 20px;
   margin-left: 35px;
   margin-right: 35px;
   margin-bottom: 45px;
@@ -264,6 +264,7 @@
 }
 
 .example__img-after {
+  //display: none;
   opacity: 0;
   transition: 0.5s;
   grid-area: 1 / -1;
@@ -276,6 +277,17 @@
 
 .example__grid {
   display: grid;
+}
+
+.example--img-object {
+  width: 280px;
+  height: 232px;
+  //object-fit: fill;
+
+  @media (min-width: $tablet-width) {
+    width: 591px;
+    height: 511px;
+  }
 }
 
 // <div class="example__toggle">
