@@ -1,6 +1,5 @@
 .example {
   margin: 0;
-  margin-bottom: 49px;
   background-color: $basic-grey-3;
 }
 
@@ -9,7 +8,6 @@
   flex-direction: column;
   padding: 0 20px 0 20px;
   box-sizing: border-box;
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -67,6 +65,7 @@
 .example__toggle-container {
   margin-left: 35px;
   margin-right: 35px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }

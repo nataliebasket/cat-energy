@@ -5,3 +5,9 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+@mixin list-zero {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

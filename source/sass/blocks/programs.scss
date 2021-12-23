@@ -7,9 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   box-sizing: border-box;
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -17,9 +16,6 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
 }
 
 .programs__item {
@@ -54,7 +50,7 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
-  color: #000000;
+  color: $basic-black;
   text-transform: uppercase;
 
   @include word-font ("Oswald", 400, normal, 16px, 16px);
