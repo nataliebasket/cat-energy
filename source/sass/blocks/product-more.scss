@@ -64,6 +64,15 @@
   color: $special_dark-grey;
   align-content: flex-end;
   width: 100%;
+
+  &:hover {
+    background-color: $special_grey-5;
+  }
+
+  &:active {
+    background-color: $special_grey-5;
+    color: rgba($special_dark-grey, 0.3);
+  }
 }
 
 .product-more__link {

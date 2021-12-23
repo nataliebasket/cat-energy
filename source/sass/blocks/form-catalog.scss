@@ -21,13 +21,14 @@
 .form-catalog__title {
   margin: 0;
   margin-top: 27px;
-  margin-bottom: 54px;
+  margin-bottom: 37px;
 
   @include word-font ("Oswald", 36px, 36px);
 
   @media (min-width: $tablet-width) {
     padding-left: 40px;
     margin-top: 40px;
+    margin-bottom: 56px;
 
     @include word-font ("Oswald", 60px, 60px);
   }
@@ -42,16 +43,19 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
 
   @include word-font ("Oswald", 14px, 18px);
 
   @media (min-width: $tablet-width) {
     padding-left: 40px;
+    margin-bottom: 42px;
 
     @include word-font ("Oswald", 20px, 30px);
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
+    margin-bottom: 66px;
   }
 }
