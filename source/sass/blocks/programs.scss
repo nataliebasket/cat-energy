@@ -1,13 +1,13 @@
 .programs {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  //margin-bottom: 20px;
 }
 
 .programs__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
 
@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    padding: 82px 110px 71px 110px;
     max-width: 1440px;
   }
 }
@@ -124,7 +124,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: 52px;
+    left: 35px;
     right: auto;
     width: 134px;
     height: 100px;
@@ -155,6 +155,7 @@
   @media (min-width: $desktop-width) {
     padding-left: 52px;
     padding-right: 51px;
+    padding-bottom: 15px;
   }
 }
 
@@ -205,9 +206,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 10px;
-    padding-bottom: 57px;
-    padding-left: 53px;
+    margin-bottom: 49px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0;
   }
 }
 
