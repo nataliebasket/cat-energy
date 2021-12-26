@@ -17,15 +17,17 @@
         <ul class="form__list">
           <li class="form__item form__item--namecat">
             <label class="form__label" for="cat-name">Имя:*</label>
-              <input class="form__input form__input--namecat" id="cat-name" type="text" placeholder="БАРСИК" name="cat-name" required >
+            <input class="form__input form__input--namecat" id="cat-name" type="text" placeholder="БАРСИК"
+              name="cat-name" required>
           </li>
           <li class="form__item form__item--namecat">
             <label class="form__label" for="cat-weight">Вес (кг):*</label>
-              <input class="form__input form__input--namecat" id="cat-weight" type="number" placeholder="7" name="cat-weight" required >
+            <input class="form__input form__input--namecat" id="cat-weight" type="number" placeholder="7"
+              name="cat-weight" required>
           </li>
           <li class="form__item">
             <label class="form__label" for="cat-age">Возраст (лет):</label>
-              <input class="form__input form__input--namecat" id="cat-age" type="number" placeholder="7" name="cat-age">
+            <input class="form__input form__input--namecat" id="cat-age" type="number" placeholder="7" name="cat-age">
           </li>
         </ul>
       </fieldset>
@@ -63,22 +65,23 @@
       <ul class="form__list form__list--contacts">
         <li class="form__item">
           <label class="form__label" for="email">E-mail:*</label>
-          <div class="form__input-container">
-            <input class="form__input form__input--icon" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required >
-          </div>
+          <input class="form__input form__input--mail" id="email" type="email" name="email"
+            placeholder="kuklachev@gmail.com" required>
+          <span class="form__input-decor form__input-decor--email"></span>
         </li>
         <li class="form__item">
           <label class="form__label" for="phone">Телефон:*</label>
-          <div class="form__input-container">
-            <input class="form__input form__input--icon" id="phone" type="number" name="phone" placeholder="8 (960) 900-60-90" >
-          </div>
-          </li>
+          <input class="form__input form__input--phone" id="phone" type="number" name="phone"
+            placeholder="8 (960) 900-60-90">
+          <span class="form__input-decor form__input-decor--phone"></span>
+        </li>
       </ul>
     </fieldset>
 
     <fieldset class="form__fieldset form__fieldset--textarea-margin">
       <legend class="form__legend form__legend--decor">Комментарий</legend>
-      <textarea class="form__textarea" name="comments" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+      <textarea class="form__textarea" name="comments" rows="5"
+        placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
     </fieldset>
 
     <fieldset class="form__fieldset form__fieldset--add-margin">
@@ -93,21 +96,21 @@
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="visually-hidden form__input" type="checkbox" name="water" >
+            <input class="visually-hidden form__input" type="checkbox" name="water">
             <span class="form__checkbox-mark"></span>
             <span class="form__checkbox-name">ПИТЬЕВАЯ ВОДА</span>
           </label>
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="visually-hidden form__input" type="checkbox" name="milk" >
+            <input class="visually-hidden form__input" type="checkbox" name="milk">
             <span class="form__checkbox-mark"></span>
             <span class="form__checkbox-name">МОЛОКО</span>
           </label>
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="visually-hidden form__input" type="checkbox" name="vitamins" >
+            <input class="visually-hidden form__input" type="checkbox" name="vitamins">
             <span class="form__checkbox-mark"></span>
             <span class="form__checkbox-name">ВИТАМИНЫ</span>
           </label>
@@ -125,13 +128,12 @@
 
 <section class="address address--gray">
   <div class="address__container-page">
-      <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-      <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+    <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
   </div>
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru"
-    allowfullscreen
-    title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+    allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
   </iframe>
 </section>
 {% endblock %}

@@ -118,7 +118,8 @@
 
 .process__text--useful::before {
   content: "";
-  background-image: url("../../img/pseudo/process-useful.svg");
+  background-image: url("../../icons/sprite.svg#process-useful");
+  background-size: 30px 32px;
 }
 
 .process__text--useful::after {
@@ -129,7 +130,8 @@
 
 .process__text--flour::before {
   content: "";
-  background-image: url("../../img/pseudo/process-flour.svg");
+  background-image: url("../../icons/sprite.svg#process-flour");
+  background-size: 29px 31px;
 }
 
 .process__text--flour::after {
@@ -140,7 +142,8 @@
 
 .process__text--eat::before {
   content: "";
-  background-image: url("../../img/pseudo/process-eat.svg");
+  background-image: url("../../icons/sprite.svg#process-eat");
+  background-size: 25px 30px;
 }
 
 .process__text--eat::after {
@@ -151,7 +154,8 @@
 
 .process__text--time::before {
   content: "";
-  background-image: url("../../img/pseudo/process-time.svg");
+  background-image: url("../../icons/sprite.svg#process-time");
+  background-size: 32px 33px;
 }
 
 .process__text--time::after {

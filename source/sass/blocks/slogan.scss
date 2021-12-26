@@ -7,7 +7,7 @@
 
   @media (min-resolution: 2dppx) {
     background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
-    background-size: 320px auto;
+    background-size: auto, 320px, auto;
     background-repeat: repeat, no-repeat;
     background-position-x: center, center;
     background-position-y: top, top;

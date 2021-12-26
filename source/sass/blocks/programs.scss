@@ -178,23 +178,6 @@
     opacity: 0.3;
   }
 
-  &:hover .programs__link-arrow::after {
-    width: 26px;
-    right: -42px;
-  }
-
-  &:hover .programs__link-arrow::before {
-    right: -48px;
-  }
-
-  &:active .programs__link-arrow::after {
-    opacity: 0.3;
-  }
-
-  &:active .programs__link-arrow::before {
-    opacity: 0.3;
-  }
-
   @media (min-width: $desktop-width) {
     margin-bottom: 49px;
     margin-top: 0;
@@ -208,32 +191,24 @@
   &::after {
     position: absolute;
     content: "";
-    width: 18px;
-    height: 2px;
-    right: -34px;
+    width: 32px;
+    height: 10px;
+    right: -60px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $basic-black;
-
-    @media (min-width: $tablet-width) {
-      right: -42px;
-    }
+    background-image: url("../../icons/sprite.svg#arrow");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: -8px;
+    transition: background-position 0.1s ease-out;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 7px solid $basic-black;
-    border-bottom: 5px solid transparent;
-    top: 50%;
-    right: -40px;
-    transform: translateY(-50%);
+  &:hover::after {
+    background-position-x: 0;
+  }
 
-    @media (min-width: $tablet-width) {
-      right: -49px;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }

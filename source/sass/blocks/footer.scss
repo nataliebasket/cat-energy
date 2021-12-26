@@ -25,6 +25,15 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-bottom: none;
+  }
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  :active {
+    opacity: 0.6;
   }
 }
 
@@ -50,6 +59,6 @@
   }
 }
 
-.footer--margin {
-  margin-right: 22px;
-}
+// .footer--margin {
+//   margin-right: 22px;
+// }

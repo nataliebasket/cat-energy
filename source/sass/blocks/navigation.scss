@@ -105,7 +105,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    color: $basic-white;
+    color: $basic-black;
 
     @include word-font ("Oswald", 20px, 30px);
   }
@@ -140,7 +140,7 @@
       width: 100%;
       height: 2px;
       bottom: 17px;
-      background-color: $basic-white;
+      background-color: $basic-green;
     }
   }
 }
@@ -170,11 +170,17 @@
   }
 }
 
-.navigation__link--black {
-  color: $basic-black;
+.navigation__link--white {
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 
   &::before {
     background-color: $basic-green;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
   }
 }
 

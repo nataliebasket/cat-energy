@@ -1,13 +1,19 @@
 <header class="header page__centerer">
   <div class="header__container">
     <a class="header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
-      <img src="img/logo-mobile.svg" alt="Логотип магазина питания." width="33" height="38">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Картинка магазина питания." width="33" height="38">
+        </picture>
+
     </a>
-    <a class="header__logo header__logo--none" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+    <a class="header__logo--none" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+
       <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18">
+
     </a>
 
-    <!-- Классы для переключения меню: navigation--closed navigation--opened -->
     <nav class="navigation navigation--closed navigation--nojs header__navigation">
       <button class="navigation__button" type="button">
         <span class="visually-hidden">Открыть меню.</span>
@@ -16,7 +22,7 @@
         <ul class="navigation__list">
           {% for page in pages %}
             <li class="navigation__item">
-              <a class="navigation__link" href="{{ page.path }}" {% if permalink == page.path %} aria-current="page" {% endif %}>{{ page.name }}</a>
+              <a class="navigation__link {% if permalink == page.path %} navigation__link--active {% endif %} {% if permalink == "index.html" %} navigation__link--white {% endif %}" href="{{ page.path }}" {% if permalink == page.path %} aria-current="page" {% endif %}>{{ page.name }}</a>
             </li>
           {% else %}
             <li>Из навигации пропали все пункты 😕</li>
