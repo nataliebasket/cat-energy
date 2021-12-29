@@ -22,6 +22,14 @@
   --button-color: #ebebeb;
 
   --social__link-color: #666666;
+
+  --window-version: "mobile";
+
+  @media (--not-narrow-vp) {
+    --window-version: "tablet";
+  }
+
+  --left-position: 50%;
 }
 
 

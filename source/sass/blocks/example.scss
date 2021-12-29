@@ -245,7 +245,8 @@
   position: relative;
 
   @media (--not-narrow-vp) {
-    width: 426px;
+    --track-width: 426px;
+    width: var(--track-width);
     height: 6px;
     background-color: var(--slider-track-color);
     border-radius: 6px;
@@ -280,9 +281,16 @@
     position: absolute;
     top: -14px;
     box-sizing: border-box;
-    left: 50%;
+    //left: 50%;
     transform: translateX(-50%);
     transition: none;
+  }
+}
+
+.example__move {
+  @media (--not-narrow-vp) {
+    //--left-position: 50%;
+    left: var(--left-position);
   }
 }
 
