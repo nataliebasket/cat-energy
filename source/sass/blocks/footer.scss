@@ -1,17 +1,17 @@
 .footer {
-  background-color: $basic-grey;
-  color: $basic-black;
+  background-color: var(--footer-bg);
+  color: var(--white-color);
 }
 
 .footer__container {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-top: 58px;
     padding-bottom: 55px;
     display: flex;
     justify-content: space-between;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     align-items: center;
   }
 }
@@ -21,9 +21,9 @@
   padding-top: 40px;
   padding-bottom: 25px;
   text-align: center;
-  border-bottom: 1px solid $special_grey-4;
+  border-bottom: 1px solid var(--border-color);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding: 0;
     border-bottom: none;
   }
@@ -42,7 +42,7 @@
   padding-bottom: 21px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding: 0;
   }
 }
@@ -54,7 +54,7 @@
   padding-top: 28px;
   padding-bottom: 32px;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding: 0;
   }
 }

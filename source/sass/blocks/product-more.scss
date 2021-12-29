@@ -9,18 +9,18 @@
   width: 100%;
 
   &::before {
-    @media (max-width: $mobile-width-only) {
+    @media (--narrow-vp) {
       content: "";
       position: absolute;
       bottom: -25px;
       left: -20px;
       height: 1px;
       width: 100vw;
-      background-color: $special_grey-5;
+      background-color: var(--button-color);
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-left: 36px;
     padding-right: 36px;
     padding-bottom: 39px;
@@ -35,7 +35,7 @@
 
   @include word-font ("Oswald", 16px, 20px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-bottom: 23px;
     padding-left: 40px;
     padding-right: 40px;
@@ -48,11 +48,11 @@
 .product-more__small-text {
   align-self: center;
   margin-bottom: 21px;
-  color: $special_dark-grey;
+  color: var(--form-color);
 
   @include word-font ("Arial", 12px, 16px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-bottom: 87px;
     text-align: center;
 
@@ -65,18 +65,18 @@
   line-height: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: $basic_grey;
-  color: $special_dark-grey;
+  background-color: var(--footer-bg);
+  color: var(--form-color);
   align-content: flex-end;
   width: 100%;
 
   &:hover {
-    background-color: $special_grey-5;
+    background-color: var(--button-color);
   }
 
   &:active {
-    background-color: $special_grey-5;
-    color: rgba($special_dark-grey, 0.3);
+    background-color: var(--button-color);
+    color: rgba(var(--form-color), 0.3);
   }
 }
 

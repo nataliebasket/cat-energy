@@ -5,7 +5,7 @@
   padding-top: 20px;
   box-sizing: border-box;
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-top: 82px;
     padding-bottom: 71px;
   }
@@ -16,7 +16,7 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
@@ -25,21 +25,21 @@
 
 .programs__item {
   margin-bottom: 15px;
-  background-color: $basic-grey;
+  background-color: var(--footer-bg);
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-bottom: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-bottom: 0;
   }
 
   &:last-child {
     margin-bottom: 0;
 
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       margin-bottom: 0;
     }
   }
@@ -54,7 +54,7 @@
 
   @include word-font ("Oswald", 24px, 37px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-top: 77px;
     padding-left: 53px;
     padding-bottom: 24px;
@@ -62,7 +62,7 @@
     @include word-font ("Oswald", 36px, 36px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-bottom: 73px;
     padding-left: 214px;
   }
@@ -78,7 +78,7 @@
   background-image: url("../../img/pseudo/cat-sit.svg");
   background-size: cover;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     left: auto;
     right: 62px;
     width: 200px;
@@ -86,7 +86,7 @@
     top: 81px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     left: 52px;
     right: auto;
     width: 100px;
@@ -105,7 +105,7 @@
   background-image: url("../../img/pseudo/cat-walk.svg");
   background-size: cover;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     left: auto;
     right: 28px;
     width: 268px;
@@ -113,7 +113,7 @@
     top: 91px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     left: 35px;
     right: auto;
     width: 134px;
@@ -123,17 +123,17 @@
 }
 
 .programs__text {
-  color: $special_dark-grey;
+  color: var(--form-color);
   margin: 0;
   padding: 0;
   padding-bottom: 23px;
   margin-right: 20px;
   margin-left: 20px;
-  border-bottom: 1px solid $special_grey-4;
+  border-bottom: 1px solid var(--border-color);
 
   @include word-font ("Arial", 14px, 18px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin: 0;
     padding-left: 52px;
     padding-right: 316px;
@@ -142,7 +142,7 @@
     @include word-font ("Arial", 16px, 24px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-left: 52px;
     padding-right: 51px;
     padding-bottom: 15px;
@@ -157,13 +157,13 @@
   padding-bottom: 10px;
   margin-bottom: 14px;
   margin-top: 9px;
-  color: $basic-black;
+  color: var(--black-color);
   text-transform: uppercase;
   position: relative;
 
   @include word-font ("Oswald", 16px, 16px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 0;
@@ -178,7 +178,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-bottom: 49px;
     margin-top: 0;
     padding-bottom: 10px;

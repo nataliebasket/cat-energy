@@ -1,7 +1,7 @@
 .copyright {
   display: inline-flex;
   text-decoration: none;
-  color: $special_dark-grey;
+  color: var(--form-color);
   align-items: center;
 
   @include word-font ("Arial", 16px, 18px);
@@ -12,10 +12,10 @@
 }
 
 .copyright:hover svg {
-  fill: $basic_green;
+  fill: var(--accent-color);
 }
 
 .copyright:active svg {
   opacity: 0.3;
-  fill: $basic_green;
+  fill: var(--accent-color);
 }

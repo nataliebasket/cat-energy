@@ -1,16 +1,6 @@
 .logo-academy {
-  //display: block;
   width: 39px;
   height: 47px;
-  fill: $special_grey-2;
+  fill: var(--social__link-color);
   margin-right: -7px;
-
-  // &:hover {
-  //   fill: $basic_green;
-  // }
-
-  // &:active {
-  //   fill: $basic_green;
-  //   opacity: 0.3;
-  // }
 }

@@ -1,24 +1,52 @@
-$tablet-width: 768px;
-//$desktop-width: 1440px;
-$desktop-width: 1280px;
+:root {
+  --white-color: #ffffff;
+  --white-trans-color: rgba(255, 255, 255, 0.3);
+  --black-color: #000000;
+  --accent-color: #68b738;
+  --accent-trans-color: rgba(104, 183, 56, 0.85);
+  --dark-accent-color: #5eaa2f;
+  --error-color: #ff8282;
 
-$mobile-width-only: 767px;
+  --dark-form-text-color: #222222;
+  --form-color: #444444;
+  --light-form-color: #cdcdcd;
+  --slider-track-color: #dcdcdc;
 
-$basic-white: #ffffff;
-$basic-black: #000000;
+  --border-color: #d9d9d9;
+  --form-border-color: #e7e7e7;
+  --main-border-color: #e6e6e6;
 
-$basic_green: #68b738;
-$basic_green-2: #5eaa2f;
-$basic-grey: #f2f2f2;
-$basic-grey-3: #eaeaea;
+  --footer-bg: #f2f2f2;
+  --section-bg-color: #eaeaea;
 
-$special-grey: #cdcdcd;
-$special_grey-2: #666666;
-$special_grey-3: #e6e6e6;
-$special_grey-4: #d9d9d9;
-$special_grey-5: #ebebeb;
+  --button-color: #ebebeb;
 
-$special_dark-grey: #444444;
-$special_dark-grey-2: #222222;
+  --social__link-color: #666666;
+}
 
-$light-grey: #e7e7e7;
+
+//$tablet-width: 768px;
+//$desktop-width: 1280px;
+//$mobile-width-only: 767px;
+
+//$basic-white: #ffffff;
+//$basic-black: #000000;
+
+//$basic_green: #68b738;
+//$basic_green-2: #5eaa2f;
+//$basic-grey: #f2f2f2;
+//$basic-grey-3: #eaeaea;
+
+//$status-error: #ff8282;
+
+
+//$special_grey-2: #666666;
+//$special_grey-3: #e6e6e6;
+//$special_grey-4: #d9d9d9;
+//$special_grey-5: #ebebeb;
+
+//$special-grey: #cdcdcd;
+//$special_dark-grey: #444444;
+//$special_dark-grey-2: #222222;
+
+//$light-grey: #e7e7e7;

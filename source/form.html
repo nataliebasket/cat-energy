@@ -17,6 +17,7 @@
         <ul class="form__list">
           <li class="form__item form__item--namecat">
             <label class="form__label" for="cat-name">Имя:*</label>
+            <!-- Класс ошибки для input: form__input--error -->
             <input class="form__input form__input--namecat" id="cat-name" type="text" placeholder="БАРСИК"
               name="cat-name" required>
           </li>
@@ -37,21 +38,21 @@
         <ul class="form__list form__list-radio">
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="visually-hidden form__input-radio" type="radio" name="program" value="slim" checked>
+              <input class="visually-hidden form__input" type="radio" name="program" value="slim" checked>
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Похудение</span>
             </label>
           </li>
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="visually-hidden form__input-radio" type="radio" name="program" value="weight">
+              <input class="visually-hidden form__input" type="radio" name="program" value="weight">
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Набор массы</span>
             </label>
           </li>
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="visually-hidden form__input-radio" type="radio" name="program" value="help">
+              <input class="visually-hidden form__input" type="radio" name="program" value="help">
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Не знаю (нужен ваш совет)</span>
             </label>
@@ -65,12 +66,14 @@
       <ul class="form__list form__list--contacts">
         <li class="form__item">
           <label class="form__label" for="email">E-mail:*</label>
+          <!-- Класс ошибки для input: form__input--error -->
           <input class="form__input form__input--mail" id="email" type="email" name="email"
             placeholder="kuklachev@gmail.com" required>
           <span class="form__input-decor form__input-decor--email"></span>
         </li>
         <li class="form__item">
           <label class="form__label" for="phone">Телефон:*</label>
+          <!-- Класс ошибки для input: form__input--error -->
           <input class="form__input form__input--phone" id="phone" type="number" name="phone"
             placeholder="8 (960) 900-60-90">
           <span class="form__input-decor form__input-decor--phone"></span>

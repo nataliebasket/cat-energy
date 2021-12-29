@@ -4,11 +4,11 @@
   padding-bottom: 48px;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
-    border-bottom: 1px solid $special_grey-3;
+  @media (--not-narrow-vp) {
+    border-bottom: 1px solid var(--main-border-color);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     border-bottom: 0;
     margin-bottom: 0;
     padding: 0;
@@ -23,14 +23,14 @@
 
   @include word-font ("Oswald", 36px, 40px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-top: 47px;
     margin-bottom: 74px;
 
     @include word-font ("Oswald", 60px, 60px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-top: 0;
     margin-bottom: 73px;
   }
@@ -44,13 +44,13 @@
   grid-template-columns: 1fr;
   gap: 20px;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 37px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-right: 0;
     column-gap: 80px;
@@ -61,7 +61,7 @@
   min-height: 60px;
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     min-height: 280px;
   }
 }
@@ -69,13 +69,13 @@
 .process__text {
   margin: 0;
   padding-left: 80px;
-  color: $special_dark-grey;
+  color: var(--form-color);
   position: relative;
   z-index: 4;
 
   @include word-font ("Arial", 14px, 18px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-top: 111px;
     padding-left: 0;
     padding-right: 70px;
@@ -83,7 +83,7 @@
     @include word-font ("Arial", 16px, 24px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-right: 0;
   }
 
@@ -95,18 +95,18 @@
     left: 0;
     background-position: center, center;
     background-repeat: no-repeat;
-    background-color: $basic_green;
+    background-color: var(--accent-color);
 
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       width: 80px;
       height: 80px;
     }
   }
 
   &::after {
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       position: absolute;
-      color: $basic-grey;
+      color: var(--footer-bg);
       top: -40px;
       left: 118px;
       z-index: -1;
@@ -123,7 +123,7 @@
 }
 
 .process__text--useful::after {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     content: "1";
   }
 }
@@ -135,7 +135,7 @@
 }
 
 .process__text--flour::after {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     content: "2";
   }
 }
@@ -147,7 +147,7 @@
 }
 
 .process__text--eat::after {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     content: "3";
   }
 }
@@ -159,7 +159,7 @@
 }
 
 .process__text--time::after {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     content: "4";
   }
 }

@@ -10,7 +10,7 @@
   padding: 0;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     display: none;
   }
 }
@@ -19,11 +19,11 @@
   content: "";
   width: 24px;
   height: 2px;
-  background-color: $basic-black;
+  background-color: var(--black-color);
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
+  box-shadow: 0 8px 0 0 var(--black-color), 0 16px 0 0 var(--black-color);
 }
 
 .navigation--opened .navigation__button {
@@ -32,7 +32,7 @@
     content: "";
     width: 25px;
     height: 2px;
-    background-color: $basic-black;
+    background-color: var(--black-color);
     position: absolute;
     top: 6px;
     left: 0;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (--narrow-vp) {
   .navigation--closed .navigation__container {
     display: none;
   }
@@ -76,9 +76,9 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  background-color: $basic-white;
+  background-color: var(--white-color);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     background-color: transparent;
     flex-direction: row;
     justify-content: space-between;
@@ -89,14 +89,14 @@
   text-decoration: none;
   display: block;
   padding: 22px 20px 24px 20px;
-  color: $basic-black;
+  color: var(--black-color);
   text-transform: uppercase;
   position: relative;
 
   @include word-font ("Oswald", 20px, 20px);
   font-weight: 500;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-left: 0;
     padding-right: 0;
     padding-top: 31px;
@@ -104,20 +104,20 @@
     @include word-font ("Oswald", 18px, 24px);
   }
 
-  @media (min-width: $desktop-width) {
-    color: $basic-black;
+  @media (--wide-vp) {
+    color: var(--black-color);
 
     @include word-font ("Oswald", 20px, 30px);
   }
 
   &:hover {
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       opacity: 0.6;
     }
   }
 
   &:active {
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       opacity: 0.3;
     }
   }
@@ -125,38 +125,38 @@
 
 .navigation__link--active {
   &::before {
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       content: "";
       position: absolute;
       width: 100%;
       height: 2px;
       bottom: 14px;
-      background-color: $basic-green;
+      background-color: var(--accent-color);
     }
 
-    @media (min-width: $desktop-width) {
+    @media (--wide-vp) {
       content: "";
       position: absolute;
       width: 100%;
       height: 2px;
       bottom: 17px;
-      background-color: $basic-green;
+      background-color: var(--accent-color);
     }
   }
 }
 
 .navigation__item {
-  @media (max-width: $mobile-width-only) {
+  @media (--narrow-vp) {
     width: 100%;
     text-align: center;
-    border-top: 1px solid $special_grey-3;
+    border-top: 1px solid var(--main-border-color);
 
     &:last-child {
-      border-bottom: 1px solid $special_grey-3;
+      border-bottom: 1px solid var(--main-border-color);
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-left: 10px;
     margin-right: 10px;
 
@@ -171,15 +171,15 @@
 }
 
 .navigation__link--white {
-  @media (min-width: $desktop-width) {
-    color: $basic-white;
+  @media (--wide-vp) {
+    color: var(--white-color);
   }
 
   &::before {
-    background-color: $basic-green;
+    background-color: var(--accent-color);
 
-    @media (min-width: $desktop-width) {
-      background-color: $basic-white;
+    @media (--wide-vp) {
+      background-color: var(--white-color);
     }
   }
 }
@@ -191,13 +191,13 @@
   width: 100%;
   z-index: 100;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     position: relative;
     top: 0;
     width: 440px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     top: 0;
     width: 478px;
   }

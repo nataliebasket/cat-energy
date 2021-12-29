@@ -1,8 +1,8 @@
 .product-gift__container {
   margin-top: 33px;
   margin-bottom: 35px;
-  color: $basic-white;
-  background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../../img/catalog/gift-cat-mobile@1x.png");
+  color: var(--white-color);
+  background: linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%), url("../../img/catalog/gift-cat-mobile@1x.png");
   background-size: cover, cover;
   background-position: center, center;
   display: flex;
@@ -12,37 +12,37 @@
 
   @media (min-resolution: 2dppx) {
     background:
-      linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+      linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
       url("../../img/catalog/gift-cat-mobile@2x.png");
     background-size: cover, cover;
     background-position: center, center;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-top: 68px;
     margin-bottom: 76px;
-    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../../img/catalog/gift-cat-tablet@1x.png");
+    background: linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%), url("../../img/catalog/gift-cat-tablet@1x.png");
     background-size: cover, cover;
     background-position: center, center;
 
     @media (min-resolution: 2dppx) {
       background:
-        linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+        linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
         url("../../img/catalog/gift-cat-tablet@2x.png");
       background-size: cover, cover;
       background-position: center, center;
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     width: 245px;
-    background: linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%), url("../../img/catalog/gift-cat-desktop@1x.png");
+    background: linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%), url("../../img/catalog/gift-cat-desktop@1x.png");
     background-size: cover, cover;
     background-position: center, center;
 
     @media (min-resolution: 2dppx) {
       background:
-        linear-gradient(rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 50%),
+        linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
         url("../../img/catalog/gift-cat-desktop@2x.png");
       background-size: cover, cover;
       background-position: center, center;
@@ -58,12 +58,12 @@
 
   @include word-font ("Arial", 16px, 20px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding: 71px 124px 69px 422px;
     text-align: left;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-top: 184px;
     padding-left: 40px;
     padding-right: 43px;
@@ -81,14 +81,14 @@
     height: 80px;
     background-image: url("../../icons/sprite.svg#gift");
 
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       top: 57px;
       left: 77px;
       width: 80px;
       height: 82px;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (--wide-vp) {
       left: 50%;
       transform: translateX(-50%);
     }

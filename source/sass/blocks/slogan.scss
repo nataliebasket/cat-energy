@@ -1,43 +1,43 @@
 .slogan {
-  background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+  background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/slogan-cat.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
   background-position-y: top, top;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(rgba($basic_green, 0.85) 302px, transparent 302px), url("../../img/slogan-cat@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+    background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/slogan-cat@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
     background-size: auto, 320px, auto;
     background-repeat: repeat, no-repeat;
     background-position-x: center, center;
     background-position-y: top, top;
   }
 
-  @media (min-width: $tablet-width) {
-    background-color: $basic-white;
+  @media (--not-narrow-vp) {
+    background-color: var(--white-color);
     background-image: none;
   }
 
   &::before {
-    @media (min-width: $desktop-width) {
+    @media (--wide-vp) {
       content: "";
       position: absolute;
       width: 100%;
       bottom: 0;
       height: 150%;
       background:
-        linear-gradient(to left, rgba($basic_green, 0.85) 50%, $basic-white 50%),
+        linear-gradient(to left, var(--accent-trans-color) 50%, var(--white-color) 50%),
         url("../../img/slogan-cat-desktop.jpg"),
-        linear-gradient(to left, #4f4e54 50%, $basic-white 50%);
+        linear-gradient(to left, #4f4e54 50%, var(--white-color) 50%);
       background-repeat: repeat, no-repeat, repeat;
       background-position-x: center, right, center;
       background-position-y: top, bottom, top;
 
       @media (min-resolution: 2dppx) {
         background:
-          linear-gradient(to left, rgba($basic_green, 0.85) 50%, $basic-white 50%),
+          linear-gradient(to left, var(--accent-trans-color) 50%, var(--white-color) 50%),
           url("../../img/slogan-cat-desktop@2x.jpg"),
-          linear-gradient(to left, #4f4e54 50%, $basic-white 50%);
+          linear-gradient(to left, #4f4e54 50%, var(--white-color) 50%);
         background-size: auto auto, 720px auto, auto auto;
         background-position-x: center, right, center;
         background-position-y: top, bottom, top;
@@ -53,13 +53,13 @@
   align-items: center;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     position: relative;
   }
 }
 
 .slogan__title {
-  color: $basic-white;
+  color: var(--white-color);
   margin: 0;
   margin-top: 27px;
   margin-bottom: 25px;
@@ -68,12 +68,12 @@
 
   @include word-font ("Oswald", 36px, 36px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     max-width: 450px;
     text-align: left;
     margin-top: 40px;
     margin-left: 89px;
-    color: $basic-black;
+    color: var(--black-color);
     align-self: flex-start;
     margin-bottom: 41px;
     z-index: 2;
@@ -81,7 +81,7 @@
     @include word-font ("Oswald", 60px, 60px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-top: 60px;
     margin-left: 80px;
   }
@@ -91,21 +91,21 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
-  color: $basic-white;
+  color: var(--white-color);
 
   @include word-font ("Oswald", 14px, 14px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-left: 90px;
     margin-bottom: 48px;
-    color: $basic-black;
+    color: var(--black-color);
     align-self: flex-start;
     z-index: 2;
 
     @include word-font ("Oswald", 20px, 20px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-left: 80px;
     margin-bottom: 52px;
   }
@@ -115,7 +115,7 @@
   display: block;
   margin-bottom: 4px;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -125,7 +125,7 @@
     height: 609px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     position: absolute;
     z-index: 1;
     left: 173px;
@@ -138,7 +138,7 @@
 .slogan__button {
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     width: 244px;
     margin-left: 90px;
     margin-bottom: 526px;
@@ -146,7 +146,7 @@
     z-index: 3;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-left: 80px;
     margin-bottom: 185px;
   }

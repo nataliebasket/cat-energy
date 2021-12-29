@@ -1,6 +1,6 @@
 .header {
-  background-color: $basic-white;
-  color: $basic-black;
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 .header__container {
@@ -11,12 +11,12 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     flex-direction: row;
     min-height: 100px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     min-height: 165px;
     box-sizing: border-box;
   }
@@ -38,12 +38,12 @@
 }
 
 .header__logo img {
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     width: 174px;
     height: 52px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     width: 202px;
     height: 60px;
   }
@@ -56,7 +56,7 @@
   align-items: center;
   min-height: 65px;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     display: none;
   }
 }

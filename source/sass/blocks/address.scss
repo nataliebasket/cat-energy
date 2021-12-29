@@ -1,13 +1,13 @@
 .address {
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     display: grid;
   }
 
   &--gray {
-    background-color: $basic_grey;
+    background-color: var(--footer-bg);
 
-    @media (min-width: $desktop-width) {
-      background-color: $basic_white;
+    @media (--wide-vp) {
+      background-color: var(--white-color);
     }
   }
 }
@@ -19,11 +19,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding: 56px 70px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     grid-area: 1 / -1;
     z-index: 4;
     box-sizing: border-box;
@@ -32,7 +32,7 @@
     margin-bottom: 107px;
     width: 565px;
     padding: 59px 80px;
-    background-color: $basic-white;
+    background-color: var(--white-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 90px;
@@ -48,27 +48,27 @@
 
   @include word-font ("Oswald", 16px, 20px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     max-width: 200px;
     padding: 0;
 
     @include word-font ("Oswald", 20px, 26px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-left: 0;
   }
 }
 
 .address__text {
-  color: $special_dark-grey;
+  color: var(--form-color);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
   @include word-font ("Arial", 14px, 20px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     text-align: right;
     padding-right: 0;
     padding-left: 150px;
@@ -76,7 +76,7 @@
     @include word-font ("Arial", 16px, 20px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding-right: 0;
     padding-left: 0;
     text-align: left;
@@ -91,7 +91,7 @@
   grid-area: 1 / -1;
   //z-index: -1;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     //min-height: 400px;
     height: 100%;
   }

@@ -10,43 +10,42 @@
   margin-top: 27px;
   margin-bottom: 41px;
   position: relative;
-  //border-bottom: 1px solid $special_grey-5;
 
   @include word-font ("Oswald", 36px, 36px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     margin-top: 40px;
     margin-bottom: 82px;
 
     @include word-font ("Oswald", 60px, 60px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     margin-top: 23px;
     margin-bottom: 82px;
   }
 
   &::before {
-    @media (max-width: $mobile-width-only) {
+    @media (--narrow-vp) {
       content: "";
       position: absolute;
       top: -28px;
       left: -20px;
       height: 1px;
       width: 100vw;
-      background-color: $special_grey-5;
+      background-color: var(--button-color);
     }
   }
 
   &::after {
-    @media (max-width: $mobile-width-only) {
+    @media (--narrow-vp) {
       content: "";
       position: absolute;
       bottom: -41px;
       left: -20px;
       height: 1px;
       width: 100vw;
-      background-color: $special_grey-5;
+      background-color: var(--button-color);
     }
   }
 }
@@ -57,13 +56,13 @@
   grid-template-columns: 1fr;
   gap: 45px;
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 63px;
     column-gap: 80px;
@@ -74,7 +73,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 80px;
@@ -93,7 +92,7 @@
 
   @include word-font ("Oswald", 24px, 24px);
 
-  @media (min-width: $tablet-width) {
+  @media (--not-narrow-vp) {
     padding-left: 36px;
     padding-right: 36px;
     margin-bottom: 79px;
@@ -101,7 +100,7 @@
     @include word-font ("Oswald", 36px, 36px);
   }
 
-  @media (min-width: $desktop-width) {
+  @media (--wide-vp) {
     padding: 0;
     margin-bottom: 9px;
   }
@@ -112,17 +111,17 @@
     display: block;
     height: 10px;
     width: calc(100% + 50px);
-    background-color: $basic-white;
+    background-color: var(--white-color);
     top: 50%;
     left: -30px;
     z-index: -1;
 
-    @media (min-width: $tablet-width) {
+    @media (--not-narrow-vp) {
       width: 100%;
       left: 0;
     }
 
-    @media (min-width: $desktop-width) {
+    @media (--wide-vp) {
       width: calc(100% + 75px);
       left: -40px;
     }
@@ -135,8 +134,8 @@
     width: 100vw;
     top: 60%;
     left: -100vw;
-    box-shadow: 100vw 0 0 0 $basic_green;
-    background-color: $basic_green;
+    box-shadow: 100vw 0 0 0 var(--accent-color);
+    background-color: var(--accent-color);
     z-index: -2;
   }
 }
