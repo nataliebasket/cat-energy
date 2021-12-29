@@ -8,7 +8,10 @@ let sizeCurtainRight = document.querySelector('.example__img-after');
 
 let windowWidth = document.documentElement.clientWidth;
 
-let startDown = 0;
+let elem = document.querySelector('.example__track');
+let track = elem.getBoundingClientRect();
+let x1 = Math.round(track.x);
+let x2 = Math.round(track.x + track.width);
 
 if (windowWidth < 768) {
   buttonAfter.onclick = function () {
@@ -24,33 +27,19 @@ if (windowWidth < 768) {
 }
 
 else {
-  // function moveThumb(e) {
-
-  //   thumb.style.left = (e.pageX - 100) + 'px';
-  //   if (e.pageX - 100 > 426) [thumb.style.left = '426px'];
-  //   if (e.pageX - 100 < 0) [thumb.style.left = '0px'];
-  //   if ((e.pageX - 100 < 426) && (e.pageX - 100 > 0)) {
-  //     sizeCurtainLeft.style.width = Math.round(592 / 426 * (e.pageX - 100)) + 'px';
-  //     sizeCurtainRight.style.width = (592 - Math.round(592 / 426 * (e.pageX - 100))) + 'px';
-  //     // console.log(e.pageX);
-  //   }
-  // }
 
   function moveThumb(e) {
-
-    thumb.style.left = (e.pageX - 100) + 'px';
-    //if (e.pageX - 100 > 426) [thumb.style.left = '426px'];
-    //if (e.pageX - 100 < 0) [thumb.style.left = '0px'];
-    if ((e.pageX - 100 < 426) && (e.pageX - 100 > 0)) {
-      sizeCurtainLeft.style.width = Math.round(592 / 426 * (e.pageX - 100)) + 'px';
-      sizeCurtainRight.style.width = (592 - Math.round(592 / 426 * (e.pageX - 100))) + 'px';
+    thumb.style.left = (e.pageX - track.x) + 'px';
+    if (e.pageX > x2) [thumb.style.left = track.width + 'px'];
+    if (e.pageX < x1) [thumb.style.left = '0px'];
+    if ((e.pageX < x2) && (e.pageX > x1)) {
+      sizeCurtainLeft.style.width = Math.round(592 / 426 * (e.pageX - track.x)) + 'px';
+      sizeCurtainRight.style.width = (592 - Math.round(592 / 426 * (e.pageX - track.x))) + 'px';
       //console.log(e.pageX);
     }
   }
 
   thumb.addEventListener("mousedown", function (e) {
-    startDown = e.pageX;
-    console.log(startDown);
     document.onmousemove = function (e) {
       moveThumb(e);
     }

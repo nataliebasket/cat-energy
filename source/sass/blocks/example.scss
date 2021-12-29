@@ -282,6 +282,7 @@
     box-sizing: border-box;
     left: 50%;
     transform: translateX(-50%);
+    transition: none;
   }
 }
 
@@ -319,11 +320,12 @@
 
 .example__img-object-right {
   transition: 0.5s;
-  opacity: 0.5;
+  opacity: 0;
   width: 280px;
   height: 232px;
 
   @media (--not-narrow-vp) {
+    transition: 0;
     opacity: 1;
     width: 592px;
     height: 511px;
