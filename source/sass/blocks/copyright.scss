@@ -1,8 +1,10 @@
 .copyright {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: var(--form-color);
   align-items: center;
+  width: 100%;
 
   @include word-font ("Arial", 16px, 18px);
 }

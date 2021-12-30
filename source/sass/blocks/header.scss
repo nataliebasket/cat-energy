@@ -51,7 +51,6 @@
 
 
 .header__logo--none {
-  //z-index: 100;
   display: flex;
   align-items: center;
   min-height: 65px;
@@ -59,4 +58,8 @@
   @media (--not-narrow-vp) {
     display: none;
   }
+}
+
+.header__logo--none img {
+  margin-left: -34px;
 }

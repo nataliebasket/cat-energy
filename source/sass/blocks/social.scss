@@ -6,7 +6,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 36px;
+  gap: 55px;
 
   @media (--not-narrow-vp) {
     gap: 48px;
@@ -24,7 +24,7 @@
     width: 22px;
     height: 22px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     left: 0;
     background-color: var(--social__link-color);
 

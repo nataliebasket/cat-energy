@@ -193,7 +193,7 @@
     content: "";
     width: 32px;
     height: 10px;
-    right: -60px;
+    right: -48px;
     top: 50%;
     transform: translateY(-50%);
     background-image: url("../../icons/sprite.svg#arrow");
@@ -202,6 +202,10 @@
     background-position-y: center;
     background-position-x: -8px;
     transition: background-position 0.1s ease-out;
+
+    @media (--not-narrow-vp) {
+      right: -60px;
+    }
   }
 
   &:hover::after {
