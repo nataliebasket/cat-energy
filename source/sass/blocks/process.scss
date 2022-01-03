@@ -3,15 +3,28 @@
   flex-direction: column;
   padding-bottom: 48px;
   box-sizing: border-box;
+  position: relative;
 
   @media (--not-narrow-vp) {
-    border-bottom: 1px solid var(--main-border-color);
+    padding-bottom: 36px;
   }
 
   @media (--wide-vp) {
     border-bottom: 0;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  &::before {
+    @media (--middle-vp) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 60px);
+      left: -30px;
+      height: 1px;
+      bottom: 0;
+      background-color: var(--main-border-color);
+    }
   }
 }
 
@@ -25,7 +38,7 @@
 
   @media (--not-narrow-vp) {
     margin-top: 47px;
-    margin-bottom: 74px;
+    margin-bottom: 71px;
 
     @include word-font ("Oswald", 60px, 60px);
   }
@@ -47,7 +60,7 @@
   @media (--not-narrow-vp) {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 37px;
+    row-gap: 68px;
   }
 
   @media (--wide-vp) {
@@ -62,7 +75,7 @@
   position: relative;
 
   @media (--not-narrow-vp) {
-    min-height: 280px;
+    min-height: 250px;
   }
 }
 
@@ -99,6 +112,8 @@
     background-color: var(--accent-color);
 
     @media (--not-narrow-vp) {
+      top: 0;
+      transform: translateY(0);
       width: 80px;
       height: 80px;
     }
