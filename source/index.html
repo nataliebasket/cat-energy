@@ -2,6 +2,8 @@
 {% set permalink = pages[pageId].path %}
 {% extends "./templates/layout.twig" %}
 
+
+
 {% block main %}
 
 <h1 class="visually-hidden">Cat energy - Интернет магазин питания для котов</h1>
@@ -11,28 +13,24 @@
     <h2 class="slogan__title">Функциональное питание для котов</h2>
     <p class="slogan__text">Занялся собой? Займись котом!</p>
 
-    <picture>
+    {{ macros.picture("slogan__image", "slogan-image", "png", "./img/macros/", "Банка с надписью курица", "280", "270", 1280, 768) }}
 
-      <source type="image/avif" media="(min-width: 1280px)"
-        srcset="img/slogan-image-desktop.avif 1x, img/slogan-image-desktop@2x.avif 2x">
-      <source type="image/avif" media="(min-width: 768px)"
-        srcset="img/slogan-image-tablet.avif 1x, img/slogan-image-tablet@2x.avif 2x">
+    <!-- <picture>
+
+      <source type="image/avif" media="(min-width: 1280px)" srcset="img/slogan-image-desktop.avif 1x, img/slogan-image-desktop@2x.avif 2x">
+      <source type="image/avif" media="(min-width: 768px)" srcset="img/slogan-image-tablet.avif 1x, img/slogan-image-tablet@2x.avif 2x">
       <source type="image/avif" srcset="img/slogan-image-mobile.avif 1x, img/slogan-image-mobile@2x.avif 2x">
 
-      <source type="image/webp" media="(min-width: 1280px)"
-        srcset="img/slogan-image-desktop.webp 1x, img/slogan-image-desktop@2x.webp 2x">
-      <source type="image/webp" media="(min-width: 768px)"
-        srcset="img/slogan-image-tablet.webp 1x, img/slogan-image-tablet@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 1280px)" srcset="img/slogan-image-desktop.webp 1x, img/slogan-image-desktop@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/slogan-image-tablet.webp 1x, img/slogan-image-tablet@2x.webp 2x">
       <source type="image/webp" srcset="img/slogan-image-mobile.webp 1x, img/slogan-image-mobile@2x.webp 2x">
 
       <source media="(min-width: 1280px)" srcset="img/slogan-image-desktop.png 1x, img/slogan-image-desktop@2x.png 2x">
       <source media="(min-width: 768px)" srcset="img/slogan-image-tablet.png 1x, img/slogan-image-tablet@2x.png 2x">
-      <img class="slogan__image" src="img/slogan-image-mobile.png" srcset="img/slogan-image-mobile@2x.png 2x"
-        alt="Банка с надписью курица" width="280" height="270">
+      <img class="slogan__image" src="img/slogan-image-mobile.png" srcset="img/slogan-image-mobile@2x.png 2x" alt="Банка с надписью курица" width="280" height="270">
 
-    </picture>
+    </picture> -->
 
-    <!-- <img class="slogan__image" src="img/slogan-image.png" alt="Банка с надписью курица" width="280" height="270"> -->
     <a class="slogan__button button" href="form.html">подобрать программу</a>
   </div>
 </section>
@@ -113,28 +111,30 @@
     <div class="example__toggle">
       <div class="example__grid">
         <div class="example__img-before">
-          <picture>
+
+          {{ macros.picture("example__img-object-left", "cat-fat", "png", "./img/macros/", "Фото кота до программы", "280", "232", null, 768) }}
+
+          <!-- <picture>
             <source type="image/avif" media="(min-width: 768px)" srcset="img/cat-fat.avif 1x, img/cat-fat@2x.avif 2x">
             <source type="image/avif" srcset="img/cat-before-mobile.avif 1x, img/cat-before-mobile@2x.avif 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
             <source type="image/webp" srcset="img/cat-before-mobile.webp 1x, img/cat-before-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
-            <img class="example__img-object-left" src="img/cat-before-mobile.png"
-              srcset="img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы" width="280" height="232">
-          </picture>
+            <img class="example__img-object-left" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы" width="280" height="232">
+          </picture> -->
         </div>
         <div class="example__img-after">
-          <picture>
-            <source type="image/avif" media="(min-width: 768px)"
-              srcset="img/cat-skinny.avif 1x, img/cat-skinny@2x.avif 2x">
+
+          {{ macros.picture("example__img-object-right", "cat-skin", "png", "./img/macros/", "Фото кота после программы", "280", "232", null, 768) }}
+
+          <!-- <picture>
+            <source type="image/avif" media="(min-width: 768px)" srcset="img/cat-skinny.avif 1x, img/cat-skinny@2x.avif 2x">
             <source type="image/avif" srcset="img/cat-after-mobile.avif 1x, img/cat-after-mobile@2x.avif 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
             <source type="image/webp" srcset="img/cat-after-mobile.webp 1x, img/cat-after-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
-            <img class="example__img-object-right" src="img/cat-after-mobile.png"
-              srcset="img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы" width="280" height="232">
-          </picture>
+            <img class="example__img-object-right" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы" width="280" height="232">
+          </picture> -->
         </div>
       </div>
       <div class="example__toggle-container">
@@ -155,9 +155,7 @@
     <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
     <div class="address__text"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></div>
   </div>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru"
-    allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
   </iframe>
 </section>
 {% endblock %}

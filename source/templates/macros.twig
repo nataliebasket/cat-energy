@@ -1,0 +1,33 @@
+{% macro picture(class, name, ext, path = "", alt = "", width = null, height = null, desktop = "1280", tablet = "768", maxdppx = 2) %}
+{% set formats = ["avif", "webp", ext] %}
+{% set viewports = [
+{"suffix": "desktop", "width": desktop},
+{"suffix": "tablet", "width": tablet},
+{"suffix": "mobile"}
+] %}
+{% set densities = range(1, maxdppx, 1) %}
+
+<picture>
+  {%- for format in formats %}
+  {%- for vp in viewports if vp.width or vp.suffix == "mobile" %}
+  {%- if format != ext or vp.suffix != "mobile" %}
+  <source type="image/{{ format }}" {% if vp.suffix !="mobile" %} media="(min-width: {{ vp.width }}px)" {%- endif %} srcset="
+              {%- for x in densities -%}
+                {{ path }}{{ name }}-{{ vp.suffix }}@{{ x }}x.{{ format }} {{ x }}x{% if x != maxdppx %},{% endif %}
+              {%- endfor -%}
+            ">
+  {%- else %}
+  <img class="{{ class }}" src="{{ path }}{{ name }}-mobile@1x.{{ ext }}" srcset="
+              {%- for x in densities if x != 1 -%}
+                {{ path }}{{ name }}-mobile@{{ x }}x.{{ ext }} {{ x }}x
+                {%- if x != maxdppx -%}
+                  ,
+                {%- endif -%}
+              {%- endfor -%}
+            " {% if width %}width="{{ width }}" {%- endif %} {% if height %}height="{{ height }}" {%- endif %} alt="{{ alt }}">
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</picture>
+
+{% endmacro %}
