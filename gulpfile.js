@@ -1,8 +1,8 @@
 import gulp from "gulp";
-import browser from "browser-sync";
-import plumber from "gulp-plumber";
-import data from "./source/templates/data.js";
-import twig from "gulp-twig";
+import browser from "browser-sync";//обновление страницы
+import plumber from "gulp-plumber";//отслеживание ошибок
+import data from "./source/templates/data.js";//подключение базы для навигации сайта
+import twig from "gulp-twig";//шаблонизатор
 import htmlmin from "gulp-htmlmin";
 import { htmlValidator } from "gulp-w3c-html-validator";
 import sass from "gulp-dart-sass";
@@ -22,29 +22,29 @@ import del from "del";
 
 const { src, dest, watch, series, parallel } = gulp;
 
-export function processMarkup () {
+export function processMarkup() {
+  return src("./source/*.html")//собираем html из twig файлов
+    .pipe(twig({
+      data: data
+    }))
+    .pipe(htmlmin({ collapseWhitespace: true }))//минифицируем
+    .pipe(dest("./build"));
+}
+
+export function validateMarkup() {
   return src("./source/*.html")
     .pipe(twig({
       data: data
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("./build"));
+    .pipe(dest("./build"))
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter());
 }
 
-export function validateMarkup () {
-  return src("./source/*.html")
-  .pipe(twig({
-    data: data
-  }))
-  .pipe(dest("./build"))
-  .pipe(htmlValidator.analyzer())
-  .pipe(htmlValidator.reporter());
-}
-
-export function processStyles () {
+export function processStyles() {
   return src("./source/sass/*.scss", { sourcemaps: true })
-    .pipe(plumber())
-    .pipe(postcss([
+    .pipe(plumber())//обработка ошибок, чтоб не падала сборка
+    .pipe(postcss([//автопрефиксер
       postImport(),
       postUrl()
     ], { syntax: postScss }))
@@ -64,7 +64,7 @@ export function processStyles () {
     .pipe(browser.stream());
 }
 
-export function processScripts () {
+export function processScripts() {
   return src("./source/js/*.js")
     .pipe(terser())
     .pipe(
@@ -76,18 +76,18 @@ export function processScripts () {
     .pipe(browser.stream());
 }
 
-export function optimizeImages () {
+export function optimizeImages() {
   return src("./source/img/**/*.{png,jpg}")
     .pipe(squoosh())
     .pipe(dest("build/img"))
 }
 
-export function copyImages () {
+export function copyImages() {
   return src("./source/img/**/*.{png,jpg}")
     .pipe(dest("build/img"))
 }
 
-export function createWebp () {
+export function createWebp() {
   return src("./source/img/**/*.{jpg,png}")
     .pipe(
       squoosh({
@@ -97,7 +97,7 @@ export function createWebp () {
     .pipe(dest("./build/img"))
 }
 
-export function createAvif () {
+export function createAvif() {
   return src("./source/img/**/*.{jpg,png}")
     .pipe(
       squoosh({
@@ -107,7 +107,7 @@ export function createAvif () {
     .pipe(dest("./build/img"))
 }
 
-export function createSprite () {
+export function createSprite() {
   return src("./source/icons/*.svg")
     .pipe(svgSprite({
       mode: {
@@ -120,7 +120,7 @@ export function createSprite () {
     .pipe(dest("./build/icons"));
 }
 
-export function copyAssets (done) {
+export function copyAssets(done) {
   src([
     "./source/fonts/*.{woff2,woff}",
     "./source/*.ico",
@@ -134,11 +134,11 @@ export function copyAssets (done) {
   done();
 }
 
-export function removeBuild () {
+export function removeBuild() {
   return del("./build");
 };
 
-export function startServer (done) {
+export function startServer(done) {
   browser.init({
     server: {
       baseDir: "./build"
@@ -150,12 +150,12 @@ export function startServer (done) {
   done();
 }
 
-function reloadServer (done) {
+function reloadServer(done) {
   browser.reload();
   done();
 }
 
-function watchFiles () {
+function watchFiles() {
   watch("./source/sass/**/*.scss", series(processStyles));
   watch("./source/js/*.js", series(processScripts, reloadServer));
   watch(["./source/**/*.{html,twig}", "./source/templates/data.js"], series(processMarkup, reloadServer));
