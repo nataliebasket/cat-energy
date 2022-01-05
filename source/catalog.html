@@ -14,7 +14,9 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image", "hen500", "png", "./img/catalog/", "Фото банки Cat Energy PRO курица.", "68", "86", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image", "hen500", "png", "./img/catalog/", "Фото банки Cat Energy PRO курица.", "68", "86", 1280, 768) }#} -->
+
+          {{ macros.picture("product__image", "./img/catalog/", "hen500", "png", "Фото банки Cat Energy PRO курица.", "68", "86", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -43,7 +45,8 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image product__image--size", "hen1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO курица.", "84", "100", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image product__image--size", "hen1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO курица.", "84", "100", 1280, 768) }#} -->
+          {{ macros.picture("product__image product__image--size", "./img/catalog/", "hen1000", "png", "Фото банки Cat Energy PRO курица.", "84", "100", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -72,7 +75,8 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image", "fish500", "png", "./img/catalog/", "Фото банки Cat Energy PRO рыба.", "68", "78", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image", "fish500", "png", "./img/catalog/", "Фото банки Cat Energy PRO рыба.", "68", "78", 1280, 768) }#} -->
+          {{ macros.picture("product__image", "./img/catalog/", "fish500", "png", "Фото банки Cat Energy PRO рыба.", "68", "78", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -102,7 +106,8 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image product__image--size", "fish1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO рыба.", "84", "100", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image product__image--size", "fish1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO рыба.", "84", "100", 1280, 768) }#} -->
+          {{ macros.picture("product__image product__image--size", "./img/catalog/", "fish1000", "png", "Фото банки Cat Energy PRO рыба.", "84", "100", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -132,7 +137,8 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image", "buck500", "png", "./img/catalog/", "Фото банки Cat Energy PRO гречка.", "68", "78", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image", "buck500", "png", "./img/catalog/", "Фото банки Cat Energy PRO гречка.", "68", "78", 1280, 768) }#} -->
+          {{ macros.picture("product__image", "./img/catalog/", "buck500", "png", "Фото банки Cat Energy PRO гречка.", "68", "78", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -162,7 +168,8 @@
       <div class="product__img-container">
         <a class="product__img-link" href="#">
 
-          {{ macros.picture("product__image product__image--size", "buck1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO гречка.", "84", "100", 1280, 768) }}
+          <!-- {#{ macros.picture("product__image product__image--size", "buck1000", "png", "./img/catalog/", "Фото банки Cat Energy PRO гречка.", "84", "100", 1280, 768) }#} -->
+          {{ macros.picture("product__image product__image--size", "./img/catalog/", "buck1000", "png", "Фото банки Cat Energy PRO гречка.", "84", "100", true, true) }}
 
         </a>
         <div class="product__discription-container">
@@ -190,7 +197,10 @@
       <h3 class="visually-hidden">Cat Energy SLIM 500 г</h3>
       <div class="product__img-container">
         <a class="product__img-link" href="#">
-          {{ macros.picture("product__image", "rice500", "png", "./img/catalog/", "Фото банки Cat Energy PRO рис.", "74", "84", 1280, 768) }}
+
+          <!-- {#{ macros.picture("product__image", "rice500", "png", "./img/catalog/", "Фото банки Cat Energy PRO рис.", "74", "84", 1280, 768) }#} -->
+          {{ macros.picture("product__image", "./img/catalog/", "rice500", "png", "Фото банки Cat Energy PRO рис.", "74", "84", true, true) }}
+
         </a>
         <div class="product__discription-container">
           <a class="product__title-link" href="#">Cat Energy SLIM 500&nbsp;г</a>
@@ -216,9 +226,6 @@
     <article class="product-more">
       <h3 class="visually-hidden">Ещё больше товаров.</h3>
       <a class="product-more__link" href="form.html">
-        <svg class="" width="30" height="30">
-          <use></use>
-        </svg>
       </a>
       <span class="product-more__big-text">Показать еще 100500 товаров</span>
       <span class="product-more__small-text">На самом деле вкусов гораздо больше!</span>

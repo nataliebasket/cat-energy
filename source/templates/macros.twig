@@ -1,32 +1,51 @@
-{% macro picture(class, name, ext, path = "", alt = "", width = null, height = null, desktop = "1280", tablet = "768", maxdppx = 2) %}
+{% macro picture(class, path, name, ext, alt="", width = null, height = null, large = true, middle = true, maxdppx = 2, lazy = true) %}
 {% set formats = ["avif", "webp", ext] %}
-{% set viewports = [
-{"suffix": "desktop", "width": desktop},
-{"suffix": "tablet", "width": tablet},
-{"suffix": "mobile"}
-] %}
 {% set densities = range(1, maxdppx, 1) %}
+{% set viewports = [
+{
+"name": "large",
+"suffix": "desktop",
+"breakpoint": "1280",
+"isNeeded": large
+},
+{
+"name": "middle",
+"suffix": "tablet",
+"breakpoint": "768",
+"isNeeded": middle
+},
+{
+"name": "small",
+"suffix": "mobile",
+"breakpoint": null,
+"isNeeded": true
+}
+] %}
 
 <picture>
-  {%- for format in formats %}
-  {%- for vp in viewports if vp.width or vp.suffix == "mobile" %}
-  {%- if format != ext or vp.suffix != "mobile" %}
-  <source type="image/{{ format }}" {% if vp.suffix !="mobile" %} media="(min-width: {{ vp.width }}px)" {%- endif %} srcset="
-              {%- for x in densities -%}
-                {{ path }}{{ name }}-{{ vp.suffix }}@{{ x }}x.{{ format }} {{ x }}x{% if x != maxdppx %},{% endif %}
+  {% for format in formats -%}
+  {% for vp in viewports if vp.isNeeded -%}
+  {% if format != ext or vp.name != "small" -%}
+  <source srcset="
+              {%- for dppx in densities -%}
+                {{ path }}{{ name }}-{{ vp.suffix }}@{{ dppx }}x.{{ format }} {{ dppx }}x{% if dppx != maxdppx %}, {% endif %}
               {%- endfor -%}
-            ">
-  {%- else %}
-  <img class="{{ class }}" src="{{ path }}{{ name }}-mobile@1x.{{ ext }}" srcset="
-              {%- for x in densities if x != 1 -%}
-                {{ path }}{{ name }}-mobile@{{ x }}x.{{ ext }} {{ x }}x
-                {%- if x != maxdppx -%}
+            " type="image/{{ format }}" {% if vp.breakpoint -%} media="(min-width: {{ vp.breakpoint }}px)" {%- endif -%}>
+
+  {% else -%}
+  <img class="{{ class }}" src="{{ path }}{{ name }}-{{ vp.suffix }}@1x.{{ ext }}" srcset="
+              {%- for dppx in densities if dppx != 1 -%}
+                {{ path }}{{ name }}-s@{{ dppx }}x.{{ ext }} {{ dppx }}x
+                {%- if dppx != maxdppx -%}
                   ,
                 {%- endif -%}
               {%- endfor -%}
-            " {% if width %}width="{{ width }}" {%- endif %} {% if height %}height="{{ height }}" {%- endif %} alt="{{ alt }}">
-  {% endif %}
-  {% endfor %}
+            " {% if width %}width="{{ width }}" {% endif -%} {% if height %}height="{{ height }}" {% endif -%} {% if lazy %}loading="lazy" {% endif -%} alt="{{ alt }}">
+
+  {% endif -%}
+
+  {%- endfor -%}
+
   {% endfor %}
 </picture>
 

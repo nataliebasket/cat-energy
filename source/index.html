@@ -2,8 +2,6 @@
 {% set permalink = pages[pageId].path %}
 {% extends "./templates/layout.twig" %}
 
-
-
 {% block main %}
 
 <h1 class="visually-hidden">Cat energy - Интернет магазин питания для котов</h1>
@@ -13,23 +11,8 @@
     <h2 class="slogan__title">Функциональное питание для котов</h2>
     <p class="slogan__text">Занялся собой? Займись котом!</p>
 
-    {{ macros.picture("slogan__image", "slogan-image", "png", "./img/macros/", "Банка с надписью курица", "280", "270", 1280, 768) }}
-
-    <!-- <picture>
-
-      <source type="image/avif" media="(min-width: 1280px)" srcset="img/slogan-image-desktop.avif 1x, img/slogan-image-desktop@2x.avif 2x">
-      <source type="image/avif" media="(min-width: 768px)" srcset="img/slogan-image-tablet.avif 1x, img/slogan-image-tablet@2x.avif 2x">
-      <source type="image/avif" srcset="img/slogan-image-mobile.avif 1x, img/slogan-image-mobile@2x.avif 2x">
-
-      <source type="image/webp" media="(min-width: 1280px)" srcset="img/slogan-image-desktop.webp 1x, img/slogan-image-desktop@2x.webp 2x">
-      <source type="image/webp" media="(min-width: 768px)" srcset="img/slogan-image-tablet.webp 1x, img/slogan-image-tablet@2x.webp 2x">
-      <source type="image/webp" srcset="img/slogan-image-mobile.webp 1x, img/slogan-image-mobile@2x.webp 2x">
-
-      <source media="(min-width: 1280px)" srcset="img/slogan-image-desktop.png 1x, img/slogan-image-desktop@2x.png 2x">
-      <source media="(min-width: 768px)" srcset="img/slogan-image-tablet.png 1x, img/slogan-image-tablet@2x.png 2x">
-      <img class="slogan__image" src="img/slogan-image-mobile.png" srcset="img/slogan-image-mobile@2x.png 2x" alt="Банка с надписью курица" width="280" height="270">
-
-    </picture> -->
+    {#{ macros.picture("slogan__image", "slogan-image", "png", "./img/macros/", "Банка с надписью курица", "280", "270", 1280, 768) }#}
+    {{ macros.picture("slogan__image", "./img/macros/", "slogan-image", "png", "Банка с надписью курица.", "280", "270", true, true) }}
 
     <a class="slogan__button button" href="form.html">подобрать программу</a>
   </div>
@@ -112,29 +95,15 @@
       <div class="example__grid">
         <div class="example__img-before">
 
-          {{ macros.picture("example__img-object-left", "cat-fat", "png", "./img/macros/", "Фото кота до программы", "280", "232", null, 768) }}
+          {#{ macros.picture("example__img-object-left", "cat-fat", "png", "./img/macros/", "Фото кота до программы", "280", "232", null, 768) }#}
+          {{ macros.picture("example__img-object-left", "./img/macros/", "cat-fat", "png", "Фото кота до программы.", "280", "232", false, true) }}
 
-          <!-- <picture>
-            <source type="image/avif" media="(min-width: 768px)" srcset="img/cat-fat.avif 1x, img/cat-fat@2x.avif 2x">
-            <source type="image/avif" srcset="img/cat-before-mobile.avif 1x, img/cat-before-mobile@2x.avif 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat.webp 1x, img/cat-fat@2x.webp 2x">
-            <source type="image/webp" srcset="img/cat-before-mobile.webp 1x, img/cat-before-mobile@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/cat-fat.png 1x, img/cat-fat@2x.png 2x">
-            <img class="example__img-object-left" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы" width="280" height="232">
-          </picture> -->
         </div>
         <div class="example__img-after">
 
-          {{ macros.picture("example__img-object-right", "cat-skin", "png", "./img/macros/", "Фото кота после программы", "280", "232", null, 768) }}
+          {#{ macros.picture("example__img-object-right", "cat-skin", "png", "./img/macros/", "Фото кота после программы", "280", "232", null, 768) }#}
+          {{ macros.picture("example__img-object-right", "./img/macros/", "cat-skin", "png", "Фото кота после программы.", "280", "232", false, true) }}
 
-          <!-- <picture>
-            <source type="image/avif" media="(min-width: 768px)" srcset="img/cat-skinny.avif 1x, img/cat-skinny@2x.avif 2x">
-            <source type="image/avif" srcset="img/cat-after-mobile.avif 1x, img/cat-after-mobile@2x.avif 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
-            <source type="image/webp" srcset="img/cat-after-mobile.webp 1x, img/cat-after-mobile@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
-            <img class="example__img-object-right" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы" width="280" height="232">
-          </picture> -->
         </div>
       </div>
       <div class="example__toggle-container">

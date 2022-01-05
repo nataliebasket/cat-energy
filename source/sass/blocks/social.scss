@@ -6,10 +6,11 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 55px;
+  column-gap: 55px;
+  row-gap: 35px;
 
   @media (--not-narrow-vp) {
-    gap: 48px;
+    column-gap: 48px;
   }
 }
 
