@@ -209,6 +209,7 @@
 
   &:hover::after {
     background-position-x: 0;
+    transition: background-position-x 0.3s ease;
   }
 
   &:active {

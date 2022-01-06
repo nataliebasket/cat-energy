@@ -113,6 +113,13 @@
   &:hover {
     @media (--not-narrow-vp) {
       opacity: 0.6;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  &:not(:hover) {
+    @media (--not-narrow-vp) {
+      transition: opacity 0.4s ease;
     }
   }
 

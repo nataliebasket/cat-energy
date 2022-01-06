@@ -30,6 +30,11 @@
 
   :hover {
     opacity: 0.8;
+    transition: opacity 0.4s ease;
+  }
+
+  :not(:hover) {
+    transition: opacity 0.4s ease;
   }
 
   :active {

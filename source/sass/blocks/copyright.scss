@@ -15,6 +15,7 @@
 
 .copyright:hover svg {
   fill: var(--accent-color);
+  transition: fill 0.3s ease;
 }
 
 .copyright:active svg {
