@@ -22,3 +22,16 @@
   opacity: 0.3;
   fill: var(--accent-color);
 }
+
+.copyright:focus {
+  outline: none;
+  border: none;
+}
+
+.copyright:focus svg {
+  fill: var(--accent-color);
+}
+
+.copyright:focus span {
+  color: var(--accent-color);
+}

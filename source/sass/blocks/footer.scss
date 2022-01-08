@@ -39,6 +39,13 @@
   }
 }
 
+.footer__logo:focus-visible {
+  border: none;
+  border-radius: 2px;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .footer__social {
   min-height: 63px;
 

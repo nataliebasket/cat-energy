@@ -57,3 +57,7 @@
 .social__link--vkontakte::before {
   mask: url("../../icons/sprite.svg#vk") center no-repeat;
 }
+
+.social__link:focus::before {
+  background-color: var(--accent-color);
+}
