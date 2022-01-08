@@ -34,7 +34,6 @@
       left: 0;
       bottom: 0;
       background-color: var(--footer-bg);
-      //background-color: red;
     }
   }
 
@@ -47,7 +46,6 @@
       right: 0;
       bottom: 0;
       background-color: var(--footer-bg);
-      //background-color: red;
     }
   }
 }
@@ -57,7 +55,6 @@
   margin-top: 23px;
   margin-bottom: 8px;
   text-transform: uppercase;
-  //position: relative;
 
   @include word-font ("Oswald", 16px, 20px);
 
@@ -82,7 +79,6 @@
       width: 100%;
       height: 2px;
       background-color: var(--footer-bg);
-      //background-color: red;
       top: 60px;
       left: 0;
     }
@@ -130,8 +126,6 @@
   margin-top: 5px;
   width: 30px;
   height: 30px;
-  //background-image: url("../../icons/sprite.svg#plus");
-  //background-size: cover;
 
   @media (--not-narrow-vp) {
     width: 60px;

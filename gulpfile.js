@@ -1,8 +1,8 @@
 import gulp from "gulp";
-import browser from "browser-sync";//обновление страницы
-import plumber from "gulp-plumber";//отслеживание ошибок
-import data from "./source/templates/data.js";//подключение базы для навигации сайта
-import twig from "gulp-twig";//шаблонизатор
+import browser from "browser-sync";
+import plumber from "gulp-plumber";
+import data from "./source/templates/data.js";
+import twig from "gulp-twig";
 import htmlmin from "gulp-htmlmin";
 import { htmlValidator } from "gulp-w3c-html-validator";
 import sass from "gulp-dart-sass";
@@ -23,11 +23,11 @@ import del from "del";
 const { src, dest, watch, series, parallel } = gulp;
 
 export function processMarkup() {
-  return src("./source/*.html")//собираем html из twig файлов
+  return src("./source/*.html")
     .pipe(twig({
       data: data
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))//минифицируем
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest("./build"));
 }
 
@@ -43,8 +43,8 @@ export function validateMarkup() {
 
 export function processStyles() {
   return src("./source/sass/*.scss", { sourcemaps: true })
-    .pipe(plumber())//обработка ошибок, чтоб не падала сборка
-    .pipe(postcss([//автопрефиксер
+    .pipe(plumber())
+    .pipe(postcss([
       postImport(),
       postUrl()
     ], { syntax: postScss }))

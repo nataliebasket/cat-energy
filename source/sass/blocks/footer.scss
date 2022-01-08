@@ -40,13 +40,10 @@
 }
 
 .footer__social {
-  //padding-top: 20px;
-  //-bottom: 21px;
   min-height: 63px;
 
   display: flex;
   align-items: center;
-  //text-align: center;
   border-bottom: 1px solid var(--border-color);
 
   @media (--not-narrow-vp) {
@@ -67,7 +64,3 @@
     padding: 0;
   }
 }
-
-// .footer--margin {
-//   margin-right: 22px;
-// }

@@ -10,8 +10,6 @@
   <div class="slogan__container page__centerer">
     <h2 class="slogan__title">Функциональное питание для котов</h2>
     <p class="slogan__text">Занялся собой? Займись котом!</p>
-
-    {#{ macros.picture("slogan__image", "slogan-image", "png", "./img/macros/", "Банка с надписью курица", "280", "270", 1280, 768) }#}
     {{ macros.picture("slogan__image", "./img/macros/", "slogan-image", "png", "Банка с надписью курица.", "280", "270", true, true) }}
 
     <a class="slogan__button button" href="form.html">подобрать программу</a>
@@ -94,16 +92,11 @@
     <div class="example__toggle">
       <div class="example__grid">
         <div class="example__img-before">
-
-          {#{ macros.picture("example__img-object-left", "cat-fat", "png", "./img/macros/", "Фото кота до программы", "280", "232", null, 768) }#}
           {{ macros.picture("example__img-object-left", "./img/macros/", "cat-fat", "png", "Фото кота до программы.", "280", "232", false, true) }}
 
         </div>
         <div class="example__img-after">
-
-          {#{ macros.picture("example__img-object-right", "cat-skin", "png", "./img/macros/", "Фото кота после программы", "280", "232", null, 768) }#}
           {{ macros.picture("example__img-object-right", "./img/macros/", "cat-skin", "png", "Фото кота после программы.", "280", "232", false, true) }}
-
         </div>
       </div>
       <div class="example__toggle-container">

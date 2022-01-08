@@ -1,12 +1,12 @@
 .slogan {
-  background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/cat-bg-mobile@1x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+  background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/cat-bg-mobile@1x.webp"), linear-gradient(#4f4e54 302px, transparent 302px);
   background-repeat: repeat, no-repeat;
   background-position-x: center, center;
   background-position-y: top, top;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/cat-bg-mobile@2x.jpg"), linear-gradient(#4f4e54 302px, transparent 302px);
+    background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/cat-bg-mobile@2x.webp"), linear-gradient(#4f4e54 302px, transparent 302px);
     background-size: auto, 320px, auto;
     background-repeat: repeat, no-repeat;
     background-position-x: center, center;
@@ -27,7 +27,7 @@
       height: 150%;
       background:
         linear-gradient(to left, var(--accent-trans-color) 50%, var(--white-color) 50%),
-        url("../../img/cat-bg-desktop@1x.jpg"),
+        url("../../img/cat-bg-desktop@1x.webp"),
         linear-gradient(to left, #4f4e54 50%, var(--white-color) 50%);
       background-repeat: repeat, no-repeat, repeat;
       background-position-x: center, right, center;
@@ -36,7 +36,7 @@
       @media (min-resolution: 2dppx) {
         background:
           linear-gradient(to left, var(--accent-trans-color) 50%, var(--white-color) 50%),
-          url("../../img/cat-bg-desktop@2x.jpg"),
+          url("../../img/cat-bg-desktop@2x.webp"),
           linear-gradient(to left, #4f4e54 50%, var(--white-color) 50%);
         background-size: auto auto, 720px auto, auto auto;
         background-position-x: center, right, center;
@@ -98,7 +98,8 @@
   @media (--not-narrow-vp) {
     margin-left: 90px;
     margin-bottom: 48px;
-    color: var(--black-color);
+    //color: var(--black-color);
+    color: var(--accent-color);
     align-self: flex-start;
     z-index: 2;
 

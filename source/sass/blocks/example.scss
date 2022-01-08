@@ -282,7 +282,6 @@
     position: absolute;
     top: -14px;
     box-sizing: border-box;
-    //left: 50%;
     transform: translateX(-50%);
     transition: none;
   }
@@ -290,7 +289,6 @@
 
 .example__move {
   @media (--not-narrow-vp) {
-    //--left-position: 50%;
     left: var(--left-position);
   }
 }

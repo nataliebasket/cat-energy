@@ -25,13 +25,13 @@
 }
 
 .product__img-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 
   @media (--not-narrow-vp) {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 33px;
@@ -40,6 +40,10 @@
 }
 
 .product__img-link {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+
   @media (--not-narrow-vp) {
     flex-grow: 1;
     display: flex;
@@ -94,6 +98,8 @@
 }
 
 .product__discription-container {
+  margin-right: 0;
+
   @media (--not-narrow-vp) {
     width: 100%;
   }
