@@ -89,6 +89,7 @@
   padding: 0;
   position: relative;
   z-index: 3;
+  width: 226px;
 
   @include word-font ("Oswald", 24px, 24px);
 
@@ -96,6 +97,7 @@
     padding-left: 36px;
     padding-right: 36px;
     margin-bottom: 79px;
+    width: 340px;
 
     @include word-font ("Oswald", 36px, 36px);
   }

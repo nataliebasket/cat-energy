@@ -2,14 +2,6 @@
   @media (--wide-vp) {
     display: grid;
   }
-
-  &--gray {
-    background-color: var(--footer-bg);
-
-    @media (--wide-vp) {
-      background-color: var(--white-color);
-    }
-  }
 }
 
 .address__container-page {
@@ -18,6 +10,7 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: var(--footer-bg);
 
   @media (--not-narrow-vp) {
     padding: 56px 70px;
@@ -37,6 +30,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 90px;
     align-items: top;
+  }
+
+  &--white {
+    background-color: var(--white-color);
   }
 }
 
@@ -93,7 +90,11 @@
   width: 100%;
   grid-area: 1 / -1;
 
-  @media (--not-narrow-vp) {
+  @media (--middle-vp) {
+    height: 400px;
+  }
+
+  @media (--wide-vp) {
     height: 100%;
   }
 }

@@ -7,31 +7,31 @@
   width: 100%;
 
   @include word-font ("Arial", 16px, 18px);
-}
 
-.copyright:active {
-  opacity: 0.3;
-}
+  &:active {
+    opacity: 0.3;
+  }
 
-.copyright:hover svg {
-  fill: var(--accent-color);
-  transition: fill 0.3s ease;
-}
+  &:active svg {
+    opacity: 0.3;
+    fill: var(--accent-color);
+  }
 
-.copyright:active svg {
-  opacity: 0.3;
-  fill: var(--accent-color);
-}
+  &:hover svg {
+    fill: var(--accent-color);
+    transition: fill 0.3s ease;
+  }
 
-.copyright:focus {
-  outline: none;
-  border: none;
-}
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
 
-.copyright:focus svg {
-  fill: var(--accent-color);
-}
+  &:focus-visible svg {
+    fill: var(--accent-color);
+  }
 
-.copyright:focus span {
-  color: var(--accent-color);
+  &:focus-visible span {
+    color: var(--accent-color);
+  }
 }

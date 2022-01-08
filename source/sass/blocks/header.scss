@@ -28,25 +28,25 @@
   align-items: center;
   min-height: 65px;
 
-  :hover {
+  &:hover {
     opacity: 0.8;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
   }
 
-  :not(:hover) {
-    transition: opacity 0.4s ease;
+  &:not(:hover) {
+    transition: opacity 0.2s ease;
   }
 
-  :active {
+  &:active {
     opacity: 0.6;
   }
-}
 
-.header__logo:focus-visible {
-  border: none;
-  border-radius: 2px;
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  &:focus-visible {
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
 }
 
 .header__logo img {

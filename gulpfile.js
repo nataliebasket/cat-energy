@@ -31,7 +31,7 @@ export function processMarkup() {
     .pipe(dest("./build"));
 }
 
-export function validateMarkup() {
+export function validateMarkup () {
   return src("./source/*.html")
     .pipe(twig({
       data: data
@@ -41,7 +41,7 @@ export function validateMarkup() {
     .pipe(htmlValidator.reporter());
 }
 
-export function processStyles() {
+export function processStyles () {
   return src("./source/sass/*.scss", { sourcemaps: true })
     .pipe(plumber())
     .pipe(postcss([
@@ -64,7 +64,7 @@ export function processStyles() {
     .pipe(browser.stream());
 }
 
-export function processScripts() {
+export function processScripts () {
   return src("./source/js/*.js")
     .pipe(terser())
     .pipe(
@@ -76,18 +76,18 @@ export function processScripts() {
     .pipe(browser.stream());
 }
 
-export function optimizeImages() {
+export function optimizeImages () {
   return src("./source/img/**/*.{png,jpg}")
     .pipe(squoosh())
     .pipe(dest("build/img"))
 }
 
-export function copyImages() {
+export function copyImages () {
   return src("./source/img/**/*.{png,jpg}")
     .pipe(dest("build/img"))
 }
 
-export function createWebp() {
+export function createWebp () {
   return src("./source/img/**/*.{jpg,png}")
     .pipe(
       squoosh({
@@ -97,7 +97,7 @@ export function createWebp() {
     .pipe(dest("./build/img"))
 }
 
-export function createAvif() {
+export function createAvif () {
   return src("./source/img/**/*.{jpg,png}")
     .pipe(
       squoosh({
@@ -107,7 +107,7 @@ export function createAvif() {
     .pipe(dest("./build/img"))
 }
 
-export function createSprite() {
+export function createSprite () {
   return src("./source/icons/*.svg")
     .pipe(svgSprite({
       mode: {
@@ -120,7 +120,7 @@ export function createSprite() {
     .pipe(dest("./build/icons"));
 }
 
-export function copyAssets(done) {
+export function copyAssets (done) {
   src([
     "./source/fonts/*.{woff2,woff}",
     "./source/*.ico",
@@ -134,11 +134,11 @@ export function copyAssets(done) {
   done();
 }
 
-export function removeBuild() {
+export function removeBuild () {
   return del("./build");
 };
 
-export function startServer(done) {
+export function startServer (done) {
   browser.init({
     server: {
       baseDir: "./build"
@@ -150,12 +150,12 @@ export function startServer(done) {
   done();
 }
 
-function reloadServer(done) {
+function reloadServer (done) {
   browser.reload();
   done();
 }
 
-function watchFiles() {
+function watchFiles () {
   watch("./source/sass/**/*.scss", series(processStyles));
   watch("./source/js/*.js", series(processScripts, reloadServer));
   watch(["./source/**/*.{html,twig}", "./source/templates/data.js"], series(processMarkup, reloadServer));
@@ -164,7 +164,7 @@ function watchFiles() {
 
 // Production build
 
-export const build = series(
+export const build = series (
   removeBuild,
   parallel(
     processStyles,
@@ -180,7 +180,7 @@ export const build = series(
 
 // Development build
 
-export default series(
+export default series (
   removeBuild,
   parallel(
     processStyles,

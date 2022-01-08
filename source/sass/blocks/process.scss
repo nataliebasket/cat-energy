@@ -121,6 +121,8 @@
 
   &::after {
     @media (--not-narrow-vp) {
+      counter-increment: section;
+      content: counter(section);
       position: absolute;
       color: var(--footer-bg);
       top: -40px;
@@ -138,22 +140,10 @@
   background-size: 30px 32px;
 }
 
-.process__text--useful::after {
-  @media (--not-narrow-vp) {
-    content: "1";
-  }
-}
-
 .process__text--flour::before {
   content: "";
   background-image: url("../../icons/sprite.svg#process-flour");
   background-size: 29px 31px;
-}
-
-.process__text--flour::after {
-  @media (--not-narrow-vp) {
-    content: "2";
-  }
 }
 
 .process__text--eat::before {
@@ -162,20 +152,8 @@
   background-size: 25px 30px;
 }
 
-.process__text--eat::after {
-  @media (--not-narrow-vp) {
-    content: "3";
-  }
-}
-
 .process__text--time::before {
   content: "";
   background-image: url("../../icons/sprite.svg#process-time");
   background-size: 32px 33px;
-}
-
-.process__text--time::after {
-  @media (--not-narrow-vp) {
-    content: "4";
-  }
 }
