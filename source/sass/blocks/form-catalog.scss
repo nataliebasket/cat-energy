@@ -7,6 +7,7 @@
   margin: 0;
   margin-top: 27px;
   margin-bottom: 37px;
+  position: relative;
 
   @include word-font ("Oswald", 36px, 36px);
 
@@ -22,13 +23,25 @@
     padding-left: 0;
     margin-top: 23px;
   }
+
+  &::before {
+    @media (--narrow-vp) {
+      content: "";
+      position: absolute;
+      top: -28px;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: var(--button-color);
+    }
+  }
 }
 
 .form-catalog__text {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 38px;
 
   @include word-font ("Oswald", 14px, 18px);
 

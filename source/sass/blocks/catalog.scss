@@ -59,7 +59,8 @@
   @media (--not-narrow-vp) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    row-gap: 68px;
+    column-gap: 60px;
   }
 
   @media (--wide-vp) {

@@ -152,7 +152,6 @@
 
 .programs__link {
   text-decoration: none;
-  //display: inline-block;
   display: inline-flex;
   align-items: center;
   padding-top: 10px;
@@ -203,7 +202,7 @@
     transition: background-position 0.1s ease-out;
 
     @media (--not-narrow-vp) {
-      right: -60px;
+      margin-left: 25px;
     }
   }
 

@@ -38,8 +38,8 @@
   }
 
   @media (--wide-vp) {
-    margin-bottom: 146px;
-    margin-top: 28px;
+    margin-bottom: 152px;
+    margin-top: 55px;
   }
 }
 
@@ -58,7 +58,7 @@
   }
 
   @media (--wide-vp) {
-    padding-right: 134px;
+    padding-right: 115px;
     margin-bottom: 69px;
   }
 }
@@ -235,7 +235,8 @@
     width: 592px;
     display: flex;
     justify-content: space-around;
-    padding-top: 30px;
+    margin-top: 41px;
+    margin-bottom: 0;
   }
 }
 
