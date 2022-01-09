@@ -1,10 +1,10 @@
 // let buttonBefore = document.querySelector('.example__button-before');
 // let buttonAfter = document.querySelector('.example__button-after');
-// let catBefore = document.querySelector('.example__img-object-left ');
-// let catAfter = document.querySelector('.example__img-object-right');
+// let catBefore = document.querySelector('.example__img-fat ');
+// let catAfter = document.querySelector('.example__img-skin');
 // let thumb = document.querySelector('.example__button');
-// let sizeCurtainLeft = document.querySelector('.example__img-before');
-// let sizeCurtainRight = document.querySelector('.example__img-after');
+// let sizeCurtainLeft = document.querySelector('.example__div-fat');
+// let sizeCurtainRight = document.querySelector('.example__div-skin');
 
 // let windowWidth = document.documentElement.clientWidth;
 
@@ -53,11 +53,11 @@
 
 let buttonBefore = document.querySelector('.example__button-before');
 let buttonAfter = document.querySelector('.example__button-after');
-let catBefore = document.querySelector('.example__img-object-left ');
-let catAfter = document.querySelector('.example__img-object-right');
+let catBefore = document.querySelector('.example__img-fat ');
+let catAfter = document.querySelector('.example__img-skin');
 let thumb = document.querySelector('.example__button');
-let sizeCurtainLeft = document.querySelector('.example__img-before');
-let sizeCurtainRight = document.querySelector('.example__img-after');
+let sizeCurtainLeft = document.querySelector('.example__div-fat');
+let sizeCurtainRight = document.querySelector('.example__div-skin');
 
 let windowWidth = document.documentElement.clientWidth;
 
@@ -74,7 +74,7 @@ window.onresize = function () {
   console.log(version);
 };
 
-if (version == '"mobile"') {
+if (version === '"mobile"') {
   buttonAfter.onclick = function () {
     catBefore.style.opacity = "0";
     catAfter.style.opacity = "1";
