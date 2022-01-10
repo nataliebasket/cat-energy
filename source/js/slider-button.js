@@ -40,19 +40,18 @@ function windowResize () {
 window.addEventListener("resize", windowResize);
 
 function moveThumb(e) {
-    thumb.style.setProperty('--left-position', (e.pageX - track.x) + "px");
-    if (e.pageX > x2) [thumb.style.setProperty('--left-position', ( track.width ) + "px")];
-    if (e.pageX < x1) [thumb.style.setProperty('--left-position', '0px')];
-    if ((e.pageX < x2) && (e.pageX > x1)) {
-      currentLeftWidth = Math.round( parseInt(curtainWidth, 10) / parseInt(trackWidth, 10) * (e.pageX - track.x));
-      sizeCurtainLeft.style.setProperty("--width-curtain-left", `${currentLeftWidth}px`);
-      currentRightWidth = parseInt(curtainWidth, 10) - Math.round( parseInt(curtainWidth, 10) / parseInt(trackWidth, 10) * (e.pageX - track.x));
-      sizeCurtainRight.style.setProperty("--width-curtain-right", `${currentRightWidth}px`);
-    }
- }
+  thumb.style.setProperty('--left-position', (e.pageX - track.x) + "px");
+  if (e.pageX > x2) [thumb.style.setProperty('--left-position', ( track.width ) + "px")];
+  if (e.pageX < x1) [thumb.style.setProperty('--left-position', '0px')];
+  if ((e.pageX < x2) && (e.pageX > x1)) {
+    currentLeftWidth = Math.round( parseInt(curtainWidth, 10) / parseInt(trackWidth, 10) * (e.pageX - track.x));
+    sizeCurtainLeft.style.setProperty("--width-curtain-left", `${currentLeftWidth}px`);
+    currentRightWidth = parseInt(curtainWidth, 10) - Math.round( parseInt(curtainWidth, 10) / parseInt(trackWidth, 10) * (e.pageX - track.x));
+    sizeCurtainRight.style.setProperty("--width-curtain-right", `${currentRightWidth}px`);
+  }
+}
 
 thumb.addEventListener("mousedown", function (e) {
-
   elem = document.querySelector('.example__track');
   track = elem.getBoundingClientRect();
   x1 = Math.round(track.x);
