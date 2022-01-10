@@ -1,0 +1,55 @@
+.site-heading__text {
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  background-color: var(--white-color);
+  display: inline-block;
+  position: relative;
+
+  @include word-font ("Oswald", 24px, 24px);
+
+  @media (--not-narrow-vp) {
+    padding-left: 36px;
+    padding-right: 36px;
+
+    @include word-font ("Oswald", 36px, 36px);
+  }
+
+  @media (--wide-vp) {
+    padding: 0;
+  }
+
+  &--decor::before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 10px;
+    width: calc(100% + 50px);
+    background-color: var(--white-color);
+    top: 50%;
+    left: -30px;
+    z-index: -1;
+
+    @media (--not-narrow-vp) {
+      width: 100%;
+      left: 0;
+    }
+
+    @media (--wide-vp) {
+      width: calc(100% + 75px);
+      left: -40px;
+    }
+  }
+
+  &--decor::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    top: 60%;
+    left: -100vw;
+    box-shadow: 100vw 0 0 0 var(--accent-color);
+    background-color: var(--accent-color);
+    z-index: -2;
+  }
+}

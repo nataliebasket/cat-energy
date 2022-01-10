@@ -15,12 +15,12 @@
       <fieldset class="form__fieldset form__fieldset--namecat-margin form__fieldset--decor-line">
         <legend class="visually-hidden">Данные кота.</legend>
         <ul class="form__list">
-          <li class="form__item form__item--namecat">
+          <li class="form__item">
             <label class="form__label" for="cat-name">Имя:*</label>
             {# Класс ошибки для input: form__input--error #}
             <input class="form__input form__input--namecat" id="cat-name" type="text" placeholder="БАРСИК" name="cat-name" required>
           </li>
-          <li class="form__item form__item--namecat">
+          <li class="form__item">
             <label class="form__label" for="cat-weight">Вес (кг):*</label>
             <input class="form__input form__input--namecat" id="cat-weight" type="number" placeholder="7" name="cat-weight" required>
           </li>
@@ -59,8 +59,12 @@
       </fieldset>
     </div>
 
+    <div class="site-heading ">
+      <p class="site-heading__text site-heading__text--decor">Контактные данные (владельца кота)</p>
+    </div>
+
     <fieldset class="form__fieldset form__fieldset--contacts-margin">
-      <legend class="form__legend form__legend--decor form__legend--width">Контактные данные (владельца кота)</legend>
+      <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
       <ul class="form__list form__list--contacts">
         <li class="form__item">
           <label class="form__label" for="email">E-mail:*</label>
@@ -77,13 +81,21 @@
       </ul>
     </fieldset>
 
-    <fieldset class="form__fieldset form__fieldset--textarea-margin">
-      <legend class="form__legend form__legend--decor">Комментарий</legend>
-      <textarea class="form__textarea" name="comments" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
-    </fieldset>
+    <div class="site-heading">
+      <p class="site-heading__text site-heading__text--decor">Комментарий</p>
+    </div>
+
+    <div class="form__fieldset form__fieldset--textarea-margin">
+      <label class="visually-hidden" for="textarea">Комментарий.</label>
+      <textarea class="form__textarea" name="comments" id="textarea" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+    </div>
+
+    <div class="site-heading">
+      <p class="site-heading__text site-heading__text--decor">Дополнительно</p>
+    </div>
 
     <fieldset class="form__fieldset form__fieldset--add-margin">
-      <legend class="form__legend form__legend--decor">Дополнительно</legend>
+      <legend class="visually-hidden">Дополнительно.</legend>
       <ul class="form__list form__list--add">
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
