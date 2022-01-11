@@ -11,8 +11,9 @@
   @media (--not-narrow-vp) {
     padding-left: 36px;
     padding-right: 36px;
-
-    @include word-font ("Oswald", 36px, 36px);
+    font-size: 36px;
+    line-height: 36px;
+    //@include word-font ("Oswald", 36px, 36px);
   }
 
   @media (--wide-vp) {

@@ -48,8 +48,8 @@
   @media (--not-narrow-vp) {
     max-width: 200px;
     padding: 0;
-
-    @include word-font ("Oswald", 20px, 26px);
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @media (--wide-vp) {
@@ -72,8 +72,10 @@
     padding-right: 0;
     padding-left: 150px;
     justify-content: space-between;
+    font-size: 16px;
+    line-height: 20px;
 
-    @include word-font ("Arial", 16px, 20px);
+    //@include word-font ("Arial", 16px, 20px);
   }
 
   @media (--wide-vp) {

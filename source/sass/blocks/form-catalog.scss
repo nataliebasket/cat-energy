@@ -48,8 +48,10 @@
   @media (--not-narrow-vp) {
     padding-left: 40px;
     margin-bottom: 42px;
+    font-size: 20px;
+    line-height: 30px;
 
-    @include word-font ("Oswald", 20px, 30px);
+    //@include word-font ("Oswald", 20px, 30px);
   }
 
   @media (--wide-vp) {

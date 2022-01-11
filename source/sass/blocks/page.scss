@@ -1,3 +1,19 @@
+.page {
+  height: 100%;
+}
+
+.page-body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  font-family: "Arial", "Helvetica", sans-serif;
+  background: var(--white-color);
+  color: var(--black-color);
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
 .page__centerer {
   margin: 0 20px;
   box-sizing: border-box;
@@ -10,4 +26,15 @@
     margin: 0 auto;
     width: 1220px;
   }
+}
+
+.page-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  clip: rect(0 0 0 0);
 }

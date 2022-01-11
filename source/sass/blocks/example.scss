@@ -313,7 +313,9 @@
   @include word-font ("Oswald", 16px, 20px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
     border-bottom: 1px dotted var(--social__link-color);
   }
 
@@ -330,38 +332,10 @@
   }
 }
 
-// .example__img-fat {
-//   width: 280px;
-//   height: 232px;
-//   transition: 0.5s;
-
-//   @media (--not-narrow-vp) {
-//     width: 592px;
-//     height: 511px;
-//     position: absolute;
-//   }
-// }
-
-
-// .example__div-fat {
-//   --width-curtain-left: 296px;
-//   width: 280px;
-//   height: 232px;
-//   grid-area: 1 / -1;
-
-//   @media (--not-narrow-vp) {
-//     width: var(--width-curtain-left);
-//     //width: 296px;
-//     height: 511px;
-//     overflow: hidden;
-//     position: relative;
-//   }
-// }
-
 .example__img-fat {
-  width: 280px;
+  //width: 280px;
+  max-width: initial;
   height: 232px;
-  //transition: 0.5s;
   position: absolute;
 
   @media (--not-narrow-vp) {
@@ -373,7 +347,6 @@
 .example__div-fat {
   --width-curtain-left: 280px;
   width: var(--width-curtain-left);
-  //width: 280px;
   height: 232px;
   grid-area: 1 / -1;
   overflow: hidden;
@@ -382,23 +355,19 @@
   @media (--not-narrow-vp) {
     --width-curtain-left: 296px;
     width: var(--width-curtain-left);
-    //width: 296px;
     height: 511px;
   }
 }
 
 .example__img-skin {
-  // transition: 0.5s;
-  // opacity: 0;
-  width: 280px;
+  max-width: initial;
+  //width: 280px;
   height: 232px;
   position: absolute;
   top: 0;
   right: 0;
 
   @media (--not-narrow-vp) {
-    // transition: 0;
-    // opacity: 1;
     width: 592px;
     height: 511px;
   }
@@ -415,41 +384,9 @@
 
   @media (--not-narrow-vp) {
     --width-curtain-right: 296px;
-    //width: 296px;
     height: 511px;
   }
 }
-
-// .example__img-skin {
-//   transition: 0.5s;
-//   opacity: 0;
-//   width: 280px;
-//   height: 232px;
-
-//   @media (--not-narrow-vp) {
-//     transition: 0;
-//     opacity: 1;
-//     width: 592px;
-//     height: 511px;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//   }
-// }
-
-// .example__div-skin {
-//   --width-curtain-right: 296px;
-//   grid-area: 1 / -1;
-
-//   @media (--not-narrow-vp) {
-//     width: var(--width-curtain-right);
-//     //width: 296px;
-//     height: 511px;
-//     overflow: hidden;
-//     margin-left: auto;
-//     position: relative;
-//   }
-// }
 
 .example__grid {
   --curtain-width: 280px;
@@ -459,6 +396,5 @@
 
   @media (--not-narrow-vp) {
     --curtain-width: 592px;
-    //width: 592px;
   }
 }

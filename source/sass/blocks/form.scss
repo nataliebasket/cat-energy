@@ -110,7 +110,9 @@
   @include word-font ("Oswald", 24px, 26px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Oswald", 36px, 36px);
+    font-size: 36px;
+    line-height: 36px;
+    //@include word-font ("Oswald", 36px, 36px);
   }
 
   &--width {
@@ -134,8 +136,9 @@
   @media (--not-narrow-vp) {
     padding-left: 39px;
     margin-bottom: 80px;
-
-    @include word-font ("Oswald", 36px, 36px);
+    font-size: 36px;
+    line-height: 36px;
+    //@include word-font ("Oswald", 36px, 36px);
   }
 
   &--width {
@@ -293,7 +296,9 @@
   @include word-font ("Oswald", 16px, 18px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -305,8 +310,9 @@
 
   @media (--not-narrow-vp) {
     padding-left: 88px;
-
-    @include word-font ("Oswald", 20px, 20px);
+    font-size: 20px;
+    line-height: 20px;
+    //@include word-font ("Oswald", 20px, 20px);
   }
 }
 
@@ -375,8 +381,9 @@
   @media (--not-narrow-vp) {
     padding: 9px 18px 10px 18px;
     margin-left: 18px;
-
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
   }
 
   @media (--not-narrow-vp) {
@@ -397,7 +404,9 @@
   @include word-font ("Oswald", 16px, 18px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -405,6 +414,10 @@
 .form__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.form__input--number {
+  appearance: textfield;
 }
 
 .form__input:focus {
@@ -438,8 +451,9 @@
     padding: 10px 19px;
     margin-top: 59px;
     height: 178px;
-
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -449,7 +463,9 @@
   @include word-font ("Oswald", 16px, 18px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -461,8 +477,9 @@
 
   @media (--not-narrow-vp) {
     margin-left: 41px;
-
-    @include word-font ("Oswald", 20px, 20px);
+    font-size: 20px;
+    line-height: 20px;
+    //@include word-font ("Oswald", 20px, 20px);
   }
 
   @media (--wide-vp) {
@@ -479,7 +496,9 @@
   @include word-font ("Arial", 14px, 16px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Arial", 16px, 16px);
+    font-size: 16px;
+    line-height: 16px;
+    //@include word-font ("Arial", 16px, 16px);
   }
 
   @media (--not-narrow-vp) {

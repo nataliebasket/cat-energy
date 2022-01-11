@@ -30,8 +30,9 @@
     padding-left: 40px;
     padding-right: 40px;
     text-align: center;
-
-    @include word-font ("Oswald", 20px, 22px);
+    font-size: 20px;
+    line-height: 22px;
+    //@include word-font ("Oswald", 20px, 22px);
   }
 
   @media (--wide-vp) {
@@ -50,8 +51,9 @@
   @media (--not-narrow-vp) {
     margin-bottom: 87px;
     text-align: center;
-
-    @include word-font ("Arial", 16px, 18px);
+    font-size: 16px;
+    line-height: 18px;
+    //@include word-font ("Arial", 16px, 18px);
   }
 }
 

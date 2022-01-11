@@ -77,8 +77,9 @@
     align-self: flex-start;
     margin-bottom: 41px;
     z-index: 2;
-
-    @include word-font ("Oswald", 60px, 60px);
+    font-size: 60px;
+    line-height: 60px;
+    //@include word-font ("Oswald", 60px, 60px);
   }
 
   @media (--wide-vp) {
@@ -101,8 +102,10 @@
     color: var(--black-color);
     align-self: flex-start;
     z-index: 2;
+    font-size: 20px;
+    line-height: 20px;
 
-    @include word-font ("Oswald", 20px, 20px);
+    //@include word-font ("Oswald", 20px, 20px);
   }
 
   @media (--wide-vp) {

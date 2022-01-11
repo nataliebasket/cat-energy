@@ -91,8 +91,9 @@
     width: 60%;
     margin-top: 35px;
     margin-bottom: 20px;
-
-    @include word-font ("Oswald", 20px, 24px);
+    font-size: 20px;
+    line-height: 24px;
+    //@include word-font ("Oswald", 20px, 24px);
   }
 
   @media (--wide-vp) {
@@ -135,7 +136,9 @@
   @include word-font ("Arial", 12px, 16px);
 
   @media (--not-narrow-vp) {
-    @include word-font ("Arial", 16px, 16px);
+    font-size: 16px;
+    line-height: 16px;
+    //@include word-font ("Arial", 16px, 16px);
   }
 }
 

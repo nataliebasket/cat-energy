@@ -39,8 +39,9 @@
   @media (--not-narrow-vp) {
     margin-top: 47px;
     margin-bottom: 71px;
-
-    @include word-font ("Oswald", 60px, 60px);
+    font-size: 60px;
+    line-height: 60px;
+    //@include word-font ("Oswald", 60px, 60px);
   }
 
   @media (--wide-vp) {
@@ -92,8 +93,9 @@
     padding-top: 111px;
     padding-left: 0;
     padding-right: 70px;
-
-    @include word-font ("Arial", 16px, 24px);
+    font-size: 16px;
+    line-height: 24px;
+    //@include word-font ("Arial", 16px, 24px);
   }
 
   @media (--wide-vp) {
