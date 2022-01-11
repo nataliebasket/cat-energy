@@ -22,15 +22,18 @@
   }
 
   &:focus-visible {
-    outline: none;
+    //outline: none;
     border: none;
+    border-radius: 2px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
   }
 
-  &:focus-visible svg {
-    fill: var(--accent-color);
-  }
+  // &:focus-visible svg {
+  //   fill: var(--accent-color);
+  // }
 
-  &:focus-visible span {
-    color: var(--accent-color);
-  }
+  // &:focus-visible span {
+  //   color: var(--accent-color);
+  // }
 }

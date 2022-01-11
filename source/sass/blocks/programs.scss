@@ -180,13 +180,20 @@
   @media (--wide-vp) {
     margin-bottom: 49px;
     margin-top: 0;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     padding-left: 0;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus-visible {
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
   }
 
   &::after {

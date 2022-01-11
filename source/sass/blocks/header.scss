@@ -65,7 +65,9 @@
 .header__logo-none {
   display: flex;
   align-items: center;
-  min-height: 65px;
+  //min-height: 65px;
+  width: 101px;
+  height: 18px;
 
   @media (--not-narrow-vp) {
     display: none;
@@ -73,5 +75,7 @@
 }
 
 .header__logo-none img {
-  margin-left: -34px;
+  margin-left: -17px;
+  width: 101px;
+  height: 18px;
 }

@@ -50,6 +50,12 @@
     align-items: flex-end;
     min-height: 200px;
   }
+
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--dark-accent-color);
+    outline-offset: 3px;
+  }
 }
 
 .product__image {
@@ -98,6 +104,12 @@
 
   @media (--wide-vp) {
     width: 90%;
+  }
+
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--dark-accent-color);
+    outline-offset: 3px;
   }
 }
 

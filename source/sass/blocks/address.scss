@@ -85,18 +85,50 @@
   }
 }
 
-.address iframe {
+.adress__map-container {
+  display: grid;
+  grid-area: 1 / -1;
+  height: 362px;
+  width: 100%;
+
+  @media (--not-narrow-vp) {
+    height: 400px;
+  }
+}
+
+.adress__map-js {
   border: none;
   display: block;
-  height: 362px;
+  height: 100%;
   width: 100%;
   grid-area: 1 / -1;
 
+  // @media (--middle-vp) {
+  //   height: 400px;
+  // }
+
+  // @media (--wide-vp) {
+  //   height: 100%;
+  // }
+}
+
+.address__map-nojs {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 362px;
+  grid-area: 1 / -1;
+}
+
+.address__map {
   @media (--middle-vp) {
+    width: 768px;
     height: 400px;
   }
 
   @media (--wide-vp) {
-    height: 100%;
+    width: 1440px;
+    height: 400px;
   }
 }

@@ -373,6 +373,7 @@
   border-radius: 0;
   border: none;
   outline: 1px solid var(--form-border-color);
+  transition: outline 0.1s ease-out;
   //border: 1px solid var(--form-border-color);
   color: var(--form-color);
   width: 100%;
@@ -448,6 +449,7 @@
   border-radius: 0;
   border: none;
   outline: 1px solid var(--form-border-color);
+  transition: outline 0.1s ease-out;
   //border: 1px solid var(--form-border-color);
   resize: none;
   padding: 10px 12px;
@@ -605,4 +607,14 @@
 
 .form__input:disabled + span + span {
   opacity: 0.3;
+}
+
+.form__label--radio:focus-within .form__radio-name {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.form__label--checkbox:focus-within .form__checkbox-name {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
 }

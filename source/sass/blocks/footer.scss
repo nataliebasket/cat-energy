@@ -1,8 +1,13 @@
+.footer__wrapper {
+  background-color: var(--footer-bg);
+}
+
 .footer__container {
   @media (--not-narrow-vp) {
+    display: flex;
+    flex-direction: row;
     padding-top: 58px;
     padding-bottom: 55px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -13,8 +18,9 @@
 }
 
 .footer__logo {
+  //height: 24px;
   display: block;
-  padding-top: 40px;
+  padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
@@ -38,13 +44,13 @@
   border: none;
   border-radius: 2px;
   outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  outline-offset: 8px;
 }
 
 .footer__social {
   min-height: 63px;
-
   display: flex;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--border-color);
 

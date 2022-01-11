@@ -5,42 +5,49 @@
       <h2 class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
       <div class="address__text"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></div>
     </div>
-    <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
-    </iframe>
+    <div class="adress__map-container">
+      <noscript class="address__map-nojs">
+        {{ macros.picture("address__map", "./img/", "map", "jpg", "Местонахождение офиса на карте.", "320", "362", true, true) }}
+      </noscript>
+      <iframe class="adress__map-js" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563637!2d30.315220216212023!3d59.96826866666999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639080782786!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+      </iframe>
+    </div>
   </section>
 
-  <div class="footer__container page__centerer">
-    <a class="footer__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page" {% endif %}>
-      <img src="img/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
-    </a>
-
-    <div class="footer__social">
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <span class="page-hidden">Мы в Вконтакте.</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-            <span class="page-hidden">Мы в Инстаграме.</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-            <span class="page-hidden">Мы в Фейсбуке.</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer__academy-logos">
-      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span>HTML Academy</span>
-        <svg class="logo-academy">
-          <use href="./icons/sprite.svg#htmlacademy" />
-        </svg>
+  <div class="footer__wrapper">
+    <div class="footer__container page__centerer">
+      <a class="footer__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page" {% endif %}>
+        <img src="img/footer-logo.svg" alt="Логотип магазина." width="128" height="24">
       </a>
+
+      <div class="footer__social">
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="page-hidden">Мы в Вконтакте.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="page-hidden">Мы в Инстаграме.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="page-hidden">Мы в Фейсбуке.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__academy-logos">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>HTML Academy</span>
+          <svg class="logo-academy">
+            <use href="./icons/sprite.svg#htmlacademy" />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
