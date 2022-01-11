@@ -2,11 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  margin: 0 auto;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
 
   @media (--not-narrow-vp) {
     padding-left: 36px;
