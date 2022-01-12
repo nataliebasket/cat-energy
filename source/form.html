@@ -9,11 +9,11 @@
   <p class="form-catalog__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
   <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-    <h2 class="page-hidden">Анкета</h2>
+    <h2 class="page__hidden">Анкета</h2>
 
     <div class="form__radio-container">
       <fieldset class="form__fieldset form__fieldset--namecat-margin form__fieldset--decor-line">
-        <legend class="page-hidden">Данные кота.</legend>
+        <legend class="page__hidden">Данные кота.</legend>
         <ul class="form__list">
           <li class="form__item">
             <label class="form__label" for="cat-name">Имя:*</label>
@@ -32,25 +32,25 @@
       </fieldset>
 
       <fieldset class="form__fieldset form__fieldset--radio-margin form__fieldset--decor-line form__fieldset--border">
-        <legend class="page-hidden">Выбор программы.</legend>
+        <legend class="page__hidden">Выбор программы.</legend>
         <ul class="form__list form__list-radio">
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="page-hidden form__input" type="radio" name="program" value="slim" checked>
+              <input class="page__hidden form__input" type="radio" disabled name="program" value="slim" checked>
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Похудение</span>
             </label>
           </li>
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="page-hidden form__input" type="radio" name="program" value="weight">
+              <input class="page__hidden form__input" type="radio" name="program" value="weight">
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Набор массы</span>
             </label>
           </li>
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
-              <input class="page-hidden form__input" type="radio" name="program" value="help">
+              <input class="page__hidden form__input" type="radio" name="program" value="help">
               <span class="form__radio-mark"></span>
               <span class="form__radio-name">Не знаю (нужен ваш совет)</span>
             </label>
@@ -59,12 +59,12 @@
       </fieldset>
     </div>
 
-    <div class="site-heading ">
-      <p class="site-heading__text site-heading__text--decor">Контактные данные (владельца кота)</p>
+    <div class="heading ">
+      <p class="heading__text heading__text--decor">Контактные данные (владельца кота)</p>
     </div>
 
     <fieldset class="form__fieldset form__fieldset--contacts-margin">
-      <legend class="page-hidden">Контактные данные (владельца кота)</legend>
+      <legend class="page__hidden">Контактные данные (владельца кота)</legend>
       <ul class="form__list form__list--contacts">
         <li class="form__item">
           <label class="form__label" for="email">E-mail:*</label>
@@ -81,55 +81,61 @@
       </ul>
     </fieldset>
 
-    <div class="site-heading">
-      <p class="site-heading__text site-heading__text--decor">Комментарий</p>
+    {# <div class="heading">
+      <label  for="textarea" class="heading__text heading__text--decor">Комментарий</label>
     </div>
-
     <div class="form__fieldset form__fieldset--textarea-margin">
-      <label class="page-hidden" for="textarea">Комментарий.</label>
+      <textarea class="form__textarea" name="comments" id="textarea" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+    </div> #}
+
+    <div class="heading form__fieldset form__fieldset--textarea-margin">
+      <label  for="textarea" class="heading__text heading__text--decor">Комментарий</label>
       <textarea class="form__textarea" name="comments" id="textarea" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
     </div>
 
-    <div class="site-heading">
-      <p class="site-heading__text site-heading__text--decor">Дополнительно</p>
-    </div>
 
-    <fieldset class="form__fieldset form__fieldset--add-margin">
-      <legend class="page-hidden">Дополнительно.</legend>
+
+    {# <div class="heading">
+      <p class="heading__text heading__text--decor">Дополнительно</p>
+    </div> #}
+
+    <fieldset class="heading form__fieldset form__fieldset--add-margin">
+      <legend class="heading__text heading__text--decor">Дополнительно</legend>
+      {# <legend class="page__hidden">Дополнительно.</legend> #}
       <ul class="form__list form__list--add">
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="page-hidden form__input" type="checkbox" name="sweetener" checked>
+            <input class="page__hidden form__input" type="checkbox" name="sweetener" checked>
             <span class="form__checkbox-mark"></span>
-            <span class="form__checkbox-name">САХАРОЗАМЕНИТЕЛЬ</span>
+            <span class="form__checkbox-name">Сахарозаменитель</span>
           </label>
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="page-hidden form__input" type="checkbox" name="water">
+            <input class="page__hidden form__input" type="checkbox" name="water">
             <span class="form__checkbox-mark"></span>
-            <span class="form__checkbox-name">ПИТЬЕВАЯ ВОДА</span>
+            <span class="form__checkbox-name">Питьевая вода</span>
           </label>
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="page-hidden form__input" type="checkbox" name="milk">
+            <input class="page__hidden form__input" type="checkbox" name="milk">
             <span class="form__checkbox-mark"></span>
-            <span class="form__checkbox-name">МОЛОКО</span>
+            <span class="form__checkbox-name">Молоко</span>
           </label>
         </li>
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">
-            <input class="page-hidden form__input" type="checkbox" name="vitamins">
+            <input class="page__hidden form__input" type="checkbox" name="vitamins">
             <span class="form__checkbox-mark"></span>
-            <span class="form__checkbox-name">ВИТАМИНЫ</span>
+            <span class="form__checkbox-name">Витамины</span>
           </label>
         </li>
       </ul>
     </fieldset>
 
     <div class="form__button-container">
-      <button class="form__button button" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+      <button class="form__button button" type="submit">Отправить заявку</button>
       <span class="form__required-text">* — Обязательные поля</span>
     </div>
 

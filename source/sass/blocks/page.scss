@@ -2,7 +2,7 @@
   height: 100%;
 }
 
-.page-body {
+.page__body {
   margin: 0;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -28,7 +28,7 @@
   }
 }
 
-.page-hidden {
+.page__hidden {
   position: absolute;
   width: 1px;
   height: 1px;

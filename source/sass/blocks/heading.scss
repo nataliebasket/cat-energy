@@ -1,14 +1,16 @@
-.site-heading__text {
+.heading__text {
   margin: 0;
   padding: 0;
   z-index: 3;
   background-color: var(--white-color);
   display: inline-block;
   position: relative;
+  max-width: 190px;
 
   @include word-font ("Oswald", 24px, 24px);
 
   @media (--not-narrow-vp) {
+    max-width: 100%;
     padding-left: 36px;
     padding-right: 36px;
     font-size: 36px;

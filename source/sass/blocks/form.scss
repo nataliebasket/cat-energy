@@ -303,6 +303,7 @@
 }
 
 .form__label--radio {
+  //display: flex;
   padding-left: 45px;
   position: relative;
   cursor: pointer;
@@ -317,6 +318,7 @@
 }
 
 .form__label--checkbox {
+  //display: flex;
   padding-left: 45px;
   position: relative;
   cursor: pointer;
@@ -326,9 +328,9 @@
     padding-left: 59px;
   }
 
-  @media (--wide-vp) {
-    padding-left: 59px;
-  }
+  // @media (--wide-vp) {
+  //   padding-left: 59px;
+  // }
 }
 
 .form__input-decor {
@@ -609,12 +611,17 @@
   opacity: 0.3;
 }
 
-.form__label--radio:focus-within .form__radio-name {
+// .form__label--radio:focus-within .form__radio-name {
+//   outline: 2px solid var(--accent-color);
+//   outline-offset: 3px;
+// }
+
+.form__label--radio:focus-within .form__radio-mark::before {
   outline: 2px solid var(--accent-color);
-  outline-offset: 3px;
+  outline-offset: 5px;
 }
 
-.form__label--checkbox:focus-within .form__checkbox-name {
+.form__label--checkbox:focus-within .form__checkbox-mark {
   outline: 2px solid var(--accent-color);
-  outline-offset: 3px;
+  outline-offset: 4px;
 }

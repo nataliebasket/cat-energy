@@ -48,7 +48,7 @@ export function processStyles () {
       postImport(),
       postUrl()
     ], { syntax: postScss }))
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on("error", sass.logError))
     .pipe(postcss([
       postMediaMinMax(),
       postCustomMedia(),
@@ -190,7 +190,7 @@ export default series (
     copyAssets,
     copyImages,
     createWebp,
-    createAvif
+    //createAvif
   ),
   series(
     startServer,
