@@ -33,18 +33,15 @@
 
 .process__title {
   margin: 0;
-  //margin-top: 16px;
   margin-bottom: 43px;
   padding: 0;
 
   @include word-font ("Oswald", 36px, 40px);
 
   @media (--not-narrow-vp) {
-    //margin-top: 47px;
     margin-bottom: 71px;
     font-size: 60px;
     line-height: 60px;
-    //@include word-font ("Oswald", 60px, 60px);
   }
 
   @media (--wide-vp) {
@@ -98,7 +95,6 @@
     padding-right: 70px;
     font-size: 16px;
     line-height: 24px;
-    //@include word-font ("Arial", 16px, 24px);
   }
 
   @media (--wide-vp) {

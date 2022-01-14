@@ -33,7 +33,7 @@
 
       <fieldset class="form__fieldset form__fieldset--radio-margin form__fieldset--decor-line form__fieldset--border">
         <legend class="page__hidden">Выбор программы.</legend>
-        <ul class="form__list form__list-radio">
+        <ul class="form__list form__list--radio">
           <li class="form__item-radio">
             <label class="form__label form__label--radio">
               <input class="page__hidden form__input" type="radio" name="program" value="slim" checked>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="heading ">
-      <p class="heading__text heading__text--decor">Контактные данные (владельца кота)</p>
+      <p class="heading__text heading__text--decor heading__text--line-down">Контактные данные (владельца кота)</p>
     </div>
 
     <fieldset class="form__fieldset form__fieldset--contacts-margin">
@@ -81,27 +81,13 @@
       </ul>
     </fieldset>
 
-    {# <div class="heading">
-      <label  for="textarea" class="heading__text heading__text--decor">Комментарий</label>
-    </div>
-    <div class="form__fieldset form__fieldset--textarea-margin">
-      <textarea class="form__textarea" name="comments" id="textarea" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
-    </div> #}
-
     <div class="heading form__fieldset form__fieldset--textarea-margin">
-      <label  for="textarea" class="heading__text heading__text--decor">Комментарий</label>
+      <label  for="textarea" class="heading__text heading__text--decor heading__text--place">Комментарий</label>
       <textarea class="form__textarea" name="comments" id="textarea" rows="5" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
     </div>
-
-
-
-    {# <div class="heading">
-      <p class="heading__text heading__text--decor">Дополнительно</p>
-    </div> #}
 
     <fieldset class="heading form__fieldset form__fieldset--add-margin">
-      <legend class="heading__text heading__text--decor">Дополнительно</legend>
-      {# <legend class="page__hidden">Дополнительно.</legend> #}
+      <legend class="heading__text heading__text--decor  heading__text--place">Дополнительно</legend>
       <ul class="form__list form__list--add">
         <li class="form__item-checkbox">
           <label class="form__label form__label--checkbox">

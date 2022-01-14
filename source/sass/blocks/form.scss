@@ -46,6 +46,7 @@
   }
 
   &--contacts-margin {
+    margin-top: 15px;
     margin-bottom: 26px;
 
     @media (--not-narrow-vp) {
@@ -65,7 +66,7 @@
     }
 
     @media (--wide-vp) {
-      margin-bottom: 57px;
+      margin-bottom: 63px;
     }
   }
 
@@ -112,7 +113,6 @@
   @media (--not-narrow-vp) {
     font-size: 36px;
     line-height: 36px;
-    //@include word-font ("Oswald", 36px, 36px);
   }
 
   &--width {
@@ -138,7 +138,6 @@
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
-    //@include word-font ("Oswald", 36px, 36px);
   }
 
   &--width {
@@ -181,13 +180,22 @@
 
 .form__list {
   @include list-zero;
+
+  &--radio {
+    margin-top: 16px;
+
+    @media (--not-narrow-vp) {
+      margin-top: 34px;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .form__list--add {
-  margin-top: 22px;
+  margin-top: 40px;
 
   @media (--not-narrow-vp) {
-    margin-top: 45px;
+    margin-top: 63px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -197,6 +205,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
+    margin-top: 60px;
   }
 }
 
@@ -250,7 +259,7 @@
   position: relative;
 
   @media (--not-narrow-vp) {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
   @media (--wide-vp) {
@@ -298,12 +307,10 @@
   @media (--not-narrow-vp) {
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
 .form__label--radio {
-  //display: flex;
   padding-left: 45px;
   position: relative;
   cursor: pointer;
@@ -313,12 +320,10 @@
     padding-left: 88px;
     font-size: 20px;
     line-height: 20px;
-    //@include word-font ("Oswald", 20px, 20px);
   }
 }
 
 .form__label--checkbox {
-  //display: flex;
   padding-left: 45px;
   position: relative;
   cursor: pointer;
@@ -327,10 +332,6 @@
   @media (--not-narrow-vp) {
     padding-left: 59px;
   }
-
-  // @media (--wide-vp) {
-  //   padding-left: 59px;
-  // }
 }
 
 .form__input-decor {
@@ -388,7 +389,6 @@
     margin-left: 18px;
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 
   @media (--not-narrow-vp) {
@@ -421,7 +421,6 @@
   @media (--not-narrow-vp) {
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
@@ -436,7 +435,6 @@
 }
 
 .form__input--error {
-  //border: 2px solid var(--error-color);
   border: none;
   outline: 2px solid  var(--error-color);
 }
@@ -453,10 +451,9 @@
   border: none;
   outline: 1px solid var(--form-border-color);
   transition: outline 0.1s ease-out;
-  //border: 1px solid var(--form-border-color);
   resize: none;
   padding: 10px 12px;
-  margin-top: 20px;
+  margin-top: 36px;
   text-transform: uppercase;
 
   @include word-font ("Oswald", 16px, 18px);
@@ -465,11 +462,10 @@
     box-sizing: border-box;
     width: 100%;
     padding: 10px 19px;
-    margin-top: 59px;
+    margin-top: 70px;
     height: 178px;
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 
   &:hover {
@@ -489,21 +485,21 @@
   @media (--not-narrow-vp) {
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 }
 
 .form__button {
+  margin-top: 21px;
   border: 0;
   cursor: pointer;
 
   @include word-font ("Oswald", 16px, 20px);
 
   @media (--not-narrow-vp) {
+    margin-top: 0;
     margin-left: 41px;
     font-size: 20px;
     line-height: 20px;
-    //@include word-font ("Oswald", 20px, 20px);
   }
 
   @media (--wide-vp) {
@@ -522,7 +518,6 @@
   @media (--not-narrow-vp) {
     font-size: 16px;
     line-height: 16px;
-    //@include word-font ("Arial", 16px, 16px);
   }
 
   @media (--not-narrow-vp) {
@@ -532,7 +527,7 @@
 }
 
 .form__radio-container {
-  margin-bottom: 17px;
+  margin-bottom: 22px;
 
   @media (--not-narrow-vp) {
     margin-bottom: 45px;

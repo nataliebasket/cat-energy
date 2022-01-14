@@ -63,19 +63,15 @@
   @include word-font ("Oswald", 24px, 37px);
 
   @media (--not-narrow-vp) {
-    //padding-top: 77px;
     padding-left: 0;
     margin-bottom: 24px;
-    //padding-right: 316px;
 
     @include word-font ("Oswald", 36px, 36px);
   }
 
   @media (--wide-vp) {
-    //padding-bottom: 73px;
     padding-left: 162px;
     margin-bottom: 73px;
-    //padding-right: 10px;
   }
 }
 
@@ -86,7 +82,9 @@
   height: 53px;
   top: 21px;
   left: 22px;
-  background-image: url("../../img/pseudo/cat-sit.svg");
+  background-image: url("../../icons/sprite.svg#cat-sit");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (--not-narrow-vp) {
@@ -113,7 +111,9 @@
   height: 50px;
   top: 24px;
   left: 13px;
-  background-image: url("../../img/pseudo/cat-walk.svg");
+  background-image: url("../../icons/sprite.svg#cat-walk");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (--not-narrow-vp) {
@@ -144,8 +144,6 @@
 
   @media (--not-narrow-vp) {
     margin: 0;
-    //padding-left: 52px;
-    //padding-right: 316px;
     padding-bottom: 0;
     margin-bottom: 53px;
     border-bottom: none;
@@ -155,9 +153,6 @@
 
   @media (--wide-vp) {
     margin-bottom: 27px;
-    //padding-left: 52px;
-    //padding-right: 51px;
-    //padding-bottom: 15px;
   }
 }
 
@@ -180,11 +175,6 @@
     margin-bottom: 27px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  @media (--wide-vp) {
-    // margin-bottom: 49px;
-    // margin-top: 0;
   }
 
   &:active {

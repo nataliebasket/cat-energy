@@ -13,7 +13,7 @@
 
   @media (--not-narrow-vp) {
     padding-left: 40px;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-bottom: 56px;
 
     @include word-font ("Oswald", 60px, 60px);
@@ -50,8 +50,6 @@
     margin-bottom: 42px;
     font-size: 20px;
     line-height: 30px;
-
-    //@include word-font ("Oswald", 20px, 30px);
   }
 
   @media (--wide-vp) {

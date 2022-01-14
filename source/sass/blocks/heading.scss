@@ -15,11 +15,18 @@
     padding-right: 36px;
     font-size: 36px;
     line-height: 36px;
-    //@include word-font ("Oswald", 36px, 36px);
   }
 
   @media (--wide-vp) {
     padding: 0;
+  }
+
+  &--width {
+    max-width: 230px;
+
+    @media (--not-narrow-vp) {
+      max-width: 100%;
+    }
   }
 
   &--decor::before {
@@ -54,5 +61,23 @@
     box-shadow: 100vw 0 0 0 var(--accent-color);
     background-color: var(--accent-color);
     z-index: -2;
+  }
+
+  &--line-down::after {
+    @media (--narrow-vp) {
+      top: 40%;
+    }
+  }
+
+  &--line-down::before {
+    @media (--narrow-vp) {
+      top: 40%;
+    }
+  }
+
+  &--place {
+    @media (--middle-vp) {
+      margin-left: -36px;
+    }
   }
 }

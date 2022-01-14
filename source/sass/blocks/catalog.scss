@@ -14,12 +14,10 @@
   @include word-font ("Oswald", 36px, 36px);
 
   @media (--not-narrow-vp) {
-    margin-top: 40px;
-    margin-bottom: 82px;
+    margin-top: 33px;
+    margin-bottom: 72px;
     font-size: 60px;
     line-height: 60px;
-
-    //@include word-font ("Oswald", 60px, 60px);
   }
 
   @media (--wide-vp) {
@@ -54,11 +52,13 @@
 
 .catalog__product-container {
   margin-top: 20px;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 45px;
 
   @media (--not-narrow-vp) {
+    margin-bottom: 68px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 68px;
@@ -69,5 +69,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 63px;
     column-gap: 80px;
+    margin-top: 0;
+    margin-bottom: 74px;
   }
 }

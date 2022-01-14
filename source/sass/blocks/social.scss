@@ -19,8 +19,8 @@
   height: 22px;
 
   @media (--not-narrow-vp) {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
   }
 }
 
@@ -68,4 +68,15 @@
   border-radius: 2px;
   outline: 2px solid var(--accent-color);
   outline-offset: 3px;
+}
+
+.social--wrapper {
+  @media (--not-narrow-vp) {
+    margin-left: 26px;
+    margin-top: 9px;
+  }
+
+  @media (--wide-vp) {
+    margin-left: 30px;
+  }
 }

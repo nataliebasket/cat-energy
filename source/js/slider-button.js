@@ -25,7 +25,6 @@ function windowResize () {
     thumb.style.setProperty("--left-position", "50%");
     sizeCurtainLeft.style.setProperty("--width-curtain-left", "296px");
     sizeCurtainRight.style.setProperty("--width-curtain-right", "296px");
-    //console.log(version);
   }
   if (version === '"mobile"') {
     thumb.style.setProperty("--left-position", "21px");
