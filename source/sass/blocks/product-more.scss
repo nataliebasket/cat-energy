@@ -70,7 +70,7 @@
 
   &:active {
     background-color: var(--button-color);
-    color: rgba(var(--form-color), 0.3);
+    color: var(--light-form-color);
   }
 }
 

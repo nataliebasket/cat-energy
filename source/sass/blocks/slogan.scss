@@ -5,7 +5,7 @@
   background-position-y: top, top;
   position: relative;
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 1.5dppx) {
     background: linear-gradient(var(--accent-trans-color) 302px, transparent 302px), url("../../img/cat-bg-mobile@2x.webp"), linear-gradient(#4f4e54 302px, transparent 302px);
     background-size: auto, 320px, auto;
     background-repeat: repeat, no-repeat;
@@ -33,7 +33,7 @@
       background-position-x: center, right, center;
       background-position-y: top, bottom, top;
 
-      @media (min-resolution: 2dppx) {
+      @media (min-resolution: 1.5dppx) {
         background:
           linear-gradient(to left, var(--accent-trans-color) 50%, var(--white-color) 50%),
           url("../../img/cat-bg-desktop@2x.webp"),
@@ -52,16 +52,28 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  padding-top: 27px;
+  padding-bottom: 10px;
 
   @media (--not-narrow-vp) {
+    padding-top: 33px;
+    padding-left: 90px;
+    padding-right: 90px;
     position: relative;
+    min-height: 843px;
+  }
+
+  @media (--wide-vp) {
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    min-height: 530px;
   }
 }
 
 .slogan__title {
   color: var(--white-color);
   margin: 0;
-  margin-top: 27px;
   margin-bottom: 25px;
   text-align: center;
   max-width: 250px;
@@ -71,20 +83,12 @@
   @media (--not-narrow-vp) {
     max-width: 450px;
     text-align: left;
-    margin-top: 40px;
-    margin-left: 89px;
     color: var(--black-color);
     align-self: flex-start;
     margin-bottom: 41px;
     z-index: 2;
     font-size: 60px;
     line-height: 60px;
-    //@include word-font ("Oswald", 60px, 60px);
-  }
-
-  @media (--wide-vp) {
-    margin-top: 60px;
-    margin-left: 80px;
   }
 }
 
@@ -97,27 +101,22 @@
   @include word-font ("Oswald", 14px, 14px);
 
   @media (--not-narrow-vp) {
-    margin-left: 90px;
     margin-bottom: 48px;
     color: var(--black-color);
     align-self: flex-start;
     z-index: 2;
     font-size: 20px;
     line-height: 20px;
-
-    //@include word-font ("Oswald", 20px, 20px);
   }
 
   @media (--wide-vp) {
-    margin-left: 80px;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
     width: 450px;
   }
 }
 
 .slogan__image {
   display: block;
-  margin-bottom: 3px;
 
   @media (--not-narrow-vp) {
     position: absolute;
@@ -141,18 +140,17 @@
 
 .slogan__button {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 10px;
 
   @media (--not-narrow-vp) {
     width: 244px;
-    margin-left: 90px;
-    margin-bottom: 526px;
+    margin-top: 0;
     align-self: flex-start;
     z-index: 3;
   }
 
   @media (--wide-vp) {
-    margin-left: 80px;
-    margin-bottom: 185px;
+    margin-bottom: 20px;
   }
 }

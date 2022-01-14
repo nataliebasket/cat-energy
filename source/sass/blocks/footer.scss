@@ -6,7 +6,7 @@
   @media (--not-narrow-vp) {
     display: flex;
     flex-direction: row;
-    padding-top: 58px;
+    padding-top: 50px;
     padding-bottom: 55px;
     justify-content: space-between;
     align-items: center;
@@ -14,13 +14,24 @@
 
   @media (--wide-vp) {
     align-items: center;
+    padding-top: 45px;
+  }
+}
+
+.footer__social--wrapper {
+  @media (--not-narrow-vp) {
+    margin-left: 23px;
+  }
+
+  @media (--wide-vp) {
+    margin-left: 30px;
   }
 }
 
 .footer__logo {
   //height: 24px;
   display: block;
-  padding-top: 25px;
+  padding-top: 40px;
   padding-bottom: 25px;
   text-align: center;
   border-bottom: 1px solid var(--border-color);

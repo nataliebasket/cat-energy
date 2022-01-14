@@ -190,7 +190,7 @@ export default series (
     copyAssets,
     copyImages,
     createWebp,
-    //createAvif
+    createAvif
   ),
   series(
     startServer,

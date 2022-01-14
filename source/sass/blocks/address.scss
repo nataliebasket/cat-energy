@@ -21,7 +21,7 @@
     z-index: 4;
     box-sizing: border-box;
     margin-top: 95px;
-    margin-left: calc((100vw - 1440px) / 2 + 100px);
+    margin-left: calc((100vw - 1440px) / 2 + 110px);
     margin-bottom: 107px;
     width: 565px;
     padding: 59px 80px;
@@ -50,10 +50,12 @@
     padding: 0;
     font-size: 20px;
     line-height: 26px;
+    margin-top: 3px;
   }
 
   @media (--wide-vp) {
     padding-left: 0;
+    margin-top: 0;
   }
 }
 

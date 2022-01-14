@@ -6,7 +6,7 @@
   }
 
   @media (--wide-vp) {
-    background: linear-gradient(to bottom, transparent 50%, var(--section-bg-color) 50%);
+    background: linear-gradient(to bottom, transparent 197px, var(--section-bg-color) 197px);
   }
 }
 
@@ -19,7 +19,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    padding-bottom: 75px;
+    padding-bottom: 11px;
+  }
+}
+
+.example__help-container {
+  @media (--middle-vp) {
+    margin-bottom: 77px;
+  }
+
+  @media (--wide-vp) {
+    //margin-bottom: 152px;
   }
 }
 
@@ -220,13 +230,17 @@
     flex-direction: column;
     align-items: center;
   }
+
+  @media (--wide-vp) {
+    margin-top: 16px;
+  }
 }
 
 .example__toggle-container {
   margin-left: 35px;
   margin-right: 35px;
   margin-bottom: 45px;
-  margin-top: 15px;
+  margin-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,8 +249,8 @@
     width: 592px;
     display: flex;
     justify-content: space-around;
-    margin-top: 41px;
-    margin-bottom: 0;
+    margin-top: 28px;
+    margin-bottom: 60px;
   }
 }
 
@@ -249,8 +263,8 @@
   background-color: var(--white-color);
   border-radius: 6px;
   border: 1px solid var(--light-form-color);
-  margin-left: 11px;
-  margin-right: 11px;
+  margin-left: 17px;
+  margin-right: 17px;
   position: relative;
 
   @media (--not-narrow-vp) {
@@ -278,7 +292,6 @@
   top: 3px;
   cursor: pointer;
   transform: translateX(-50%);
-  //transition: 0.5s;
 
   @media (--not-narrow-vp) {
     --left-position: 50%;
@@ -289,7 +302,9 @@
     border: 13px solid var(--white-color);
     padding: 0;
     border-radius: 50%;
-    box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.16);
+    //box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+    outline: 1px solid var(--light-form-color);
     position: absolute;
     top: -14px;
     box-sizing: border-box;
@@ -297,11 +312,16 @@
     transition: none;
   }
 
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
   &:active {
     outline: 1px solid var(--accent-color);
   }
 
   &:focus-visible {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     outline: 2px solid var(--accent-color);
   }
 }

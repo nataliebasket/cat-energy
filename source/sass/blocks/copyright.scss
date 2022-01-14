@@ -22,18 +22,13 @@
   }
 
   &:focus-visible {
-    //outline: none;
     border: none;
     border-radius: 2px;
     outline: 2px solid var(--accent-color);
     outline-offset: 3px;
   }
+}
 
-  // &:focus-visible svg {
-  //   fill: var(--accent-color);
-  // }
-
-  // &:focus-visible span {
-  //   color: var(--accent-color);
-  // }
+.copyright span {
+  margin-right: 13px;
 }

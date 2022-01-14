@@ -136,7 +136,7 @@
   align-items: center;
   position: relative;
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 1.5dppx) {
     background:
       linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
       url("../../img/catalog/gift-cat-mobile@2x.png");
@@ -151,7 +151,7 @@
     background-size: cover, cover;
     background-position: center, center;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 1.5dppx) {
       background:
         linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
         url("../../img/catalog/gift-cat-tablet@2x.png");
@@ -166,7 +166,7 @@
     background-size: cover, cover;
     background-position: center, center;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 1.5dppx) {
       background:
         linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%),
         url("../../img/catalog/gift-cat-desktop@2x.png");

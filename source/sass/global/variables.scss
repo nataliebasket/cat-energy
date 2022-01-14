@@ -23,12 +23,11 @@
   --button-color: #ebebeb;
 
   --social__link-color: #666666;
+  --radio-hover: #bababa;
 
   --window-version: "mobile";
 
   @media (--not-narrow-vp) {
     --window-version: "tablet";
   }
-
-  //--left-position: 50%;
 }

@@ -1,4 +1,4 @@
-.programs__container {
+.programs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
 
   @media (--wide-vp) {
     padding-top: 82px;
-    padding-bottom: 71px;
+    padding-bottom: 36px;
   }
 }
 
@@ -19,20 +19,30 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 80px;
+    grid-row-gap: 40px;
   }
 }
 
 .programs__item {
-  margin-bottom: 15px;
   background-color: var(--footer-bg);
   position: relative;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 11px;
 
   @media (--not-narrow-vp) {
     margin-bottom: 30px;
+    padding-top: 77px;
+    padding-left: 52px;
+    padding-right: 316px;
+    padding-bottom: 30px;
   }
 
   @media (--wide-vp) {
     margin-bottom: 0;
+    padding-right: 51px;
   }
 
   &:last-child {
@@ -47,25 +57,25 @@
 .programs__title {
   text-transform: uppercase;
   display: block;
-  padding-top: 32px;
-  padding-left: 91px;
-  padding-bottom: 29px;
+  padding-left: 71px;
+  margin-bottom: 29px;
 
   @include word-font ("Oswald", 24px, 37px);
 
   @media (--not-narrow-vp) {
-    padding-top: 77px;
-    padding-left: 53px;
-    padding-bottom: 24px;
-    padding-right: 316px;
+    //padding-top: 77px;
+    padding-left: 0;
+    margin-bottom: 24px;
+    //padding-right: 316px;
 
     @include word-font ("Oswald", 36px, 36px);
   }
 
   @media (--wide-vp) {
-    padding-bottom: 73px;
-    padding-left: 214px;
-    padding-right: 10px;
+    //padding-bottom: 73px;
+    padding-left: 162px;
+    margin-bottom: 73px;
+    //padding-right: 10px;
   }
 }
 
@@ -128,25 +138,26 @@
   margin: 0;
   padding: 0;
   padding-bottom: 23px;
-  margin-right: 20px;
-  margin-left: 20px;
   border-bottom: 1px solid var(--border-color);
 
   @include word-font ("Arial", 14px, 18px);
 
   @media (--not-narrow-vp) {
     margin: 0;
-    padding-left: 52px;
-    padding-right: 316px;
+    //padding-left: 52px;
+    //padding-right: 316px;
+    padding-bottom: 0;
+    margin-bottom: 53px;
     border-bottom: none;
 
     @include word-font ("Arial", 16px, 24px);
   }
 
   @media (--wide-vp) {
-    padding-left: 52px;
-    padding-right: 51px;
-    padding-bottom: 15px;
+    margin-bottom: 27px;
+    //padding-left: 52px;
+    //padding-right: 51px;
+    //padding-bottom: 15px;
   }
 }
 
@@ -154,11 +165,9 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  padding-top: 10px;
-  padding-left: 19px;
-  padding-bottom: 10px;
-  margin-bottom: 14px;
-  margin-top: 9px;
+  margin-bottom: 11px;
+  margin-top: 19px;
+  margin-right: 10px;
   color: var(--black-color);
   text-transform: uppercase;
   position: relative;
@@ -166,23 +175,16 @@
   @include word-font ("Oswald", 16px, 16px);
 
   @media (--not-narrow-vp) {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 0;
-    margin-left: 52px;
-    margin-top: 20px;
-    margin-bottom: 46px;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 27px;
     font-size: 20px;
     line-height: 30px;
-    //@include word-font ("Oswald", 20px, 30px);
   }
 
   @media (--wide-vp) {
-    margin-bottom: 49px;
-    margin-top: 0;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 0;
+    // margin-bottom: 49px;
+    // margin-top: 0;
   }
 
   &:active {
@@ -201,7 +203,6 @@
     width: 32px;
     height: 10px;
     margin-left: 15px;
-    //transform: translateY(-50%);
     background-image: url("../../icons/sprite.svg#arrow");
     background-repeat: no-repeat;
     background-size: cover;

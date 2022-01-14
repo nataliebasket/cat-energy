@@ -376,7 +376,6 @@
   border: none;
   outline: 1px solid var(--form-border-color);
   transition: outline 0.1s ease-out;
-  //border: 1px solid var(--form-border-color);
   color: var(--form-color);
   width: 100%;
   flex-grow: 1;
@@ -394,6 +393,16 @@
 
   @media (--not-narrow-vp) {
     height: 50px;
+  }
+
+  &:hover {
+    outline: 1px solid var(--light-form-color);
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid var(--form-color);
+    border-radius: 0;
   }
 
   &--namecat {
@@ -424,14 +433,6 @@
 
 .form__input--number {
   appearance: textfield;
-}
-
-.form__input:focus {
-  border: none;
-  //outline: none;
-  //border: 2px solid var(--form-color);
-  outline: 2px solid var(--form-color);
-  border-radius: 0;
 }
 
 .form__input--error {
@@ -469,6 +470,10 @@
     font-size: 20px;
     line-height: 30px;
     //@include word-font ("Oswald", 20px, 30px);
+  }
+
+  &:hover {
+    outline: 1px solid var(--light-form-color);
   }
 
   &:focus {
@@ -611,14 +616,13 @@
   opacity: 0.3;
 }
 
-// .form__label--radio:focus-within .form__radio-name {
-//   outline: 2px solid var(--accent-color);
-//   outline-offset: 3px;
-// }
-
 .form__label--radio:focus-within .form__radio-mark::before {
   outline: 2px solid var(--accent-color);
   outline-offset: 5px;
+}
+
+.form__label--radio:hover .form__radio-mark::before {
+  box-shadow: 0 0 1px 1px var(--radio-hover);
 }
 
 .form__label--checkbox:focus-within .form__checkbox-mark {
