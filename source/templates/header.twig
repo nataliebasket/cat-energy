@@ -1,16 +1,17 @@
 <header class="header page__centerer">
   <div class="header__container">
-    <a class="header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+    <div class="header__logo-container">
+      <a class="header__logo" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
         <picture>
-          <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" alt="Картинка магазина питания." width="33" height="38">
+          <source media="(min-width: 1280px)" srcset="img/mysprite.svg#logo-desktop">
+          <source media="(min-width: 768px)" srcset="img/mysprite.svg#logo-tablet">
+          <img src="img/mysprite.svg#logo-mobile" alt="Картинка магазина питания." width="33" height="38">
         </picture>
-
-    </a>
-    <a class="header__logo-none" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
-      <img src="img/logo-mobile-text.svg" alt="Название магазина питания." width="101" height="18">
-    </a>
+      </a>
+      <a class="header__logo-none" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+        <img src="img/mysprite.svg#logo-mobile-text" alt="Название магазина питания." width="101" height="18">
+      </a>
+    </div>
 
     <nav class="navigation navigation--closed navigation--nojs">
       <button class="navigation__button" type="button">

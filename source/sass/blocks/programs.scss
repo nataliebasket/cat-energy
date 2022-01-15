@@ -59,14 +59,17 @@
   display: block;
   padding-left: 71px;
   margin-bottom: 29px;
-
-  @include word-font ("Oswald", 24px, 37px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
 
   @media (--not-narrow-vp) {
     padding-left: 0;
     margin-bottom: 24px;
-
-    @include word-font ("Oswald", 36px, 36px);
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (--wide-vp) {
@@ -139,16 +142,22 @@
   padding: 0;
   padding-bottom: 23px;
   border-bottom: 1px solid var(--border-color);
-
-  @include word-font ("Arial", 14px, 18px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (--not-narrow-vp) {
     margin: 0;
     padding-bottom: 0;
     margin-bottom: 53px;
     border-bottom: none;
-
-    @include word-font ("Arial", 16px, 24px);
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (--wide-vp) {
@@ -166,8 +175,11 @@
   color: var(--black-color);
   text-transform: uppercase;
   position: relative;
-
-  @include word-font ("Oswald", 16px, 16px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
 
   @media (--not-narrow-vp) {
     padding: 0;

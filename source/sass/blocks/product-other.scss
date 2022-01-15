@@ -1,5 +1,12 @@
 .product-other__list {
-  @include list-zero;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (--wide-vp) {
+    margin-top: 70px;
+    margin-bottom: 75px;
+  }
 }
 
 .product-other__item {
@@ -44,8 +51,11 @@
   padding: 0;
   margin-top: 12px;
   margin-bottom: 14px;
-
-  @include word-font ("Oswald", 16px, 16px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
 
   @media (--not-narrow-vp) {
     margin-top: 0;
@@ -67,8 +77,11 @@
   margin: 0;
   padding: 0;
   margin-bottom: 15px;
-
-  @include word-font ("Arial", 14px, 14px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
 
   @media (--not-narrow-vp) {
     font-size: 16px;
@@ -90,8 +103,11 @@
   grid-area: price;
   text-align: right;
   align-self: flex-start;
-
-  @include word-font ("Arial", 14px, 14px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
 
   @media (--not-narrow-vp) {
     margin-top: 3px;
@@ -157,6 +173,7 @@
   }
 
   @media (--wide-vp) {
+    margin: 0;
     width: 245px;
     background: linear-gradient(var(--accent-trans-color) 50%, var(--accent-trans-color) 50%), url("../../img/catalog/gift-cat-desktop@1x.png");
     background-size: cover, cover;
@@ -177,8 +194,11 @@
   display: block;
   padding: 187px 61px 43px 58px;
   text-align: center;
-
-  @include word-font ("Arial", 16px, 20px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (--not-narrow-vp) {
     padding: 71px 124px 69px 422px;

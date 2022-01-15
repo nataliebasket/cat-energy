@@ -93,23 +93,26 @@
   color: var(--black-color);
   text-transform: uppercase;
   position: relative;
-
-  @include word-font ("Oswald", 20px, 20px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
   font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
 
   @media (--not-narrow-vp) {
     padding-left: 0;
     padding-right: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-
-    @include word-font ("Oswald", 18px, 24px);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   @media (--wide-vp) {
     color: var(--black-color);
-
-    @include word-font ("Oswald", 20px, 30px);
+    font-size: 20px;
+    line-height: 30px;
   }
 
   &:hover {

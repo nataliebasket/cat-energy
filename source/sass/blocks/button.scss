@@ -7,8 +7,11 @@
   padding-top: 10px;
   padding-bottom: 10px;
   display: block;
-
-  @include word-font ("Oswald", 14px, 18px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (--not-narrow-vp) {
     padding-top: 17px;

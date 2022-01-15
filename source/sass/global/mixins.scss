@@ -1,3 +1,19 @@
+// @mixin arial-font ($font-size, $line-height) {
+//   font-family: "Arial", sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: $font-size;
+//   line-height: $line-height;
+// }
+
+// @mixin oswald-font ($font-size, $line-height) {
+//   font-family: "Oswald", "Impact", sans-serif;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: $font-size;
+//   line-height: $line-height;
+// }
+
 @mixin word-font ($font, $font-size, $line-height) {
   font-family: $font, "Helvetica", sans-serif;
   font-style: normal;
@@ -5,6 +21,7 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
 
 @mixin list-zero {
   margin: 0;

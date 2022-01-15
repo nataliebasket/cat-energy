@@ -2,7 +2,7 @@
   background-color: var(--section-bg-color);
 
   @media (--not-narrow-vp) {
-    background: linear-gradient(to bottom, transparent 60%, var(--section-bg-color) 60%);
+    background: linear-gradient(to bottom, transparent 620px, var(--section-bg-color) 620px);
   }
 
   @media (--wide-vp) {
@@ -33,14 +33,17 @@
   margin: 0;
   margin-top: 23px;
   margin-bottom: 40px;
-
-  @include word-font ("Oswald", 36px, 40px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
 
   @media (--not-narrow-vp) {
     margin-top: 44px;
     margin-bottom: 64px;
-
-    @include word-font ("Oswald", 60px, 60px);
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (--wide-vp) {
@@ -53,14 +56,17 @@
   margin: 0;
   margin-bottom: 20px;
   color: var(--form-color);
-
-  @include word-font ("Arial", 14px, 18px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (--not-narrow-vp) {
     margin-bottom: 54px;
     padding-right: 6px;
-
-    @include word-font ("Arial", 16px, 24px);
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (--wide-vp) {
@@ -143,14 +149,20 @@
   padding-top: 14px;
   padding-bottom: 17px;
   text-transform: uppercase;
-
-  @include word-font ("Oswald", 24px, 24px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
 
   @media (--not-narrow-vp) {
     padding-left: 20px;
     padding-right: 20px;
-
-    @include word-font ("Oswald", 30px, 37px);
+    font-family: "Oswald", "Impact", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 
@@ -168,8 +180,11 @@
   bottom: 0;
   transform: translate(-50%, 50%);
   left: 50%;
-
-  @include word-font ("Arial", 12px, 12px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
 
   @media (--not-narrow-vp) {
     background-color: var(--white-color);
@@ -177,8 +192,8 @@
     padding-left: 3px;
     padding-right: 3px;
     width: 128px;
-
-    @include word-font ("Arial", 14px, 14px);
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @media (--wide-vp) {
@@ -191,8 +206,11 @@
   margin: 0;
   margin-top: 26px;
   margin-bottom: 40px;
-
-  @include word-font ("Oswald", 14px, 20px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (--not-narrow-vp) {
     width: 180px;
@@ -200,8 +218,11 @@
     margin: 0;
     align-self: flex-start;
     margin-top: 5px;
-
-    @include word-font ("Oswald", 20px, 30px);
+    font-family: "Oswald", "Impact", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (--wide-vp) {
@@ -325,8 +346,11 @@
   padding: 0;
   cursor: pointer;
   border-bottom: 1px solid transparent;
-
-  @include word-font ("Oswald", 16px, 20px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (--not-narrow-vp) {
     font-size: 20px;

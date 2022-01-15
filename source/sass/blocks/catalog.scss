@@ -10,8 +10,11 @@
   margin-top: 27px;
   margin-bottom: 41px;
   position: relative;
-
-  @include word-font ("Oswald", 36px, 36px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
 
   @media (--not-narrow-vp) {
     margin-top: 33px;

@@ -77,8 +77,11 @@
   margin-bottom: 25px;
   text-align: center;
   max-width: 250px;
-
-  @include word-font ("Oswald", 36px, 36px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
 
   @media (--not-narrow-vp) {
     max-width: 450px;
@@ -97,8 +100,11 @@
   margin: 0;
   margin-bottom: 29px;
   color: var(--white-color);
-
-  @include word-font ("Oswald", 14px, 14px);
+  font-family: "Oswald", "Impact", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
 
   @media (--not-narrow-vp) {
     margin-bottom: 48px;

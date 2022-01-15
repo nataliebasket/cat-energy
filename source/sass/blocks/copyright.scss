@@ -5,8 +5,11 @@
   color: var(--form-color);
   align-items: center;
   width: 100%;
-
-  @include word-font ("Arial", 16px, 18px);
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 
   &:active {
     opacity: 0.3;
