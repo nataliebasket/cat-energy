@@ -19,8 +19,11 @@ import rename from "gulp-rename";
 import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
 import del from "del";
+import gulpIf from "gulp-if";
 
 const { src, dest, watch, series, parallel } = gulp;
+const isDevelopment = process.env.NODE_ENV !== "production";
+const isProduction = process.env.NODE_ENV == "production";
 
 export function processMarkup() {
   return src("./source/*.html")
@@ -42,7 +45,7 @@ export function validateMarkup () {
 }
 
 export function processStyles () {
-  return src("./source/sass/*.scss", { sourcemaps: true })
+  return src("./source/sass/*.scss", { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(postcss([
       postImport(),
@@ -60,7 +63,7 @@ export function processStyles () {
         extname: ".min.css"
       })
     )
-    .pipe(dest("./build/css", { sourcemaps: "." }))
+    .pipe(dest("./build/css", { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
@@ -78,7 +81,7 @@ export function processScripts () {
 
 export function optimizeImages () {
   return src("./source/img/**/*.{png,jpg}")
-    .pipe(squoosh())
+    .pipe(gulpif(isProduction, squoosh()))
     .pipe(dest("build/img"))
 }
 
@@ -89,21 +92,13 @@ export function copyImages () {
 
 export function createWebp () {
   return src("./source/img/**/*.{jpg,png}")
-    .pipe(
-      squoosh({
-        webp: {}
-      })
-    )
+    .pipe(gulpIf(isProduction, squoosh({ webp: {}})))
     .pipe(dest("./build/img"))
 }
 
 export function createAvif () {
   return src("./source/img/**/*.{jpg,png}")
-    .pipe(
-      squoosh({
-        avif: {}
-      })
-    )
+    .pipe(gulpIf(isProduction, squoosh({ avif: {}})))
     .pipe(dest("./build/img"))
 }
 
@@ -151,15 +146,17 @@ export function startServer (done) {
 }
 
 function reloadServer (done) {
-  browser.reload();
-  done();
+    browser.reload();
+    done();
 }
 
 function watchFiles () {
-  watch("./source/sass/**/*.scss", series(processStyles));
-  watch("./source/js/*.js", series(processScripts, reloadServer));
-  watch(["./source/**/*.{html,twig}", "./source/templates/data.js"], series(processMarkup, reloadServer));
-  watch("./source/icons/**/*.svg", series(createSprite, reloadServer));
+  if (isDevelopment) {
+    watch("./source/sass/**/*.scss", series(processStyles));
+    watch("./source/js/*.js", series(processScripts, reloadServer));
+    watch(["./source/**/*.{html,twig}", "./source/templates/data.js"], series(processMarkup, reloadServer));
+    watch("./source/icons/**/*.svg", series(createSprite, reloadServer));
+  }
 }
 
 // Production build

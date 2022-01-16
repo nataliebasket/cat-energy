@@ -10,6 +10,7 @@
     "gulp": "4.0.2",
     "gulp-dart-sass": "1.0.2",
     "gulp-htmlmin": "5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-libsquoosh": "1.0.12",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
@@ -31,7 +32,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "test": "npm run editorconfig && npm run stylelint && gulp validateMarkup",
-    "build": "gulp build",
+    "build": "npx cross-env NODE_ENV=production gulp",
     "start": "gulp"
   },
   "browserslist": [
