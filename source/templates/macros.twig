@@ -1,5 +1,10 @@
 {% macro picture(class, path, name, ext, alt="", width = null, height = null, large = true, middle = true, maxdppx = 2, lazy = true) %}
-{% set formats = ["avif", "webp", ext] %}
+
+{# {% set formats = ["avif", "webp", ext] %} #}
+
+{% import massiveExt from "./gulpfile.js" as formats %}
+
+
 {% set densities = range(1, maxdppx, 1) %}
 {% set viewports = [
 {

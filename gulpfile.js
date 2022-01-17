@@ -25,6 +25,16 @@ const { src, dest, watch, series, parallel } = gulp;
 const isDevelopment = process.env.NODE_ENV !== "production";
 const isProduction = process.env.NODE_ENV == "production";
 
+
+export function massiveExt() {
+  if (isProduction) {
+    let formats = ["avif", "webp", "png"];
+  } else {
+    let formats = ["png"];
+}
+  return formats;
+}
+
 export function processMarkup() {
   return src("./source/*.html")
     .pipe(twig({
@@ -171,7 +181,7 @@ export const build = series (
     copyAssets,
     optimizeImages,
     createWebp,
-    createAvif
+    //createAvif
   )
 );
 
